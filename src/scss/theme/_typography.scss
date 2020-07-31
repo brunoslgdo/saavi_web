@@ -1,0 +1,42 @@
+$font-size: (
+    title: 6.2rem,
+    subtitle: 5.2rem,
+    emphasis: 3.2rem,
+    body: 2.4rem,
+    small: 1.6rem,
+);
+
+$font-weight: (
+    thin: 100,
+    elight: 200,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    sbold: 600,
+    bold: 700,
+    ebold: 800,
+    black: 900,
+);
+
+:root {
+    
+    @each $key, $val in $font-size {
+        --#{$key}: #{$val};
+    }
+                 
+    @each $key, $val in $font-weight {
+        --#{$key}: #{$val};
+    }
+}
+
+@each $key, $val in $font-size {
+    .#{$key} {
+        font-size:  #{$val};
+    }
+}
+
+@each $key, $val in $font-weight {
+    .#{$key} {
+        font-weight: #{$val};
+    }
+}

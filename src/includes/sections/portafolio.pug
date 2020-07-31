@@ -1,0 +1,24 @@
+include ../config/conf_portafolio
+section.__wrap
+    .portafolio
+        .portafolio__child
+            h1.portafolio__title Portafolio
+        .portafolio__child
+            img(src=`${pathImg}portafolio-mapa.svg`, alt="portafolio en la república mexicana", class="portafolio__mapa")
+    .pslider
+        ul.pslider__description
+            each item in PORTAFOLIO
+                li.hero
+                    img(src=`${pathImg}${item.hero}`, alt=`${item.plant}`)
+                    .hero__caption
+                        h2.subtitle.bold.text--alt= `${item.city}`
+                        h3.body.bold.text--alt.mbottom--sm= `${item.plant}`
+                        p.body.bold.text--alt= `${item.ub}`
+                        p.body.bold.text--alt= `Capacidad nominal: ${item.capacity}`
+                        p.body.bold.text--alt= `Inicio de operaciones: ${item.start}`
+        ul.pslider__thumbnail
+            each item in PORTAFOLIO
+                li.pslider__thumbnail__item
+                    .hero
+                        img(src=`${pathImg}${item.thumbnail}`, alt=`${item.plant}`)
+                        p.subtitle.bold.text--alt.hero__caption= `${item.city.split('')[0]}`

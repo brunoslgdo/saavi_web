@@ -1,0 +1,32 @@
+/* ---------
+centrado solo horizontal para elementos
+de bloque y línea respectivamente
+--------- */
+
+.center {
+
+    &--block {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &--content {
+        text-align: center;
+    }
+}
+
+/* --------- 
+texto
+--------- */
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* ---------
+altura
+--------- */
+
+.vh {
+    min-height: 100vh;
+}

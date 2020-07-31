@@ -1,0 +1,14 @@
+include ../config/conf_contacto
+section.__wrap.bg.bg--contacto
+    article.contacto
+        .contacto__child
+            .contacto__box
+                h1.subtitle.sbold.text--alt Contacto
+                h2.emphasis.regular.text--alt.mbottom--md Oficinas corporativas
+            .contacto__box
+                each item in CONTACTO
+                    .contacto__desc
+                        img(src=`${pathImg}${item.icon}`, alt="icon user")
+                        p.small.text--alt= `${item.desc}`
+            .contacto__box
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.3476362581882!2d-99.204665685516!3d19.440572986879843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2021fe885ba15%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1595970294267!5m2!1ses!2smx" width="100%" height="320" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

@@ -1,0 +1,27 @@
+.form {
+
+    &__data {
+        margin-bottom: var(--sm);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: var(--ss);
+    }
+
+    &__input {
+        border: 0.1rem solid transparent;
+        border-radius: 3.2rem;
+        padding: 0.8rem 2.4rem;
+        width: 100%;
+    }
+
+    &__submit {
+        border: 0.1rem solid var(--text--alt);
+        background-color: transparent;
+    }
+}

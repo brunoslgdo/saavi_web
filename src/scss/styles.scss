@@ -1,0 +1,31 @@
+@import 'theme/colors';
+@import 'theme/typography';
+
+@import 'layout/reset';
+@import 'layout/gutters';
+@import 'layout/box_model';
+
+@import 'classes/backgrounds';
+@import 'classes/general';
+@import 'classes/hero';
+@import 'classes/hover';
+
+@import 'components/hamburguer';
+@import 'components/header';
+@import 'components/nav';
+@import 'components/menu';
+@import 'components/socials';
+@import 'components/card_contact';
+@import 'components/soluciones';
+@import 'components/pslider';
+@import 'components/mosaicos';
+@import 'components/form';
+
+@import 'sections/home';
+@import 'sections/quienes_somos';
+@import 'sections/servicios';
+@import 'sections/portafolio';
+@import 'sections/directivos';
+@import 'sections/inversionistas';
+@import 'sections/contacto';
+

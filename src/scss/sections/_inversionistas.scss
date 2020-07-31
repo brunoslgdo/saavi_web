@@ -1,0 +1,28 @@
+.inversionistas {
+    max-width: 96rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: var(--lg);
+    padding-bottom: var(--lg);
+
+    @media only screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__child:nth-child(1) {
+
+        .subtitle {
+            margin-top: var(--lg);
+        }
+    }
+
+    &__child:nth-child(2) {
+        background-color: var(--first);
+        padding: var(--sm);
+    }
+
+    &__icon {
+        @extend .center--block;
+    }
+}

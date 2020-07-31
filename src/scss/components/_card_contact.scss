@@ -1,0 +1,16 @@
+.card-contact {
+    display: flex;
+
+    &__child:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-right: var(--ss);
+    }
+
+    &__item {
+        display: block;
+        color: var(--text);
+        font-size: var(--small);
+    }
+}

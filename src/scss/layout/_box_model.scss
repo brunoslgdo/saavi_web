@@ -1,0 +1,9 @@
+.__wrap {
+    padding-right: var(--ss);
+    padding-left: var(--ss);
+
+    &--normal {
+        @extend .center--block;
+        max-width: 96rem;
+    }
+}

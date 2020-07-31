@@ -1,0 +1,50 @@
+.pslider {
+    position: relative;
+    max-width: 102.4rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    &__description {
+        height: 56rem;
+        
+        .hero {
+            position: absolute;
+            width: 100%;
+            height: 56rem;
+            z-index: -1;
+
+            &__caption {
+                padding: var(--xx) var(--sm) var(--sm);
+            }
+        }
+    }
+    
+    &__thumbnail {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__thumbnail__item {
+        // overflow: hidden;
+      
+        .hero {
+            height: 8.8rem;
+
+            &__caption {
+                margin: auto;
+            }
+        }
+
+        &:hover .hero {
+            background: linear-gradient(#fff, var(--first));
+
+            img {
+                opacity: 0.1;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+include ../config/conf_directivos
+section.__wrap
+    article.directivos
+        h1.subtitle.sbold.first.mbottom--sm Directivos
+        ul.directivos-card
+            each item in DIRECTIVOS
+                li.directivos-card__item
+                    h1.body.sbold.text--alt !{`${item.name}`}
+                    h1.body.sbold.text--alt.mbottom--ss !{`${item.lastname}`}
+                    h2.small.text--alt.mbottom--sm= `${item.title}`
+                    p.small.text--alt.mbottom--sm= `${item.desc}`
+                    a(href="#"): img(src=`${pathImg}icon-linkedin-alt.svg`, alt="icon linkedin")

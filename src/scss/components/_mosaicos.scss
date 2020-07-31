@@ -1,0 +1,53 @@
+.mosaicos {
+
+    &__child:last-child {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+
+        @media only screen and (min-width: 568px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        @media only screen and (min-width: 736px) {
+            grid-template-columns: repeat(7, 1fr);
+        }
+    }
+
+    &__content {
+        background-color: var(--first);
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    &__thumbnail {
+        padding-bottom: 100%;
+        position: relative;
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+
+        h1 {
+            @extend .text--alt;
+            font-family: 'Stem-Bold';
+            font-size: var(--lg);
+            position: absolute;
+            top: 300%;
+            left: 50%;
+            transform: translate(-50%, 300%);
+            transition: transform 0.4s ease-in-out,
+                        top 0.4s ease-in-out,
+                        left 0.4s ease-in-out;
+        }
+
+        &:hover h1 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

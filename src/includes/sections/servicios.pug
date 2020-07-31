@@ -1,0 +1,22 @@
+include ../config/conf_generador
+include ../config/conf_suministradora
+section.__wrap.bg.bg--servicios
+    article.servicios
+        .servicios__child.__wrap
+            h1.emphasis.bold.first--alt.mbottom--sm Elige competitividad y eficiencia
+            h2.emphasis.sbold.first.mbottom--sm Suministradora
+            ul.soluciones
+                each item in SUMINISTRADORA
+                    li.soluciones__list
+                        .soluciones__icon
+                            img(src=`${pathImg}${item.icon}`, alt=`${item.content}`)
+                        p.body.small.first= `${item.content}`
+        .servicios__child.__wrap
+            h1.emphasis.bold.text--alt.mbottom--ss Tu energía en manos de expertos 
+            p.body.regular.text--alt.mbottom--sm Creamos la solución precisa para tu empresa, con la seguridad de que tendrás siempre el mejor servicio. 
+            h2.emphasis.sbold.text--alt.mbottom--sm Generador
+            ul.soluciones
+                each item in GENERADOR
+                    li.soluciones__list
+                        img(src=`${pathImg}${item.icon}`, alt=`${item.content}`, class="soluciones__icon")
+                        p.body.small.text--alt= `${item.content}`

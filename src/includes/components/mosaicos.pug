@@ -1,0 +1,31 @@
+include ../config/conf_portafolio
+.mosaicos
+    each item in PORTAFOLIO
+        .mosaicos__child
+            .mosaicos__content
+                .mosaicos__heading
+                    h1= `${item.city}`
+                    h2= `${item.plant}`
+                .mosaicos__subheading
+                    h2= `${item.ub}`
+                .mosaicos__description
+                    h3 Capacidad nominal
+                    p= `${item.capacity}`
+                .mosaicos__description
+                    h3 Inicio de operaciones
+                    p= `${item.start}`
+    .mosaicos__child
+        each item in PORTAFOLIO
+            .mosaicos__thumbnail
+                img(src=`${pathImg}${item.thumbnail}`, alt=`${item.city} - ${item.plant}`)
+                h1= `${item.city.split('')[0]}`
+
+
+
+        //-     hero: 'thumbnail-01.jpg',
+        //-   thumbnail: 'thumbnail-01.jpg',
+        //-   city: 'Campeche',
+        //-   plant: 'Central Ciclo Combinado',
+        //-   ub: 'Palizada, Campeche',
+        //-   capacity:  '252 MWh',
+        //-   start: 'Mayo, 2003',
