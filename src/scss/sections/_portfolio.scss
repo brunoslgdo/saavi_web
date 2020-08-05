@@ -1,0 +1,56 @@
+.portfolio {
+    
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+
+        @media only screen and (min-width: 736px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: var(--md);
+        }
+    }
+
+    &__child {
+
+        &:first-child {
+            grid-column: 1 / span 2;
+            grid-row-start: 1 / 2;
+            background-color: var(--first);
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+
+            @media only screen and (min-width: 568px) {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+
+            .display {
+                line-height: 1;
+                padding-left: var(--sm);
+                padding-bottom: var(--sm);
+                position: absolute;
+                bottom: 0;
+            }
+        }
+        
+        &:last-child {
+            grid-column: 1 / span 2;
+            grid-row-start: 2 / 3;
+
+            @media only screen and (min-width: 568px) {
+                grid-column: 1 / 3;
+                grid-row: 1 / 3;
+                padding-top: var(--xl);
+            }
+        }
+    }
+
+    &__map {
+        display: block;
+        max-width: 100%;
+    }
+}

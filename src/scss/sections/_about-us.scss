@@ -1,0 +1,48 @@
+.about-us {
+
+    &__content {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr auto;
+        gap: var(--sm);
+    
+        @media only screen and (min-width: 736px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+        }
+    }
+
+    &__child:nth-child(1) {
+        // background-color: hsl(90, 100%, 50%);
+    }
+    
+    &__child:nth-child(2) {
+        background-image: url('../img/historia.png');
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        // background-color: hsl(270, 100%, 50%);
+    }
+    
+    &__child:nth-child(3) {
+        // background-color: hsl(30, 100%, 50%);
+        
+        @media only screen and (min-width: 736px) {
+            grid-column: 2 / 3;
+        }
+    }
+
+    &__history {
+        padding-left: var(--sm);
+    
+        &:nth-child(2) {
+            padding-bottom: var(--sm);
+            display: flex;
+
+            .display {
+                margin-top: auto;
+                line-height: 1;
+            }
+        }
+    }
+}

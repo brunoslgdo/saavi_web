@@ -1,3 +1,5 @@
+@import 'functions/convert_pixels';
+
 @import 'theme/colors';
 @import 'theme/typography';
 
@@ -16,16 +18,16 @@
 @import 'components/menu';
 @import 'components/socials';
 @import 'components/card_contact';
-@import 'components/soluciones';
+@import 'components/solutions';
 @import 'components/pslider';
-@import 'components/mosaicos';
+@import 'components/gallery';
 @import 'components/form';
 
 @import 'sections/home';
-@import 'sections/quienes_somos';
-@import 'sections/servicios';
-@import 'sections/portafolio';
-@import 'sections/directivos';
-@import 'sections/inversionistas';
-@import 'sections/contacto';
+@import 'sections/about-us';
+@import 'sections/managers';
+@import 'sections/services';
+@import 'sections/portfolio';
+@import 'sections/investors';
+@import 'sections/contact';
 

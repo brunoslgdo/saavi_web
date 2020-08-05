@@ -8,326 +8,352 @@
     <link href="../css/styles.css" rel="stylesheet"/>
   </head>
   <body>
-    <header class="header">
-      <div class="header__child">
+    <header class="layout-main header">
+      <aside class="layout-main__left">
         <picture>
           <source class="header__logo" srcset="../img/logo-saavi.svg" media="(min-width: 768px)"/>
           <source class="header__logo" srcset="../img/logo-saavi-alt.svg" media="(min-width: 320px)"/><img class="header__logo" src="../img/logo-saavi.svg" alt="logo saavi"/>
         </picture>
-      </div>
-      <div class="header__child">
-        <div class="hamburguer" onclick="myFunction()">
+      </aside>
+      <section class="layout-main__center header__content"></section>
+      <aside class="layout-main__right">
+        <div class="hamburguer" id="js-hamburguer">
           <div class="hamburguer__line"></div>
           <div class="hamburguer__line"></div>
           <div class="hamburguer__line"></div>
         </div>
-        <ul class="menu" id="myLinks">
-          <li class="menu__item"><a class="menu__link" href="#quienes-somos">Acerca de Saavi</a></li>
-          <li class="menu__item"><a class="menu__link" href="#soluciones-energia">Soluciones de Energía</a></li>
-          <li class="menu__item"><a class="menu__link" href="#portafolio">Portafolio</a></li>
-          <li class="menu__item"><a class="menu__link" href="#contacto">Contacto</a></li>
+        <ul class="menu" id="js-menu">
+          <li class="menu__item"><a class="xsmall light text--alt" href="#quienes-somos">Acerca de Saavi</a></li>
+          <li class="menu__item"><a class="xsmall light text--alt" href="#soluciones-energia">Soluciones de Energía</a></li>
+          <li class="menu__item"><a class="xsmall light text--alt" href="#portafolio">Portafolio</a></li>
+          <li class="menu__item"><a class="xsmall light text--alt" href="#contacto">Contacto</a></li>
+          <li class="menu__item menu__movil"><a class="xsmall light text--alt" href="">SP </a><span class="xsmall light text--alt">/ </span><a class="xsmall light text--alt" href="">EN</a></li>
+          <li class="menu__item menu__movil menu__item-socials"><a class="xsmall light text--alt menu__movil" href="/"><img src="../img/icon-twitter-white.svg" alt="saavi twitter"/></a><a class="xsmall light text--alt menu__movil" href="/"><img src="../img/icon-facebook-white.svg" alt="saavi facebook"/></a><a class="xsmall light text--alt menu__movil" href="/"><img src="../img/icon-linkedin-white.svg" alt="saavi linkedin"/></a>
+          </li>
+          <li class="menu__item menu__movil xsmall light text--alt" id="js-close">Cerrar</li>
         </ul>
-        <ul class="menu-desktop">
-          <li class="menu-desktop__item"><a class="menu-desktop__link" href="#quienes-somos">Acerca de Saavi</a></li>
-          <li class="menu-desktop__item"><a class="menu-desktop__link" href="#soluciones-energia">Soluciones de Energía</a></li>
-          <li class="menu-desktop__item"><a class="menu-desktop__link" href="#portafolio">Portafolio</a></li>
-          <li class="menu-desktop__item"><a class="menu-desktop__link" href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
+      </aside>
     </header>
-    <ul class="socials">
-      <li class="socials__item"><a class="socials__link" href="/"><img class="socials__icon" src="../img/icon-twitter.svg" alt="saavi twitter"/></a></li>
-      <li class="socials__item"><a class="socials__link" href="/"><img class="socials__icon" src="../img/icon-facebook.svg" alt="saavi facebook"/></a></li>
-      <li class="socials__item"><a class="socials__link" href="/"><img class="socials__icon" src="../img/icon-linkedin.svg" alt="saavi linkedin"/></a></li>
-      <li class="socials__item"><a class="socials__link" href="/"><img class="socials__icon" src="../img/icon-instagram.svg" alt="saavi twitter"/></a></li>
-    </ul>
-    <section class="__wrap bg bg--home">
-      <article class="home vh">
-        <div class="home__child">
-          <h1 class="home__display">Generamos el futuro</h1>
-          <p class="home__caption">Nuestra electricidad impulsa la competitividad de las empresas <strong class="sbold">en México</strong></p>
-        </div>
+    <main class="layout-main main">
+      <aside class="layout-main__left">
+        <ul class="socials fixed">
+          <li class="socials__item"><a class="socials__link" href="/"><img class="socials__icon" src="../img/icon-twitter-blue.svg" alt="saavi twitter"/></a></li>
+          <li class="socials__item"><a class="socials__link" href="/"><img class="socials__icon" src="../img/icon-facebook-blue.svg" alt="saavi facebook"/></a></li>
+          <li class="socials__item"><a class="socials__link" href="/"><img class="socials__icon" src="../img/icon-linkedin-blue.svg" alt="saavi linkedin"/></a></li>
+        </ul>
+      </aside>
+      <section class="layout-main__center main__content">
+        <h1 class="text--alt mbottom--md">GENERAMOS EL FUTURO</h1>
+        <p class="body light text--alt">Nuestra electricidad impulsa la competitividad de las empresas en México </p>
+      </section>
+      <aside class="layout-main__right"></aside>
+    </main>
+    <section class="layout-main about-us">
+      <aside class="layout-main__left">
+        <ul class="socials absolute">
+          <li class="socials__item"><a class="socials__link" href="/"><img class="socials__icon" src="../img/icon-twitter-white.svg" alt="saavi twitter"/></a></li>
+          <li class="socials__item"><a class="socials__link" href="/"><img class="socials__icon" src="../img/icon-facebook-white.svg" alt="saavi facebook"/></a></li>
+          <li class="socials__item"><a class="socials__link" href="/"><img class="socials__icon" src="../img/icon-linkedin-white.svg" alt="saavi linkedin"/></a></li>
+        </ul>
+      </aside>
+      <article class="layout-main__center about-us__content">
+        <section class="about-us__child">
+          <h1 class="display sbold first--alt mbottom--sm">¿Quiénes somos?</h1>
+          <p class="body regular first">Somos expertos en energía con más de 20 años en el mercado. Generamos y comercializamos electricidad para contribuir a satisfacer la demanda del país. </p>
+        </section>
+        <section class="about-us__child about-us__history">
+          <h1 class="display sbold text--alt">Historia</h1>
+        </section>
+        <section class="about-us__child about-us__history">
+          <h2 class="title sbold first--alt">1995</h2>
+          <p class="small light first">Se constituye International Generating Company "InterGen"</p>
+        </section>
       </article>
+      <aside class="layout-main__right"></aside>
     </section>
-    <div id="quienes-somos"></div>
-    <div class="mbottom--xx"></div>
-    <section class="__wrap">
-      <article class="quienes-somos __wrap--normal">
-        <div class="quienes-somos__child">
-          <h1 class="title sbold first--alt mbottom--sm">¿Quiénes somos?</h1>
-          <p class="body regular first--alt">Somos expertos en energía con más de 20 años en el mercado. Generamos y comercializamos electricidad para contribuir a satisfacer la demanda del país. </p>
-        </div>
-        <div class="quienes-somos__child">
-          <div class="hero">
-            <h1 class="title sbold text--alt">Historia</h1><img src="../img/quienes-somos.png" alt="quienes somos"/>
-          </div>
-        </div>
-        <div class="quienes-somos__child">
-          <div class="historia">
-            <h2 class="subtitle regular first--alt mbottom--ss">1995</h2>
-            <p class="small first">Se constituye International Generating Company "InterGen"</p>
-          </div>
-        </div>
-      </article>
-    </section>
-    <div id="soluciones-energia"></div>
-    <div class="mbottom--xx"></div>
-    <section class="__wrap bg bg--servicios">
-      <article class="servicios">
-        <div class="servicios__child __wrap">
-          <h1 class="emphasis bold first--alt mbottom--sm">Elige competitividad y eficiencia</h1>
-          <h2 class="emphasis sbold first mbottom--sm">Suministradora</h2>
-          <ul class="soluciones">
-            <li class="soluciones__list">
-              <div class="soluciones__icon"><img src="../img/icon-suministradora-potencia.svg" alt="Potencia"/></div>
-              <p class="body small first">Potencia</p>
+    <section class="layout-main managers">
+      <aside class="layout-main__left"></aside>
+      <article class="layout-main__center managers__content">
+        <section class="managers__child">
+          <h1 class="display sbold first--alt mbottom--sm">Directivos</h1>
+        </section>
+        <section class="managers__child">
+          <ul class="card-managers">
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">Jaime Tupper</h1>
+                <h2 class="xsmall regular text--alt">CEO</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
             </li>
-            <li class="soluciones__list">
-              <div class="soluciones__icon"><img src="../img/icon-suministradora-cel.svg" alt="CEL Certificados de Energías Limpias"/></div>
-              <p class="body small first">CEL Certificados de Energías Limpias</p>
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">Marco Fuentes</h1>
+                <h2 class="xsmall regular text--alt">COO</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
             </li>
-            <li class="soluciones__list">
-              <div class="soluciones__icon"><img src="../img/icon-suministradora-dft.svg" alt="DFT Derechos Financieros de Transmision"/></div>
-              <p class="body small first">DFT Derechos Financieros de Transmision</p>
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">Esmeralda Viramontes</h1>
+                <h2 class="xsmall regular text--alt">DIRECTORA LEGAL</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
             </li>
-            <li class="soluciones__list">
-              <div class="soluciones__icon"><img src="../img/icon-suministradora-conexos.svg" alt="Servicios Conexos"/></div>
-              <p class="body small first">Servicios Conexos</p>
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">Mauricio Valle</h1>
+                <h2 class="xsmall regular text--alt">CFO</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
             </li>
-            <li class="soluciones__list">
-              <div class="soluciones__icon"><img src="../img/icon-suministradora-controlable.svg" alt="Demanda Controlable"/></div>
-              <p class="body small first">Demanda Controlable</p>
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">Carlos Zepeda</h1>
+                <h2 class="xsmall regular text--alt">DIRECTOR DE RRHH</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
             </li>
-            <li class="soluciones__list">
-              <div class="soluciones__icon"><img src="../img/icon-suministradora-distribuida.svg" alt="Representación de Generación Distribuida"/></div>
-              <p class="body small first">Representación de Generación Distribuida</p>
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">Héctor Castro</h1>
+                <h2 class="xsmall regular text--alt">TITLE</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
+            </li>
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">Gerardo Cervantes</h1>
+                <h2 class="xsmall regular text--alt">TITLE</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
+            </li>
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">New Business</h1>
+                <h2 class="xsmall regular text--alt">TITLE</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
+            </li>
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">Rodrigo Apellido</h1>
+                <h2 class="xsmall regular text--alt">TITLE</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
+            </li>
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">Arturo Posadas</h1>
+                <h2 class="xsmall regular text--alt">TITLE</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
+            </li>
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">Pamela Apellido</h1>
+                <h2 class="xsmall regular text--alt">TITLE</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
+            </li>
+            <li class="card-managers__list">
+              <div class="card-managers__content">
+                <h1 class="body sbold text--alt">Ángel Apellido</h1>
+                <h2 class="xsmall regular text--alt">TITLE</h2><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="linkedin"/></a>
+              </div>
             </li>
           </ul>
-        </div>
-        <div class="servicios__child __wrap">
-          <h1 class="emphasis bold text--alt mbottom--ss">Tu energía en manos de expertos </h1>
-          <p class="body regular text--alt mbottom--sm">Creamos la solución precisa para tu empresa, con la seguridad de que tendrás siempre el mejor servicio. </p>
-          <h2 class="emphasis sbold text--alt mbottom--sm">Generador</h2>
-          <ul class="soluciones">
-            <li class="soluciones__list"><img class="soluciones__icon" src="../img/icon-generadora-energia.svg" alt="Energía"/>
-              <p class="body small text--alt">Energía</p>
+        </section>
+      </article>
+      <aside class="layout-main__right"></aside>
+    </section>
+    <section class="layout-main servicies">
+      <aside class="layout-main__left"></aside>
+      <article class="layout-main__center services__content">
+        <section class="services__child">
+          <h1 class="title first--alt mbottom--sm">Elige competitividad y eficiencia</h1>
+          <h2 class="subtitle medium first mbottom--sm">Suministradora</h2>
+          <ul class="solutions">
+            <li class="solutions__list"><img class="solutions__icon" src="../img/icon-suministradora-potencia.svg" alt="Potencia"/>
+              <p class="body light first">Potencia</p>
             </li>
-            <li class="soluciones__list"><img class="soluciones__icon" src="../img/icon-generadora-potencia.svg" alt="Potencia"/>
-              <p class="body small text--alt">Potencia</p>
+            <li class="solutions__list"><img class="solutions__icon" src="../img/icon-suministradora-cel.svg" alt="CEL Certificados de Energías Limpias"/>
+              <p class="body light first">CEL Certificados de Energías Limpias</p>
             </li>
-            <li class="soluciones__list"><img class="soluciones__icon" src="../img/icon-generadora-conexos.svg" alt="Servicios Conexos"/>
-              <p class="body small text--alt">Servicios Conexos</p>
+            <li class="solutions__list"><img class="solutions__icon" src="../img/icon-suministradora-dft.svg" alt="DFT Derechos Financieros de Transmision"/>
+              <p class="body light first">DFT Derechos Financieros de Transmision</p>
             </li>
-            <li class="soluciones__list"><img class="soluciones__icon" src="../img/icon-generadora-generadores.svg" alt="Representación de Generadores"/>
-              <p class="body small text--alt">Representación de Generadores</p>
+            <li class="solutions__list"><img class="solutions__icon" src="../img/icon-suministradora-conexos.svg" alt="Servicios Conexos"/>
+              <p class="body light first">Servicios Conexos</p>
+            </li>
+            <li class="solutions__list"><img class="solutions__icon" src="../img/icon-suministradora-controlable.svg" alt="Demanda Controlable"/>
+              <p class="body light first">Demanda Controlable</p>
+            </li>
+            <li class="solutions__list"><img class="solutions__icon" src="../img/icon-suministradora-distribuida.svg" alt="Representación de Generación Distribuida"/>
+              <p class="body light first">Representación de Generación Distribuida</p>
             </li>
           </ul>
-        </div>
+        </section>
+        <section class="services__child">
+          <h1 class="title text--alt mbottom--sm">Tu energía en manos de expertos </h1>
+          <h2 class="subtitle medium text--alt mbottom--sm">Generador</h2>
+          <ul class="solutions mbottom--sm">
+            <li class="solutions__list"><img class="solutions__icon" src="../img/icon-generadora-energia.svg" alt="Energía"/>
+              <p class="body light text--alt">Energía</p>
+            </li>
+            <li class="solutions__list"><img class="solutions__icon" src="../img/icon-generadora-potencia.svg" alt="Potencia"/>
+              <p class="body light text--alt">Potencia</p>
+            </li>
+            <li class="solutions__list"><img class="solutions__icon" src="../img/icon-generadora-conexos.svg" alt="Servicios Conexos"/>
+              <p class="body light text--alt">Servicios Conexos</p>
+            </li>
+            <li class="solutions__list"><img class="solutions__icon" src="../img/icon-generadora-generadores.svg" alt="Representación de Generadores"/>
+              <p class="body light text--alt">Representación de Generadores</p>
+            </li>
+          </ul>
+          <p class="body regular text--alt">Creamos la solución precisa para tu empresa, con la seguridad de que tendrás siempre el mejor servicio. </p>
+        </section>
       </article>
+      <aside class="layout-main__right services__bg"></aside>
     </section>
-    <div id="portafolio"></div>
-    <section class="__wrap">
-      <div class="portafolio">
-        <div class="portafolio__child">
-          <h1 class="portafolio__title">Portafolio</h1>
-        </div>
-        <div class="portafolio__child"><img class="portafolio__mapa" src="../img/portafolio-mapa.svg" alt="portafolio en la república mexicana"/></div>
-      </div>
-      <div class="pslider">
-        <ul class="pslider__description">
-          <li class="hero"><img src="../img/thumbnail-01.jpg" alt="Central Ciclo Combinado"/>
-            <div class="hero__caption">
-              <h2 class="subtitle bold text--alt">Campeche</h2>
-              <h3 class="body bold text--alt mbottom--sm">Central Ciclo Combinado</h3>
-              <p class="body bold text--alt">Palizada, Campeche</p>
-              <p class="body bold text--alt">Capacidad nominal: 252 MWh</p>
-              <p class="body bold text--alt">Inicio de operaciones: Mayo, 2003</p>
-            </div>
-          </li>
-          <li class="hero"><img src="../img/thumbnail-02.jpg" alt="Estación de compresión de gas"/>
-            <div class="hero__caption">
-              <h2 class="subtitle bold text--alt">El Sauz</h2>
-              <h3 class="body bold text--alt mbottom--sm">Estación de compresión de gas</h3>
-              <p class="body bold text--alt">Palizada, Campeche</p>
-              <p class="body bold text--alt">Capacidad nominal: 252 MWh</p>
-              <p class="body bold text--alt">Inicio de operaciones: Mayo, 2003</p>
-            </div>
-          </li>
-          <li class="hero"><img src="../img/thumbnail-03.jpg" alt="Estación de compresión de gas"/>
-            <div class="hero__caption">
-              <h2 class="subtitle bold text--alt">Altamira</h2>
-              <h3 class="body bold text--alt mbottom--sm">Estación de compresión de gas</h3>
-              <p class="body bold text--alt">Palizada, Campeche</p>
-              <p class="body bold text--alt">Capacidad nominal: 252 MWh</p>
-              <p class="body bold text--alt">Inicio de operaciones: Mayo, 2003</p>
-            </div>
-          </li>
-          <li class="hero"><img src="../img/thumbnail-04.jpg" alt="Central de ciclo combinado"/>
-            <div class="hero__caption">
-              <h2 class="subtitle bold text--alt">Chihuahua</h2>
-              <h3 class="body bold text--alt mbottom--sm">Central de ciclo combinado</h3>
-              <p class="body bold text--alt">Palizada, Campeche</p>
-              <p class="body bold text--alt">Capacidad nominal: 252 MWh</p>
-              <p class="body bold text--alt">Inicio de operaciones: Mayo, 2003</p>
-            </div>
-          </li>
-          <li class="hero"><img src="../img/thumbnail-05.jpg" alt="Central de ciclo combinado"/>
-            <div class="hero__caption">
-              <h2 class="subtitle bold text--alt">La Rosita I y II</h2>
-              <h3 class="body bold text--alt mbottom--sm">Central de ciclo combinado</h3>
-              <p class="body bold text--alt">Palizada, Campeche</p>
-              <p class="body bold text--alt">Capacidad nominal: 252 MWh</p>
-              <p class="body bold text--alt">Inicio de operaciones: Mayo, 2003</p>
-            </div>
-          </li>
-          <li class="hero"><img src="../img/thumbnail-06.jpg" alt="Parque eólico exporación"/>
-            <div class="hero__caption">
-              <h2 class="subtitle bold text--alt">Energía Sierra Juárez</h2>
-              <h3 class="body bold text--alt mbottom--sm">Parque eólico exporación</h3>
-              <p class="body bold text--alt">Palizada, Campeche</p>
-              <p class="body bold text--alt">Capacidad nominal: 252 MWh</p>
-              <p class="body bold text--alt">Inicio de operaciones: Mayo, 2003</p>
-            </div>
-          </li>
-          <li class="hero"><img src="../img/thumbnail-07.jpg" alt="Central de ciclo combinado"/>
-            <div class="hero__caption">
-              <h2 class="subtitle bold text--alt">San Luis de la Paz</h2>
-              <h3 class="body bold text--alt mbottom--sm">Central de ciclo combinado</h3>
-              <p class="body bold text--alt">Palizada, Campeche</p>
-              <p class="body bold text--alt">Capacidad nominal: 252 MWh</p>
-              <p class="body bold text--alt">Inicio de operaciones: Mayo, 2003</p>
-            </div>
-          </li>
-        </ul>
-        <ul class="pslider__thumbnail">
-          <li class="pslider__thumbnail__item">
-            <div class="hero"><img src="../img/thumbnail-01.jpg" alt="Central Ciclo Combinado"/>
-              <p class="subtitle bold text--alt hero__caption">C</p>
-            </div>
-          </li>
-          <li class="pslider__thumbnail__item">
-            <div class="hero"><img src="../img/thumbnail-02.jpg" alt="Estación de compresión de gas"/>
-              <p class="subtitle bold text--alt hero__caption">E</p>
-            </div>
-          </li>
-          <li class="pslider__thumbnail__item">
-            <div class="hero"><img src="../img/thumbnail-03.jpg" alt="Estación de compresión de gas"/>
-              <p class="subtitle bold text--alt hero__caption">A</p>
-            </div>
-          </li>
-          <li class="pslider__thumbnail__item">
-            <div class="hero"><img src="../img/thumbnail-04.jpg" alt="Central de ciclo combinado"/>
-              <p class="subtitle bold text--alt hero__caption">C</p>
-            </div>
-          </li>
-          <li class="pslider__thumbnail__item">
-            <div class="hero"><img src="../img/thumbnail-05.jpg" alt="Central de ciclo combinado"/>
-              <p class="subtitle bold text--alt hero__caption">L</p>
-            </div>
-          </li>
-          <li class="pslider__thumbnail__item">
-            <div class="hero"><img src="../img/thumbnail-06.jpg" alt="Parque eólico exporación"/>
-              <p class="subtitle bold text--alt hero__caption">E</p>
-            </div>
-          </li>
-          <li class="pslider__thumbnail__item">
-            <div class="hero"><img src="../img/thumbnail-07.jpg" alt="Central de ciclo combinado"/>
-              <p class="subtitle bold text--alt hero__caption">S</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <div class="mbottom--xx"></div>
-    <section class="__wrap">
-      <article class="directivos">
-        <h1 class="subtitle sbold first mbottom--sm">Directivos</h1>
-        <ul class="directivos-card">
-          <li class="directivos-card__item">
-            <h1 class="body sbold text--alt">Jaime</h1>
-            <h1 class="body sbold text--alt mbottom--ss">Tupper</h1>
-            <h2 class="small text--alt mbottom--sm">CEO</h2>
-            <p class="small text--alt mbottom--sm">Lorem ipsum dolor sit amet, consectetuer adipiscing</p><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="icon linkedin"/></a>
-          </li>
-          <li class="directivos-card__item">
-            <h1 class="body sbold text--alt">Marco</h1>
-            <h1 class="body sbold text--alt mbottom--ss">Fuentes</h1>
-            <h2 class="small text--alt mbottom--sm">COO</h2>
-            <p class="small text--alt mbottom--sm">Lorem ipsum dolor sit amet, consectetuer adipiscing</p><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="icon linkedin"/></a>
-          </li>
-          <li class="directivos-card__item">
-            <h1 class="body sbold text--alt">Esmeralda</h1>
-            <h1 class="body sbold text--alt mbottom--ss">Viramontes</h1>
-            <h2 class="small text--alt mbottom--sm">DIRECTORA LEGAL</h2>
-            <p class="small text--alt mbottom--sm">Lorem ipsum dolor sit amet, consectetuer adipiscing</p><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="icon linkedin"/></a>
-          </li>
-          <li class="directivos-card__item">
-            <h1 class="body sbold text--alt">Mauricio</h1>
-            <h1 class="body sbold text--alt mbottom--ss">del Valle</h1>
-            <h2 class="small text--alt mbottom--sm">CFO</h2>
-            <p class="small text--alt mbottom--sm">Lorem ipsum dolor sit amet, consectetuer adipiscing</p><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="icon linkedin"/></a>
-          </li>
-          <li class="directivos-card__item">
-            <h1 class="body sbold text--alt">Carlos</h1>
-            <h1 class="body sbold text--alt mbottom--ss">Zepeda</h1>
-            <h2 class="small text--alt mbottom--sm">DIRECTOR DE RRHH</h2>
-            <p class="small text--alt mbottom--sm">Lorem ipsum dolor sit amet, consectetuer adipiscing</p><a href="#"><img src="../img/icon-linkedin-alt.svg" alt="icon linkedin"/></a>
-          </li>
-        </ul>
+    <section class="layout-main portfolio">
+      <aside class="layout-main__left"></aside>
+      <article class="layout-main__center portfolio__content">
+        <section class="portfolio__child">
+          <h1 class="display sbold text--alt">Portafolio</h1>
+        </section>
+        <section class="portfolio__child"><img class="portfolio__map" src="../img/mapa.svg" alt="mapa centrales de ciclo combinado, estaciones de gas y parque eólico"/></section>
       </article>
+      <aside class="layout-main__right"></aside>
     </section>
-    <div class="mbottom--xx"></div>
-    <section class="__wrap bg bg--inversionistas">
-      <article class="inversionistas vh">
-        <div class="inversionistas__child">
-          <h1 class="subtitle sbold first mbottom--sm">Inversionistas</h1>
-        </div>
-        <div class="inversionistas__child"><img class="inversionistas__icon mbottom--md" src="../img/icon-user.svg" alt="icon user"/>
-          <form class="form">
-            <div class="form__data">
-              <label class="body text--alt form__label" for="usuario">Usuario</label>
-              <input class="small form__input" type="text" placeholder="inversionista@saavienergia.com"/>
+    <section class="layout-main">
+      <aside class="layout-main__left"></aside>
+      <article class="layout-main__center">
+        <div class="gallery">
+          <div class="gallery__images">
+            <div class="gallery__image tabcontent" id="Campeche"><img src="../img/thumbnail-01.jpg"/>
+              <div class="gallery__description">
+                <h1 class="title sbold text--alt">Campeche</h1>
+                <h2 class="body regular text--alt mbottom--md">Central Ciclo Combinado</h2>
+                <h3 class="body sbold text--alt">Palizada, Campeche</h3>
+                <p class="body text--alt">Capacidad: 252 MWh</p>
+                <p class="body text--alt">Inicio: Mayo, 2003</p>
+              </div>
             </div>
-            <div class="form__data">
-              <label class="body text--alt form__label" for="usuario">Contraseña</label>
-              <input class="small form__input" type="password" placeholder="Ingresa tu contraseña"/>
+            <div class="gallery__image tabcontent" id="El Sauz"><img src="../img/thumbnail-02.jpg"/>
+              <div class="gallery__description">
+                <h1 class="title sbold text--alt">El Sauz</h1>
+                <h2 class="body regular text--alt mbottom--md">Estación de compresión de gas</h2>
+                <h3 class="body sbold text--alt">Palizada, Campeche</h3>
+                <p class="body text--alt">Capacidad: 252 MWh</p>
+                <p class="body text--alt">Inicio: Mayo, 2003</p>
+              </div>
             </div>
-            <div class="form__data">
-              <input class="small text--alt form__input form__submit" type="submit" value="Iniciar sesión"/>
+            <div class="gallery__image tabcontent" id="Altamira"><img src="../img/thumbnail-03.jpg"/>
+              <div class="gallery__description">
+                <h1 class="title sbold text--alt">Altamira</h1>
+                <h2 class="body regular text--alt mbottom--md">Estación de compresión de gas</h2>
+                <h3 class="body sbold text--alt">Palizada, Campeche</h3>
+                <p class="body text--alt">Capacidad: 252 MWh</p>
+                <p class="body text--alt">Inicio: Mayo, 2003</p>
+              </div>
             </div>
-            <div class="form__data">
-              <p class="small text--alt center--content">¿Olvidaste tu contraseña?</p>
+            <div class="gallery__image tabcontent" id="Chihuahua"><img src="../img/thumbnail-04.jpg"/>
+              <div class="gallery__description">
+                <h1 class="title sbold text--alt">Chihuahua</h1>
+                <h2 class="body regular text--alt mbottom--md">Central de ciclo combinado</h2>
+                <h3 class="body sbold text--alt">Palizada, Campeche</h3>
+                <p class="body text--alt">Capacidad: 252 MWh</p>
+                <p class="body text--alt">Inicio: Mayo, 2003</p>
+              </div>
             </div>
-          </form>
-        </div>
-      </article>
-    </section>
-    <div id="contacto"></div>
-    <section class="__wrap bg bg--contacto">
-      <article class="contacto">
-        <div class="contacto__child">
-          <div class="contacto__box">
-            <h1 class="subtitle sbold text--alt">Contacto</h1>
-            <h2 class="emphasis regular text--alt mbottom--md">Oficinas corporativas</h2>
-          </div>
-          <div class="contacto__box">
-            <div class="contacto__desc"><img src="../img/icon-placeholder.svg" alt="icon user"/>
-              <p class="small text--alt">Blvd. Miguel de Cervantes Saavedra 301, Piso 11 Col. Granada, 11520 Ciudad de México</p>
+            <div class="gallery__image tabcontent" id="La Rosita I y II"><img src="../img/thumbnail-05.jpg"/>
+              <div class="gallery__description">
+                <h1 class="title sbold text--alt">La Rosita I y II</h1>
+                <h2 class="body regular text--alt mbottom--md">Central de ciclo combinado</h2>
+                <h3 class="body sbold text--alt">Palizada, Campeche</h3>
+                <p class="body text--alt">Capacidad: 252 MWh</p>
+                <p class="body text--alt">Inicio: Mayo, 2003</p>
+              </div>
             </div>
-            <div class="contacto__desc"><img src="../img/icon-tel.svg" alt="icon user"/>
-              <p class="small text--alt">+52 (55) 5279 4850</p>
+            <div class="gallery__image tabcontent" id="Energía Sierra Juárez"><img src="../img/thumbnail-06.jpg"/>
+              <div class="gallery__description">
+                <h1 class="title sbold text--alt">Energía Sierra Juárez</h1>
+                <h2 class="body regular text--alt mbottom--md">Parque eólico exporación</h2>
+                <h3 class="body sbold text--alt">Palizada, Campeche</h3>
+                <p class="body text--alt">Capacidad: 252 MWh</p>
+                <p class="body text--alt">Inicio: Mayo, 2003</p>
+              </div>
             </div>
-            <div class="contacto__desc"><img src="../img/icon-email.svg" alt="icon user"/>
-              <p class="small text--alt">info@saavienergia.com</p>
-            </div>
-            <div class="contacto__desc"><img src="../img/icon-whatsapp.svg" alt="icon user"/>
-              <p class="small text--alt">+52 (55) 5279 4850</p>
+            <div class="gallery__image tabcontent" id="San Luis de la Paz"><img src="../img/thumbnail-07.jpg"/>
+              <div class="gallery__description">
+                <h1 class="title sbold text--alt">San Luis de la Paz</h1>
+                <h2 class="body regular text--alt mbottom--md">Central de ciclo combinado</h2>
+                <h3 class="body sbold text--alt">Palizada, Campeche</h3>
+                <p class="body text--alt">Capacidad: 252 MWh</p>
+                <p class="body text--alt">Inicio: Mayo, 2003</p>
+              </div>
             </div>
           </div>
-          <div class="contacto__box"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.3476362581882!2d-99.204665685516!3d19.440572986879843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2021fe885ba15%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1595970294267!5m2!1ses!2smx" width="100%" height="320" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+          <div class="gallery__thumbnails">
+            <div class="gallery__thumbnail tablink" onclick="gallery('Campeche', this, 'white')"><img src="../img/thumbnail-01.jpg"/></div>
+            <div class="gallery__thumbnail tablink" onclick="gallery('El Sauz', this, 'white')"><img src="../img/thumbnail-02.jpg"/></div>
+            <div class="gallery__thumbnail tablink" onclick="gallery('Altamira', this, 'white')"><img src="../img/thumbnail-03.jpg"/></div>
+            <div class="gallery__thumbnail tablink" onclick="gallery('Chihuahua', this, 'white')"><img src="../img/thumbnail-04.jpg"/></div>
+            <div class="gallery__thumbnail tablink" onclick="gallery('La Rosita I y II', this, 'white')"><img src="../img/thumbnail-05.jpg"/></div>
+            <div class="gallery__thumbnail tablink" onclick="gallery('Energía Sierra Juárez', this, 'white')"><img src="../img/thumbnail-06.jpg"/></div>
+            <div class="gallery__thumbnail tablink" onclick="gallery('San Luis de la Paz', this, 'white')"><img src="../img/thumbnail-07.jpg"/></div>
+          </div>
         </div>
       </article>
+      <aside class="layout-main__right"></aside>
+    </section>
+    <section class="layout-investors investors">
+      <aside class="layout-investors__left"></aside>
+      <article class="layout-investors__center-left investors__content">
+        <section class="investors__child">
+          <h1 class="title sbold first">Inversionistas</h1>
+        </section>
+      </article>
+      <article class="layout-investors__center-right">
+        <form class="form">
+          <div class="form__data">
+            <label class="body text--alt form__label" for="usuario">Usuario</label>
+            <input class="small form__input" type="text" placeholder="inversionista@saavienergia.com"/>
+          </div>
+          <div class="form__data">
+            <label class="body text--alt form__label" for="usuario">Contraseña</label>
+            <input class="small form__input" type="password" placeholder="Ingresa tu contraseña"/>
+          </div>
+          <div class="form__data">
+            <input class="small text--alt form__input form__submit" type="submit" value="Iniciar sesión"/>
+          </div>
+          <div class="form__data">
+            <p class="small text--alt center--content">¿Olvidaste tu contraseña?</p>
+          </div>
+        </form>
+      </article>
+      <aside class="layout-investors__right"></aside>
+    </section>
+    <section class="layout-main contact">
+      <aside class="layout-main__left"></aside>
+      <article class="layout-main__center contact__content">
+        <section class="contact__child">
+          <h1 class="display sbold text--alt">Contacto</h1>
+        </section>
+        <section class="contact__child">
+          <h2 class="subtitle regular text--alt mbottom--sm">Oficinas corporativas</h2>
+          <ul class="contact-data">
+            <li class="contact-data__item"><img src="../img/icon-placeholder.svg" alt="icon user"/>
+              <p class="small light text--alt">Blvd. Miguel de Cervantes Saavedra 301, Piso 11 Col. Granada, 11520 Ciudad de México</p>
+            </li>
+            <li class="contact-data__item"><img src="../img/icon-tel.svg" alt="icon user"/>
+              <p class="small light text--alt">+52 (55) 5279 4850</p>
+            </li>
+            <li class="contact-data__item"><img src="../img/icon-email.svg" alt="icon user"/>
+              <p class="small light text--alt">info@saavienergia.com</p>
+            </li>
+            <li class="contact-data__item"><img src="../img/icon-whatsapp.svg" alt="icon user"/>
+              <p class="small light text--alt">+52 (55) 5279 4850</p>
+            </li>
+          </ul>
+        </section>
+        <section class="contact__child"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.3476362581882!2d-99.204665685516!3d19.440572986879843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2021fe885ba15%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1595970294267!5m2!1ses!2smx" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></section>
+      </article>
+      <aside class="layout-main__right"></aside>
     </section>
     <script src="../js/menu.js"></script>
+    <script src="../js/gallery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../js/change-color.js"></script>
   </body>
 </html>

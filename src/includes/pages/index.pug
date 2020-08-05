@@ -1,4 +1,5 @@
 include ../config/conf_variables
+include ../config/conf_socials
 
 <!DOCTYPE html>
 html(lang="es")
@@ -10,23 +11,155 @@ html(lang="es")
         link(href=`${pathStyles}styles.css`, rel="stylesheet")
     body
 
-        include ../components/header
-        include ../components/socials
-        include ../sections/home
-        #quienes-somos
-        .mbottom--xx
-        include ../sections/quienes_somos
-        #soluciones-energia
-        .mbottom--xx
-        include ../sections/servicios
-        #portafolio
-        include ../sections/portafolio
-        .mbottom--xx
-        include ../sections/directivos
-        .mbottom--xx
-        include ../sections/inversionistas
-        #contacto
-        include ../sections/contacto
-        //- include ../components/mosaicos
         
+
+        header.layout-main.header
+            aside.layout-main__left
+                picture
+                    source(srcset=`${pathImg}logo-saavi.svg`, media="(min-width: 768px)", class="header__logo")
+                    source(srcset=`${pathImg}logo-saavi-alt.svg`, media="(min-width: 320px)", class="header__logo")
+                    img(src=`${pathImg}logo-saavi.svg`, alt="logo saavi", class="header__logo")
+            section.layout-main__center.header__content
+            aside.layout-main__right
+                include ../components/hamburguer
+                //- span.body.sbold.text--alt SP
+                //- span.body.sbold.text--alt EN
+                include ../components/menu
+        
+        main.layout-main.main
+            aside.layout-main__left
+                ul.socials.fixed
+                    each item in SOCIALS_BLUE
+                        li.socials__item: a(href=`${item.href}`, class="socials__link"): img(src=`${pathImg}${item.icon}`, alt=`${item.alt}`, class="socials__icon")
+            section.layout-main__center.main__content
+                h1.text--alt.mbottom--md GENERAMOS EL FUTURO
+                p.body.light.text--alt Nuestra electricidad impulsa la competitividad de las empresas en México 
+            aside.layout-main__right
+       
+        section.layout-main.about-us
+            aside.layout-main__left
+                ul.socials.absolute
+                    each item in SOCIALS_WHITE
+                        li.socials__item: a(href=`${item.href}`, class="socials__link"): img(src=`${pathImg}${item.icon}`, alt=`${item.alt}`, class="socials__icon")
+            article.layout-main__center.about-us__content
+                section.about-us__child
+                    h1.display.sbold.first--alt.mbottom--sm ¿Quiénes somos?
+                    p.body.regular.first Somos expertos en energía con más de 20 años en el mercado. Generamos y comercializamos electricidad para contribuir a satisfacer la demanda del país. 
+                section.about-us__child.about-us__history
+                    h1.display.sbold.text--alt Historia
+                section.about-us__child.about-us__history
+                    h2.title.sbold.first--alt 1995
+                    p.small.light.first Se constituye International Generating Company "InterGen"
+            aside.layout-main__right
+        
+        section.layout-main.managers
+            aside.layout-main__left
+            article.layout-main__center.managers__content
+                section.managers__child
+                    h1.display.sbold.first--alt.mbottom--sm Directivos
+                include ../config/conf_directivos
+                section.managers__child
+                    ul.card-managers
+                        each item in DIRECTIVOS
+                            li.card-managers__list
+                                .card-managers__content
+                                    h1.body.sbold.text--alt= `${item.name}`
+                                    h2.xsmall.regular.text--alt= `${item.title}`
+                                    a(href="#"): img(src=`${pathImg}icon-linkedin-alt.svg`, alt="linkedin")
+            aside.layout-main__right
+        
+        section.layout-main.servicies
+            aside.layout-main__left
+            article.layout-main__center.services__content
+                include ../config/conf_generador
+                include ../config/conf_suministradora
+                section.services__child
+                    h1.title.first--alt.mbottom--sm Elige competitividad y eficiencia
+                    h2.subtitle.medium.first.mbottom--sm Suministradora
+                    ul.solutions
+                        each item in SUMINISTRADORA
+                            li.solutions__list
+                                img(src=`${pathImg}${item.icon}`, class="solutions__icon", alt=`${item.content}`)
+                                p.body.light.first= `${item.content}`
+                section.services__child
+                    h1.title.text--alt.mbottom--sm Tu energía en manos de expertos 
+                    h2.subtitle.medium.text--alt.mbottom--sm Generador
+                    ul.solutions.mbottom--sm
+                        each item in GENERADOR
+                            li.solutions__list
+                                img(src=`${pathImg}${item.icon}`, alt=`${item.content}`, class="solutions__icon")
+                                p.body.light.text--alt= `${item.content}`
+                    p.body.regular.text--alt Creamos la solución precisa para tu empresa, con la seguridad de que tendrás siempre el mejor servicio. 
+            aside.layout-main__right.services__bg
+        
+        section.layout-main.portfolio
+            aside.layout-main__left
+            article.layout-main__center.portfolio__content
+                section.portfolio__child
+                    h1.display.sbold.text--alt Portafolio
+                section.portfolio__child
+                    img(src=`${pathImg}mapa.svg`, class="portfolio__map", alt="mapa centrales de ciclo combinado, estaciones de gas y parque eólico") 
+            aside.layout-main__right
+        
+        section.layout-main
+            aside.layout-main__left
+            article.layout-main__center
+                include ../config/conf_portafolio
+                .gallery
+                    .gallery__images
+                        each item in PORTAFOLIO
+                            div(id=`${item.city}`, class="gallery__image tabcontent")
+                                img(src=`${pathImg}${item.thumbnail}`)
+                                .gallery__description
+                                    h1.title.sbold.text--alt= `${item.city}`
+                                    h2.body.regular.text--alt.mbottom--md= `${item.plant}`
+                                    h3.body.sbold.text--alt= `${item.ub}`
+                                    p.body.text--alt= `Capacidad: ${item.capacity}`
+                                    p.body.text--alt= `Inicio: ${item.start}`
+                    .gallery__thumbnails
+                        each item in PORTAFOLIO
+                            div(class="gallery__thumbnail tablink", onclick=`gallery('${item.city}', this, 'white')`)
+                                img(src=`${pathImg}${item.thumbnail}`)
+            aside.layout-main__right
+        
+        section.layout-investors.investors
+            aside.layout-investors__left
+            article.layout-investors__center-left.investors__content
+                section.investors__child
+                    h1.title.sbold.first Inversionistas
+            article.layout-investors__center-right
+                form.form
+                    .form__data
+                        label(for="usuario", class="body text--alt form__label") Usuario
+                        input(type="text", placeholder="inversionista@saavienergia.com", class="small form__input")
+                    .form__data
+                        label(for="usuario" class="body text--alt form__label") Contraseña
+                        input(type="password", placeholder="Ingresa tu contraseña", class="small form__input")
+                    .form__data
+                        input(type="submit", value="Iniciar sesión", class="small text--alt form__input form__submit")
+                    .form__data
+                        p.small.text--alt.center--content ¿Olvidaste tu contraseña?
+            aside.layout-investors__right
+        
+
+        section.layout-main.contact
+            aside.layout-main__left
+            article.layout-main__center.contact__content
+                section.contact__child
+                    h1.display.sbold.text--alt Contacto
+                include ../config/conf_contacto
+                section.contact__child
+                    h2.subtitle.regular.text--alt.mbottom--sm Oficinas corporativas
+                    ul.contact-data
+                        each item in CONTACTO
+                            li.contact-data__item
+                                img(src=`${pathImg}${item.icon}`, alt="icon user")
+                                p.small.light.text--alt= `${item.desc}`
+                section.contact__child
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.3476362581882!2d-99.204665685516!3d19.440572986879843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2021fe885ba15%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1595970294267!5m2!1ses!2smx" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            aside.layout-main__right
+
         script(src="../js/menu.js")
+        script(src="../js/gallery.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+        script(src="../js/change-color.js")

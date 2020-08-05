@@ -1,3 +1,3 @@
-function hamburguer(x) {
-    x.classList.toggle("change");
-  }
+const hamburguer = (hamburgerId) => {
+	
+}

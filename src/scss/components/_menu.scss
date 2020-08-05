@@ -1,51 +1,64 @@
 .menu {
+    list-style: none;
     background-color: #383838;
-    padding-top: var(--sm);
-    padding-bottom: var(--sm);
+    padding: var(--lg) var(--sm) var(--xx);
     position: fixed;
-    top: 8rem;
-    left: 0;
-    right: 0;
+    top: 0;
+    right: -60rem;
+    width: 60vw;
+    height: 100vh;
+    transition: right 0.3s ease-in-out;
 
-    @media only screen and (min-width: 1024px) {
-        display: none;
+    @media only screen and (min-width: 736px) {
+        background-color: initial;
+        padding-top: calc(var(--md) + 0.3rem);
+        width: initial;
+        height: initial;
+        display: flex;
     }
 
     &__item {
-        text-align: center;
+        cursor: pointer;
         margin-bottom: var(--sm);
+
+        @media only screen and (min-width: 736px) {
+            margin-right: var(--md);
+
+            &:nth-child(4) {
+                margin-right: calc(var(--md) * 2);
+            }
+        }
 
         &:last-child {
             margin-bottom: 0;
         }
     }
 
-    &__link {
-        @extend .small;
-        @extend .text--alt;
-    }
-}
+    &__item.menu__item-socials {
+        
+        a:nth-child(2) img {
+            margin-right: var(--sm);
+            margin-left: var(--sm);
+        }
 
-.menu-desktop {
-    display: none;
-
-    @media only screen and (min-width: 1024px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        img {
+            display: inline-block;
+            width: var(--md);
+        } 
     }
 
-    &__link {
-        font-size: 1.4rem;
-        @extend .text--alt;
-        padding-left: var(--md);
+    &.show {
+        right: 0;
     }
 
-    &__item:hover .menu-desktop__link {
-        opacity: 0.8;
+    .xsmall {
+        text-decoration: none;
     }
-}
 
-#myLinks {
-    display: none;
+    &__movil {
+
+        @media only screen and (min-width: 736px) {
+            display: none;
+        }
+    }
 }

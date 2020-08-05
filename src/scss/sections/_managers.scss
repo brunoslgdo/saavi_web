@@ -1,0 +1,73 @@
+.card-managers {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+    gap: var(--sm);
+    
+    @media only screen and (min-width: 568px) {
+        grid-template-columns: repeat(3, auto);
+    }
+    
+    @media only screen and (min-width: 667px) {
+        grid-template-columns: repeat(4, auto);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        position: relative;
+        
+        &::before {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        &:nth-child(-n + 12):nth-child(even) {
+            background-color: var(--first--alt);
+        }
+        
+        &:nth-child(-n + 12):nth-child(odd) {
+            background-color: var(--first);
+        }
+        
+        &:nth-child(-n + 8):nth-child(odd) {
+            background-color: var(--first--alt);
+        }
+        
+        &:nth-child(-n + 8):nth-child(even) {
+            background-color: var(--first);
+        }
+
+        &:nth-child(-n + 4):nth-child(odd) {
+            background-color: var(--first);
+        }
+        
+        &:nth-child(-n + 4):nth-child(even) {
+            background-color: var(--first--alt);
+        }
+    }
+
+    &__content {
+        padding: var(--xs);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (min-width: 736px) {
+            padding: var(--sm);
+        }
+        
+        a {
+            margin-top: auto;
+            margin-left: auto;
+        }
+
+        img {
+            display: block;
+        }
+    }
+}

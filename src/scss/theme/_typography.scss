@@ -1,21 +1,23 @@
 $font-size: (
-    title: 6.2rem,
-    subtitle: 5.2rem,
+    display: rem(54px),
+    title: rem(40px),
+    subtitle: rem(34px),
     emphasis: 3.2rem,
-    body: 2.4rem,
-    small: 1.6rem,
+    body: rem(20px),
+    small: rem(16px),
+    xsmall: rem(12px)
 );
 
 $font-weight: (
-    thin: 100,
-    elight: 200,
-    light: 300,
-    regular: 400,
-    medium: 500,
-    sbold: 600,
-    bold: 700,
-    ebold: 800,
     black: 900,
+    ebold: 800,
+    bold: 700,
+    sbold: 600,
+    medium: 500,
+    regular: 400,
+    light: 300,
+    elight: 200,
+    thin: 100,
 );
 
 :root {
@@ -40,3 +42,4 @@ $font-weight: (
         font-weight: #{$val};
     }
 }
+

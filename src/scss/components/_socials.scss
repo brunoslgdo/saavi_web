@@ -1,10 +1,19 @@
 .socials {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 4rem;
+    list-style: none;
 
     &__item {
         margin-bottom: var(--sm);
     }
+}
+
+.fixed {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.absolute {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }

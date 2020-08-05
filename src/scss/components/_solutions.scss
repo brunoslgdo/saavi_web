@@ -1,0 +1,18 @@
+.solutions {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: var(--xs);
+    
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__icon {
+        flex: none;
+        margin-right: var(--xs);
+        width: calc(var(--xl) + var(--ss));
+    }
+}

@@ -1,11 +1,11 @@
 $gutters: (
-    xx: 8rem,
-    xl: 4.8rem,
-    lg: 4rem,
-    md: 3.2rem,
-    sm: 2.4rem,
-    xs: 1.6rem,
-    ss: 0.8rem,
+    xx: rem(80px),
+    xl: rem(48px),
+    lg: rem(40px),
+    md: rem(32px),
+    sm: rem(24px),
+    xs: rem(16px),
+    ss: rem(8px),
 );
 
 :root {
