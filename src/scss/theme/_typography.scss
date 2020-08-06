@@ -1,8 +1,7 @@
 $font-size: (
     display: rem(54px),
-    title: rem(40px),
+    title: rem(46px),
     subtitle: rem(34px),
-    emphasis: 3.2rem,
     body: rem(20px),
     small: rem(16px),
     xsmall: rem(12px)
@@ -31,15 +30,44 @@ $font-weight: (
     }
 }
 
-@each $key, $val in $font-size {
-    .#{$key} {
-        font-size:  #{$val};
-    }
+.display,
+.title,
+.subtitle,
+.bold {
+    font-weight: var(--sbold);
 }
 
-@each $key, $val in $font-weight {
-    .#{$key} {
-        font-weight: #{$val};
-    }
+.display,
+.title {
+    line-height: 1.2;
 }
 
+.display {
+    font-size: var(--display);
+    margin-bottom: var(--sm);
+    overflow-wrap: anywhere;
+}
+
+.title {
+    font-size: var(--title);
+    margin-bottom: var(--xs);
+}
+
+.subtitle {
+    font-size: var(--subtitle);
+    margin-bottom: var(--sm);
+}
+
+.body,
+.small {
+    font-weight: var(--light);
+    line-height: 1.6;
+}
+
+.body {
+    font-size: var(--body);
+}
+
+.small {
+    font-size: var(--small);
+}
