@@ -1,4 +1,5 @@
 include ../config/conf_variables
+include ../config/conf_energy-solutions
 
 <!DOCTYPE html>
 html(lang="es")
@@ -15,4 +16,39 @@ html(lang="es")
             section.layout-main__center.main__content
                 h1.display.text-alt GENERAMOS EL FUTURO
                 p.body.text-alt Nuestra electricidad impulsa la competitividad de las empresas <strong>en México</strong>
+            aside.layout-main__right
+
+        section.layout-main.about-us
+            aside.layout-main__left
+            section.layout-main__center.about-us__content
+                article.about-us__child
+                    h1.title.first-alt ¿Quiénes somos?
+                    p.body.first: strong Somos expertos en energía con más de 20 años en el mercado. Generamos y comercializamos electricidad para contribuir a satisfacer la demanda del país.
+                article.about-us__child.about-us__history
+                    h1.title.text-alt Historia
+                article.about-us__child.about-us__time-line
+                    h2.subtitle.first-alt 1995
+                    p.small.first Se constituye International Generating Company “InterGen”
+            aside.layout-main__right
+        
+        section.layout-main.energy-solutions
+            aside.layout-main__left
+            section.layout-main__center.energy-solutions__content
+                article.energy-solutions__child
+                    h1.title.first-alt Elige competitividad y eficiencia
+                    h2.subtitle.first Suministradora
+                    ul.solutions
+                        each item in SUPPLIER
+                            li.solutions__item
+                                img(src=`${pathImg}${item.icon}`, class="solutions__icon", alt=`${item.name}`)
+                                span.small.first= `${item.name}`
+                article.energy-solutions__child
+                    h1.title.text-alt Tu energía en manos de expertos
+                    h2.subtitle.text-alt Generador
+                    ul.solutions
+                        each item in GENERATOR
+                            li.solutions__item
+                                img(src=`${pathImg}${item.icon}`, class="solutions__icon", alt=`${item.name}`)
+                                span.small.text-alt= `${item.name}`
+                    p.body.text-alt: strong Creamos la solución precisa para tu empresa, con la seguridad de que tendrás siempre el mejor ser vicio.
             aside.layout-main__right
