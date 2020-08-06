@@ -1,4 +1,5 @@
-@import 'functions/convert_pixels';
+@import 'variables/paths';
+@import 'functions/convert-pixels';
 
 @import 'theme/colors';
 @import 'theme/typography';
@@ -7,27 +8,17 @@
 @import 'layout/gutters';
 @import 'layout/box_model';
 
-@import 'classes/backgrounds';
-@import 'classes/general';
-@import 'classes/hero';
-@import 'classes/hover';
-
-@import 'components/hamburguer';
 @import 'components/header';
-@import 'components/nav';
-@import 'components/menu';
+@import 'components/about-us_history';
+@import 'components/about-us_managers';
+@import 'components/portfolio_power-plants';
+@import 'components/investors_form';
 @import 'components/socials';
-@import 'components/card_contact';
-@import 'components/solutions';
-@import 'components/pslider';
-@import 'components/gallery';
-@import 'components/form';
 
-@import 'sections/home';
+// ok
+@import 'sections/main';
 @import 'sections/about-us';
-@import 'sections/managers';
-@import 'sections/services';
+@import 'sections/energy-solutions';
 @import 'sections/portfolio';
 @import 'sections/investors';
 @import 'sections/contact';
-
