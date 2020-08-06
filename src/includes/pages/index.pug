@@ -10,23 +10,9 @@ html(lang="es")
         link(href=`${pathStyles}styles.css`, rel="stylesheet")
     body
 
-        include ../components/header
-        include ../components/socials
-        include ../sections/home
-        #quienes-somos
-        .mbottom--xx
-        include ../sections/quienes_somos
-        #soluciones-energia
-        .mbottom--xx
-        include ../sections/servicios
-        #portafolio
-        include ../sections/portafolio
-        .mbottom--xx
-        include ../sections/directivos
-        .mbottom--xx
-        include ../sections/inversionistas
-        #contacto
-        include ../sections/contacto
-        //- include ../components/mosaicos
-        
-        script(src="../js/menu.js")
+        main.layout-main.main
+            aside.layout-main__left
+            section.layout-main__center.main__content
+                h1.display.text-alt GENERAMOS EL FUTURO
+                p.body.text-alt Nuestra electricidad impulsa la competitividad de las empresas <strong>en México</strong>
+            aside.layout-main__right
