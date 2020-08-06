@@ -1,0 +1,27 @@
+.main {
+    background-color: var(--first);
+    background-image: url('../img/main.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        p {
+            line-height: 1.5;
+            max-width: 20rem;
+        }
+    }
+}
