@@ -1,12 +1,8 @@
 include ../config/conf_menu
-ul.menu#js-menu
+ul.menu#myLinks
     each item in MENU
-        li.menu__item: a(href=`${item.href}`, class="xsmall light text--alt")= `${item.content}`
-    li.menu__item.menu__movil
-        a(href="", class="xsmall light text--alt") SP 
-        span.xsmall.light.text--alt / 
-        a(href="", class="xsmall light text--alt") EN
-    li.menu__item.menu__movil.menu__item-socials
-        each item in SOCIALS_WHITE
-            a(href=`${item.href}`, class="xsmall light text--alt menu__movil"): img(src=`${pathImg}${item.icon}`, alt=`${item.alt}`)
-    li.menu__item.menu__movil.xsmall.light.text--alt#js-close Cerrar
+        li.menu__item: a(href=`${item.href}`, class="menu__link")= `${item.content}`
+
+ul.menu-desktop
+    each item in MENU
+        li.menu-desktop__item: a(href=`${item.href}`, class="menu-desktop__link")= `${item.content}`
