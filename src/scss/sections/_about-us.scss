@@ -7,6 +7,10 @@
         grid-template-columns: auto;
         grid-template-rows: repeat(2, 1fr) auto;
         gap: var(--sm);
+        
+        @media only screen and (min-width: 667px) {
+            grid-template-rows: 1fr auto;
+        }
     }
 
     &__child:nth-child(1) {
