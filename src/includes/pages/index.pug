@@ -1,5 +1,8 @@
 include ../config/conf_variables
 include ../config/conf_energy-solutions
+include ../config/conf_managers
+include ../config/conf_power-plants
+include ../config/conf_contact
 
 <!DOCTYPE html>
 html(lang="es")
@@ -30,6 +33,18 @@ html(lang="es")
                     h2.subtitle.first-alt 1995
                     p.small.first Se constituye International Generating Company “InterGen”
             aside.layout-main__right
+
+        //- section.layout-main.managers
+        //-     aside.layout-main__left
+        //-     section.layout-main__center.managers__content
+        //-         ul.card-managers
+        //-             each item in MANAGERS
+        //-                 li.card-managers__item
+        //-                     .card-managers__position
+        //-                         h1.body.text-alt <strong>!{`${item.name}`}</strong>
+        //-                         h2.small.text-alt= `${item.title}`
+        //-                     img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`, class="card-managers__position")
+        //-     aside.layout-main__right
         
         section.layout-main.energy-solutions
             aside.layout-main__left
@@ -52,3 +67,55 @@ html(lang="es")
                                 span.small.text-alt= `${item.name}`
                     p.body.text-alt: strong Creamos la solución precisa para tu empresa, con la seguridad de que tendrás siempre el mejor ser vicio.
             aside.layout-main__right
+        
+        section.layout-main.portfolio
+            aside.layout-main__left
+            section.layout-main__center.portfolio__content
+                article.portfolio__child
+                    h1.title.text-alt Portafolio
+                article.portfolio__child.mapa
+                    img(src=`${pathImg}mapa.svg`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico")
+            aside.layout-main__right
+        
+        //- section.layout-main.power-plants
+        //-     aside.layout-main__left
+        //- section.layout-main__center.power-plants__content
+        //- section.power-plants__content
+        //-     ul.description
+        //-         each item in POWERPLANTS
+        //-             li(class="description__item" id=`${item.plantnumber}`)
+        //-                 .description__header
+        //-                     h1.subtitle.text-alt= `${item.city}`
+        //-                     h2.body.text-alt <strong>!{`${item.type}`}</strong>
+        //-                 .description__info
+        //-                     p.small.text-alt <strong>!{`${item.ub}`}</strong>
+        //-                     p.small.text-alt Capacidad nominal: <strong>!{`${item.capacity}`}</strong>
+        //-                     p.small.text-alt Inicio de operaciones: <strong>!{`${item.start}`}</strong>
+        //-                 .description__img
+        //-                     img(src=`${pathImg}${item.img}`, alt=`${item.city} - ${item.type}`, class="card-power-plants__img")
+        //-                 .description__close
+        //-                     p.small.text-alt <strong>Cerrar</strong>
+        //-     ul.thumbnails
+        //-         each item in POWERPLANTS
+        //-             li.thumbnails__item
+        //-                 img(src=`${pathImg}${item.thumbnail}`, alt=`${item.city} - ${item.type}`)
+        //-                 p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
+            //- aside.layout-main__right
+
+        section.layout-main.contact
+            aside.layout-main__left
+            section.layout-main__center.contact__content
+                article.contact__child
+                    h1.title.text-alt Contacto
+                article.contact__child
+                    h2.subtitle.text-alt Oficinas corporativas
+                article.contact__child
+                    ul.data
+                        each item in CONTACT
+                            li.data__item
+                                img(src=`${pathImg}${item.icon}`, class="data__icon")
+                                span.small.text-alt= `${item.content}`
+                iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15049.390543816424!2d-99.202477!3d19.440573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1597155607932!5m2!1ses!2smx" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="contact__child")
+            aside.layout-main__right
+        
+        //- script(src="../js/power-plants.js")
