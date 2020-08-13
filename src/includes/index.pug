@@ -1,8 +1,8 @@
-include ../config/conf_variables
-include ../config/conf_energy-solutions
-include ../config/conf_managers
-include ../config/conf_power-plants
-include ../config/conf_contact
+include config/conf_variables
+include config/conf_energy-solutions
+include config/conf_managers
+include config/conf_power-plants
+include config/conf_contact
 
 <!DOCTYPE html>
 html(lang="es")
@@ -102,6 +102,25 @@ html(lang="es")
         //-                 p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
             //- aside.layout-main__right
 
+        section.layout-main.investors
+            aside.layout-main__left
+            section.layout-main__center.investors__content
+                article.investors__child
+                    h1.title.first Inversionistas
+                article.investors__child
+                    form(action="#", class="form-investors")
+                        .form-investors__field
+                            label(for="", class="form-investors__label body text-alt") Usuario
+                            input(type="text", placeholder="Ej. inversionista@saavienergia.com", required, name="user", id="user", class="form-investors__input")
+                        .form-investors__field
+                            label(for="", class="form-investors__label body text-alt") Contraseña
+                            input(type="password", placeholder="Ingresa tu contraseña", required, name="pass", id="pass", class="form-investors__input")
+                        .form-investors__field
+                            input(type="submit", value="Iniciar sesión", class="form-investors__input ghost")
+                        .form-investors__field
+                            p.small.text-alt ¿Olvidaste tu contraseña?
+            aside.layout-main__right
+        
         section.layout-main.contact
             aside.layout-main__left
             section.layout-main__center.contact__content
