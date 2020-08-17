@@ -89,110 +89,97 @@ html {
   padding: 0; }
 
 :root {
-  --xx: 5rem;
-  --xl: 3rem;
-  --lg: 2.5rem;
-  --md: 2rem;
-  --sm: 1.5rem;
-  --xs: 1rem;
-  --ss: 0.5rem; }
+  --xx: rem(80px);
+  --xl: rem(48px);
+  --lg: rem(40px);
+  --md: rem(32px);
+  --sm: rem(24px);
+  --xs: rem(16px);
+  --ss: rem(8px); }
 
 .mbottom--xx {
-  margin-bottom: 5rem; }
+  margin-bottom: rem(80px); }
 
 .mbottom--xl {
-  margin-bottom: 3rem; }
+  margin-bottom: rem(48px); }
 
 .mbottom--lg {
-  margin-bottom: 2.5rem; }
+  margin-bottom: rem(40px); }
 
 .mbottom--md {
-  margin-bottom: 2rem; }
+  margin-bottom: rem(32px); }
 
 .mbottom--sm {
-  margin-bottom: 1.5rem; }
+  margin-bottom: rem(24px); }
 
 .mbottom--xs {
-  margin-bottom: 1rem; }
+  margin-bottom: rem(16px); }
 
 .mbottom--ss {
-  margin-bottom: 0.5rem; }
+  margin-bottom: rem(8px); }
 
-.layout-main {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-areas: 'left' 'center' 'right';
-  max-width: 85.375rem;
+.container {
+  padding-right: var(--xs);
+  padding-left: var(--xs); }
+
+.wrap {
+  --width: calc(768 + 48);
+  --max-width: calc(var(--width) / 16 * 1rem);
   margin-right: auto;
   margin-left: auto;
-  overflow: hidden; }
-  @media only screen and (min-width: 736px) {
-    .layout-main {
-      grid-template-areas: 'left center right';
-      grid-template-columns: 1fr minmax(20rem, 48rem) 1fr; } }
-  .layout-main__left {
-    grid-area: left; }
-  .layout-main__center {
-    grid-area: center; }
-  .layout-main__right {
-    grid-area: right; }
+  max-width: var(--max-width); }
 
-.layout-investors {
+.energy-solutions__content, .portfolio__content, .investors__content {
   display: grid;
-  grid-template-areas: 'area';
-  grid-template-rows: auto; }
-  @media only screen and (min-width: 736px) {
-    .layout-investors {
-      grid-template-areas: 'area area area area';
-      grid-template-columns: 1fr minmax(10rem, 24rem) minmax(10rem, 24rem) 1fr; } }
-  .layout-investors__left {
-    grid-area: area;
-    background-image: url("../img/inversionistas.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    @media only screen and (min-width: 736px) {
-      .layout-investors__left {
-        grid-column: 1 / 3; } }
-  .layout-investors__center-left {
-    grid-area: area;
-    padding-top: var(--xx);
-    padding-bottom: var(--xx); }
-    @media only screen and (min-width: 736px) {
-      .layout-investors__center-left {
-        grid-column: 2 / 3; } }
-  .layout-investors__center-right {
-    grid-area: area;
-    background-color: var(--first);
-    padding: var(--xx) var(--sm); }
-    @media only screen and (min-width: 736px) {
-      .layout-investors__center-right {
-        grid-column: 3 / 4; } }
-  .layout-investors__right {
-    grid-area: area; }
-    @media only screen and (min-width: 736px) {
-      .layout-investors__right {
-        grid-column: 4 / 5; } }
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  column-gap: var(--sm); }
+
+.form-investors {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: var(--sm); }
+  .form-investors input[placeholder],
+  .form-investors input[value] {
+    font-family: 'montserrat', sans-serif;
+    font-size: var(--small); }
+  .form-investors__field {
+    display: flex;
+    flex-direction: column;
+    padding-right: var(--sm);
+    padding-left: var(--sm); }
+  .form-investors__label {
+    margin-bottom: var(--ss); }
+  .form-investors__input {
+    border: 0.1rem solid transparent;
+    border-radius: var(--lg);
+    padding: var(--ss) var(--sm);
+    width: 100%; }
+  .form-investors__input.ghost {
+    color: var(--text-alt);
+    border-color: currentColor;
+    background-color: transparent; }
 
 .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--first);
   background-image: url("../img/main.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
   min-height: 100vh; }
-  .main__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-right: var(--sm);
-    padding-left: var(--sm); }
-    .main__content .display {
-      max-width: calc(var(--xx) * 5); }
-    .main__content .body {
-      max-width: calc(var(--xx) * 4); }
+  .main .display,
+  .main .body {
+    margin: auto; }
+  .main .display {
+    max-width: calc(var(--xx) * 5); }
+  .main .body {
+    max-width: calc(var(--xx) * 4); }
 
 .about-us {
   margin-top: calc(var(--xx) * 1.5);
@@ -242,25 +229,71 @@ html {
     padding-right: var(--sm);
     padding-left: var(--sm); }
 
-@media only screen and (min-width: 736px) {
-  .energy-solutions__content {
+.card-managers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: var(--xs); }
+  @media only screen and (min-width: 414px) {
+    .card-managers {
+      gap: var(--sm); } }
+  @media only screen and (min-width: 568px) {
+    .card-managers {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media only screen and (min-width: 768px) {
+    .card-managers {
+      grid-template-columns: repeat(4, 1fr); } }
+  .card-managers__item {
+    list-style: none;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    position: relative; }
+    .card-managers__item::before {
+      content: "";
+      display: block;
+      padding-bottom: 100%; }
+  .card-managers__item:nth-child(odd) {
+    background-color: var(--first); }
+  .card-managers__item:nth-child(even) {
+    background-color: var(--first-alt); }
+  .card-managers__position {
+    padding: var(--ss);
+    position: absolute; }
+    @media only screen and (min-width: 375px) {
+      .card-managers__position {
+        padding: var(--sm); } }
+  .card-managers__position:nth-child(1) {
+    top: 0;
+    left: 0; }
+  .card-managers__position:nth-child(2) {
+    right: 0;
+    bottom: 0; }
+  .card-managers .body {
+    line-height: 1.2; }
 
-.energy-solutions__child {
-  padding: calc(var(--xx) * 1.5) var(--sm); }
-  .energy-solutions__child .title {
-    overflow-wrap: anywhere; }
-
-.energy-solutions__child:nth-child(2) {
-  background-color: var(--first); }
-  .energy-solutions__child:nth-child(2) .body {
+.energy-solutions {
+  --child-padding: calc(var(--xx) * 1.5) var(--sm); }
+  @media only screen and (min-width: 1024px) {
+    .energy-solutions {
+      background-image: url("../img/soluciones.png");
+      background-size: calc(50% - var(--sm));
+      background-position: right top;
+      background-repeat: no-repeat; } }
+  .energy-solutions.container {
+    padding-right: 0;
+    padding-left: 0; }
+  @media only screen and (min-width: 736px) {
+    .energy-solutions__content {
+      grid-template-columns: repeat(2, 1fr); } }
+  .energy-solutions__child {
+    padding: var(--child-padding); }
+  .energy-solutions__child:nth-child(2) {
+    background-color: var(--first); }
+  .energy-solutions .body {
     margin-top: var(--sm); }
-
-.energy-solutions .layout-main__right {
-  background-image: url("../img/soluciones.png");
-  background-position: center top;
-  background-repeat: no-repeat; }
+  .energy-solutions .title {
+    overflow-wrap: anywhere; }
 
 .solutions {
   display: grid;
@@ -275,3 +308,232 @@ html {
     flex: none;
     margin-right: var(--ss);
     width: calc(var(--xl) + var(--ss)); }
+
+.portfolio.container {
+  padding-right: 0;
+  padding-left: 0; }
+
+@media only screen and (min-width: 568px) {
+  .portfolio__content {
+    grid-template-columns: repeat(2, 1fr); } }
+
+.portfolio__child:nth-child(1) {
+  background-color: var(--first);
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  position: relative; }
+  @media only screen and (min-width: 568px) {
+    .portfolio__child:nth-child(1) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2; } }
+  .portfolio__child:nth-child(1)::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%; }
+  .portfolio__child:nth-child(1) .title {
+    line-height: 1;
+    margin-bottom: 0;
+    padding-left: var(--sm);
+    padding-bottom: var(--sm);
+    position: absolute;
+    bottom: 0; }
+
+.portfolio .mapa {
+  padding: var(--sm); }
+  @media only screen and (min-width: 568px) {
+    .portfolio .mapa {
+      grid-column: 1 / 3;
+      grid-row: 1 / 3;
+      padding-top: var(--xx); } }
+  .portfolio .mapa img {
+    max-width: 100%;
+    position: relative;
+    z-index: 0; }
+
+.power-plants__content {
+  position: relative; }
+
+@media only screen and (min-width: 736px) {
+  .description {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    position: relative; }
+    .description::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%; } }
+
+.description__item {
+  display: none;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto 1fr auto;
+  gap: var(--sm);
+  padding: var(--sm);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  transform-origin: center;
+  transform: translateY(-50%) scale(1);
+  overflow: hidden; }
+  @media only screen and (min-width: 736px) {
+    .description__item {
+      grid-template-columns: repeat(16, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+      gap: 0;
+      position: absolute;
+      height: initial;
+      top: initial;
+      transform-origin: initial;
+      transform: initial; }
+      .description__item::after {
+        content: '';
+        display: block;
+        padding-bottom: 100%; } }
+  .description__item:nth-child(odd) {
+    background-color: var(--first); }
+  .description__item:nth-child(even) {
+    background-color: var(--first-alt); }
+
+@media only screen and (min-width: 736px) {
+  .description__header, .description__info, .description__img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1; }
+  .description__header, .description__info {
+    left: var(--sm); }
+  .description__close {
+    display: none; }
+  .description__header {
+    top: var(--sm); }
+  .description__info {
+    top: calc(var(--xx) + var(--lg)); }
+  .description__img img {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%; } }
+
+.description__header .subtitle,
+.description__header .body {
+  margin-bottom: 0; }
+
+.description__img {
+  z-index: 0; }
+  .description__img img {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+
+.description__close {
+  cursor: pointer;
+  text-align: right; }
+
+.thumbnails {
+  border: var(--ss) solid var(--text-alt);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: var(--ss); }
+  @media only screen and (min-width: 568px) {
+    .thumbnails {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (min-width: 736px) {
+    .thumbnails {
+      grid-template-columns: repeat(7, 1fr); } }
+  .thumbnails__item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    position: relative; }
+    .thumbnails__item:nth-child(odd) {
+      background-color: var(--first); }
+    .thumbnails__item:nth-child(even) {
+      background-color: var(--first-alt); }
+    .thumbnails__item::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%; }
+    .thumbnails__item img,
+    .thumbnails__item .body {
+      position: absolute; }
+    .thumbnails__item img {
+      display: block;
+      width: 100%;
+      height: 100%; }
+    .thumbnails__item .body {
+      cursor: pointer;
+      padding-right: var(--sm);
+      padding-bottom: var(--sm);
+      right: 0;
+      bottom: 0;
+      line-height: 1;
+      color: var(--text-alt); }
+      .thumbnails__item .body::after {
+        content: '\27A4';
+        padding-left: var(--ss); }
+
+.investors {
+  --top-bottom-padding: calc(var(--xx) * 1.5);
+  background-image: url("../img/inversionistas.png");
+  background-size: cover;
+  padding-top: var(--top-bottom-padding);
+  padding-bottom: var(--top-bottom-padding); }
+  @media only screen and (min-width: 736px) {
+    .investors__content {
+      grid-template-columns: repeat(2, 1fr); } }
+  .investors__child:nth-child(2) {
+    background-color: var(--first);
+    padding-top: var(--top-bottom-padding);
+    padding-bottom: var(--top-bottom-padding); }
+
+.contact {
+  margin-top: calc(var(--xx) * 1.5);
+  margin-bottom: calc(var(--xx) * 1.5); }
+  .contact__content,
+  .contact .layout-main__right {
+    background-color: var(--first); }
+  .contact__content {
+    display: grid;
+    gap: var(--md);
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: calc(var(--xx) * 1.5) var(--sm); }
+    @media only screen and (min-width: 736px) {
+      .contact__content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto); } }
+  @media only screen and (min-width: 736px) {
+    .contact__child:nth-child(1) {
+      grid-column: 1 / span 2;
+      grid-row: 1 / 2; }
+    .contact__child:nth-child(2) {
+      grid-column: 1 / span 2;
+      grid-row: 2 / 3; }
+    .contact__child:nth-child(3) {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4; }
+    .contact__child:nth-child(4) {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4; } }
+  .contact .title,
+  .contact .subtitle {
+    margin-bottom: 0; }
+  .contact .title {
+    line-height: 1; }
+
+.data {
+  display: grid;
+  gap: var(--xs); }
+  .data__item {
+    display: flex;
+    align-items: center; }
+  .data__icon {
+    flex: none;
+    width: var(--lg); }
+  .data .text-alt {
+    padding-left: var(--ss); }
