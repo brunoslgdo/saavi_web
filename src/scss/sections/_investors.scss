@@ -1,0 +1,21 @@
+.investors {
+    --top-bottom-padding: calc(var(--xx) * 1.5);
+    background-image: url('#{$pathImg}inversionistas.png');
+    background-size: cover;
+    padding-top: var(--top-bottom-padding);
+    padding-bottom: var(--top-bottom-padding);
+
+    &__content {
+        @extend %content;
+         
+         @media only screen and (min-width: 736px) {
+             grid-template-columns: repeat(2, 1fr);
+         }
+     }
+
+    &__child:nth-child(2) {
+        background-color: var(--first);
+        padding-top: var(--top-bottom-padding);
+        padding-bottom: var(--top-bottom-padding);
+    }
+}
