@@ -1,35 +1,44 @@
 .energy-solutions {
+    --child-padding: calc(var(--xx) * 1.5) var(--sm);
+
+    @media only screen and (min-width: 1024px) {
+        background-image: url('#{$pathImg}soluciones.png');
+        background-size: calc(50% - var(--sm));
+        background-position: right top;
+        background-repeat: no-repeat;
+    }
+
+    &.container {
+        padding-right: 0;
+        padding-left: 0;
+    }
 
     &__content {
+       @extend %content;
         
         @media only screen and (min-width: 736px) {
-            display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
     &__child {
-        padding: calc(var(--xx) * 1.5) var(--sm);
-
-        .title {
-            overflow-wrap: anywhere;
-        }
+        padding: var(--child-padding);
     }
     
     &__child:nth-child(2) {
         background-color: var(--first);
-
-        .body {
-            margin-top: var(--sm);
-        }
     }
 
-    .layout-main__right {
-        background-image: url('#{$pathImg}soluciones.png');
-        background-position: center top;
-        background-repeat: no-repeat;
+    .body {
+        margin-top: var(--sm);
+    }
+
+    .title {
+        overflow-wrap: anywhere;
     }
 }
+
+// solution list items
 
 .solutions {
     display: grid;
