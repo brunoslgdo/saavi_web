@@ -1,10 +1,10 @@
 $font-size: (
-    display: rem(54px),
-    title: rem(46px),
-    subtitle: rem(34px),
-    body: rem(20px),
-    small: rem(16px),
-    xsmall: rem(12px)
+    display: #{toRem(54)},
+    title: #{toRem(46)},
+    subtitle: #{toRem(34)},
+    body: #{toRem(20)},
+    small: #{toRem(16)},
+    xsmall: #{toRem(12)},
 );
 
 $font-weight: (
