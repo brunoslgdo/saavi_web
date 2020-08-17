@@ -9,16 +9,15 @@
 @import 'layout/box_model';
 
 @import 'components/header';
-@import 'components/about-us_history';
-@import 'components/about-us_managers';
-@import 'components/portfolio_power-plants';
-@import 'components/investors_form';
+@import 'components/forms';
 @import 'components/socials';
 
 // ok
 @import 'sections/main';
 @import 'sections/about-us';
+@import 'sections/managers';
 @import 'sections/energy-solutions';
 @import 'sections/portfolio';
+@import 'SECTIONS/power-plants';
 @import 'sections/investors';
 @import 'sections/contact';
