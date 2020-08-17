@@ -1,26 +1,26 @@
 .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--first);
     background-image: url('../img/main.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
     min-height: 100vh;
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding-right: var(--sm);
-        padding-left: var(--sm);
+    .display,
+    .body {
+        margin: auto;
+    }
 
-        .display {
-            max-width: calc(var(--xx) * 5);
-        }
+    .display {
+        max-width: calc(var(--xx) * 5);
+    }
 
-        .body {
-            max-width: calc(var(--xx) * 4);
-        }
+    .body {
+        max-width: calc(var(--xx) * 4);
     }
 }
