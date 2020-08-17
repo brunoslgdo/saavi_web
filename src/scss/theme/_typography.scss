@@ -1,10 +1,10 @@
 $font-size: (
-    display: #{toRem(54)},
-    title: #{toRem(46)},
-    subtitle: #{toRem(34)},
-    body: #{toRem(20)},
-    small: #{toRem(16)},
-    xsmall: #{toRem(12)},
+    display: toRem(54),
+    title: toRem(46),
+    subtitle: toRem(34),
+    body: toRem(20),
+    small: toRem(16),
+    xsmall: toRem(12),
 );
 
 $font-weight: (

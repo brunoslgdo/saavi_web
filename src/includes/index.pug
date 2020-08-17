@@ -14,33 +14,35 @@ html(lang="es")
         link(href=`${pathStyles}styles.css`, rel="stylesheet")
     body
         
-        //- main.container.main
-        //-     section.wrap.main__content
-        //-         h1.display.text-alt GENERAMOS EL FUTURO
-        //-         p.body.text-alt Nuestra electricidad impulsa la competitividad de las empresas <strong>en México</strong>
+        //- ok
+        main.container.main
+            section.wrap.main__content
+                h1.display.text-alt GENERAMOS EL FUTURO
+                p.body.text-alt Nuestra electricidad impulsa la competitividad de las empresas <strong>en México</strong>
         
-        //- section.container.about-us
-        //-     article.wrap.about-us__content
-        //-         .about-us__child
-        //-             h1.title.first-alt ¿Quiénes somos?
-        //-             p.body.first: strong Somos expertos en energía con más de 20 años en el mercado. Generamos y comercializamos electricidad para contribuir a satisfacer la demanda del país.
-        //-         .about-us__child.about-us__history
-        //-             h1.title.text-alt Historia
-        //-         .about-us__child.about-us__time-line
-        //-             h2.subtitle.first-alt 1995
-        //-             p.small.first Se constituye International Generating Company “InterGen”
-         
-
-        //- section.container
-        //-     article.wrap
-        //-         h1.title.first Directivos
-        //-         ul.card-managers
-        //-             each item in MANAGERS
-        //-                 li.card-managers__item
-        //-                     .card-managers__position
-        //-                         h1.body.text-alt <strong>!{`${item.name}<br>${item.lastname}`}</strong>
-        //-                         h2.small.text-alt= `${item.title}`
-        //-                     img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`, class="card-managers__position")
+        //- ok
+        section.container.about-us
+            article.wrap.about-us__content
+                .about-us__child
+                    h1.title.first-alt ¿Quiénes somos?
+                    p.body.first: strong Somos expertos en energía con más de 20 años en el mercado. Generamos y comercializamos electricidad para contribuir a satisfacer la demanda del país.
+                .about-us__child.about-us__history
+                    h1.title.text-alt Historia
+                .about-us__child.about-us__time-line
+                    h2.subtitle.first-alt 1995
+                    p.small.first Se constituye International Generating Company “InterGen”
+        
+        //- ok
+        section.container.managers
+            article.wrap
+                h1.title.first Directivos
+                ul.card-managers
+                    each item in MANAGERS
+                        li.card-managers__item
+                            .card-managers__position
+                                h1.body.text-alt <strong>!{`${item.name}<br>${item.lastname}`}</strong>
+                                h2.small.text-alt= `${item.title}`
+                            img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`, class="card-managers__position")
         
         //- ok
         section.container.energy-solutions
@@ -93,10 +95,11 @@ html(lang="es")
         //-                     img(src=`${pathImg}${item.thumbnail}`, alt=`${item.city} - ${item.type}`)
         //-                     p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
 
+        //- ok
         section.container.investors
             article.wrap.investors__content
                 .investors__child
-                    h1.title.first Inversioni
+                    h1.title.first Invers
                 .investors__child
                     form(action="#", class="form-investors")
                         .form-investors__field
@@ -110,19 +113,20 @@ html(lang="es")
                         .form-investors__field
                             p.small.text-alt ¿Olvidaste tu contraseña?
         
-        //- section.container.contact
-        //-     article.wrap.contact__content
-        //-         .contact__child
-        //-             h1.title.text-alt Contacto
-        //-         .contact__child
-        //-             h2.subtitle.text-alt Oficinas corporativas
-        //-         .contact__child
-        //-             ul.data
-        //-                 each item in CONTACT
-        //-                     li.data__item
-        //-                         img(src=`${pathImg}${item.icon}`, class="data__icon")
-        //-                         span.small.text-alt= `${item.content}`
-        //-         iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15049.390543816424!2d-99.202477!3d19.440573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1597155607932!5m2!1ses!2smx" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="contact__child")
-        //-     aside.layout-main__right
+        //- ok
+        section.container.contact
+            article.wrap.contact__content
+                .contact__child
+                    h1.title.text-alt Contacto
+                .contact__child
+                    h2.subtitle.text-alt Oficinas corporativas
+                .contact__child
+                    ul.data
+                        each item in CONTACT
+                            li.data__item
+                                img(src=`${pathImg}${item.icon}`, class="data__icon")
+                                span.small.text-alt= `${item.content}`
+                iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15049.390543816424!2d-99.202477!3d19.440573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1597155607932!5m2!1ses!2smx" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="contact__child")
+            aside.layout-main__right
         
         //- script(src="../js/power-plants.js")

@@ -1,3 +1,8 @@
+.managers {
+    --child-padding: calc(var(--xx) * 1.5);
+    margin-bottom: var(--child-padding);
+}
+
 .card-managers {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -1,4 +1,6 @@
 .portfolio {
+    --child-padding: calc(var(--xx) * 1.5);
+    margin-bottom: var(--child-padding);
 
     &.container {
         padding-right: 0;

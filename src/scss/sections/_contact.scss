@@ -1,6 +1,9 @@
 .contact {
-    margin-top: calc(var(--xx) * 1.5);
-    margin-bottom: calc(var(--xx) * 1.5);
+    background-color: var(--first);
+    
+    @media only screen and (min-width: 1280px) {
+        background-image: linear-gradient(to left, var(--first) 50%, #fff 50%);
+    }
 
     &__content,
     .layout-main__right {

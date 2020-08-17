@@ -8,6 +8,7 @@
     input[value] {
         font-family: 'montserrat', sans-serif;
         font-size: var(--small);
+        font-weight: var(--light);
     }
 
     &__field {
@@ -22,7 +23,7 @@
     }
 
     &__input {
-        border: 0.1rem solid transparent;
+        border: toRem(1) solid transparent;
         border-radius: var(--lg);
         padding: var(--ss) var(--sm);
         width: 100%;

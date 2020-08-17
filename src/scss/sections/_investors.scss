@@ -1,21 +1,60 @@
 .investors {
     --top-bottom-padding: calc(var(--xx) * 1.5);
     background-image: url('#{$pathImg}inversionistas.png');
+    background-repeat: no-repeat;
     background-size: cover;
     padding-top: var(--top-bottom-padding);
     padding-bottom: var(--top-bottom-padding);
 
+    @media only screen and (min-width: 568px) {
+        
+        &.container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @media only screen and (min-width: 1280px) {
+        background-image: linear-gradient(#fff 50%, #fff 50%),
+                          url('#{$pathImg}inversionistas.png');
+        background-position: right;
+        background-size: 40%, cover;
+    }
+    
     &__content {
         @extend %content;
-         
-         @media only screen and (min-width: 736px) {
-             grid-template-columns: repeat(2, 1fr);
-         }
+        gap: 0;
+
+        @media only screen and (min-width: 568px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        }
      }
 
-    &__child:nth-child(2) {
-        background-color: var(--first);
-        padding-top: var(--top-bottom-padding);
-        padding-bottom: var(--top-bottom-padding);
+    &__child {
+
+        @media only screen and (min-width: 1280px) {
+            min-height: 100vh;
+        }
+        
+        &:nth-child(1) {
+            padding-right: var(--sm);
+            padding-left: var(--sm);
+
+            @media only screen and (min-width: 568px) {
+                padding-top: var(--top-bottom-padding);
+                padding-bottom: var(--top-bottom-padding);
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: var(--first);
+            padding-top: var(--top-bottom-padding);
+            padding-bottom: var(--top-bottom-padding);
+        }
     }
 }

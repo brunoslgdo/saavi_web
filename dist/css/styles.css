@@ -89,42 +89,41 @@ html {
   padding: 0; }
 
 :root {
-  --xx: rem(80px);
-  --xl: rem(48px);
-  --lg: rem(40px);
-  --md: rem(32px);
-  --sm: rem(24px);
-  --xs: rem(16px);
-  --ss: rem(8px); }
+  --xx: 5rem;
+  --xl: 3rem;
+  --lg: 2.5rem;
+  --md: 2rem;
+  --sm: 1.5rem;
+  --xs: 1rem;
+  --ss: 0.5rem; }
 
 .mbottom--xx {
-  margin-bottom: rem(80px); }
+  margin-bottom: 5rem; }
 
 .mbottom--xl {
-  margin-bottom: rem(48px); }
+  margin-bottom: 3rem; }
 
 .mbottom--lg {
-  margin-bottom: rem(40px); }
+  margin-bottom: 2.5rem; }
 
 .mbottom--md {
-  margin-bottom: rem(32px); }
+  margin-bottom: 2rem; }
 
 .mbottom--sm {
-  margin-bottom: rem(24px); }
+  margin-bottom: 1.5rem; }
 
 .mbottom--xs {
-  margin-bottom: rem(16px); }
+  margin-bottom: 1rem; }
 
 .mbottom--ss {
-  margin-bottom: rem(8px); }
+  margin-bottom: 0.5rem; }
 
 .container {
   padding-right: var(--xs);
   padding-left: var(--xs); }
 
 .wrap {
-  --width: calc(768 + 48);
-  --max-width: calc(var(--width) / 16 * 1rem);
+  --max-width: 51rem;
   margin-right: auto;
   margin-left: auto;
   max-width: var(--max-width); }
@@ -143,7 +142,8 @@ html {
   .form-investors input[placeholder],
   .form-investors input[value] {
     font-family: 'montserrat', sans-serif;
-    font-size: var(--small); }
+    font-size: var(--small);
+    font-weight: var(--light); }
   .form-investors__field {
     display: flex;
     flex-direction: column;
@@ -152,7 +152,7 @@ html {
   .form-investors__label {
     margin-bottom: var(--ss); }
   .form-investors__input {
-    border: 0.1rem solid transparent;
+    border: 0.0625rem solid transparent;
     border-radius: var(--lg);
     padding: var(--ss) var(--sm);
     width: 100%; }
@@ -228,6 +228,10 @@ html {
   .about-us__time-line {
     padding-right: var(--sm);
     padding-left: var(--sm); }
+
+.managers {
+  --child-padding: calc(var(--xx) * 1.5);
+  margin-bottom: var(--child-padding); }
 
 .card-managers {
   display: grid;
@@ -309,47 +313,47 @@ html {
     margin-right: var(--ss);
     width: calc(var(--xl) + var(--ss)); }
 
-.portfolio.container {
-  padding-right: 0;
-  padding-left: 0; }
-
-@media only screen and (min-width: 568px) {
-  .portfolio__content {
-    grid-template-columns: repeat(2, 1fr); } }
-
-.portfolio__child:nth-child(1) {
-  background-color: var(--first);
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(9, 1fr);
-  position: relative; }
+.portfolio {
+  --child-padding: calc(var(--xx) * 1.5);
+  margin-bottom: var(--child-padding); }
+  .portfolio.container {
+    padding-right: 0;
+    padding-left: 0; }
   @media only screen and (min-width: 568px) {
-    .portfolio__child:nth-child(1) {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2; } }
-  .portfolio__child:nth-child(1)::before {
-    content: "";
-    display: block;
-    padding-bottom: 100%; }
-  .portfolio__child:nth-child(1) .title {
-    line-height: 1;
-    margin-bottom: 0;
-    padding-left: var(--sm);
-    padding-bottom: var(--sm);
-    position: absolute;
-    bottom: 0; }
-
-.portfolio .mapa {
-  padding: var(--sm); }
-  @media only screen and (min-width: 568px) {
-    .portfolio .mapa {
-      grid-column: 1 / 3;
-      grid-row: 1 / 3;
-      padding-top: var(--xx); } }
-  .portfolio .mapa img {
-    max-width: 100%;
-    position: relative;
-    z-index: 0; }
+    .portfolio__content {
+      grid-template-columns: repeat(2, 1fr); } }
+  .portfolio__child:nth-child(1) {
+    background-color: var(--first);
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    position: relative; }
+    @media only screen and (min-width: 568px) {
+      .portfolio__child:nth-child(1) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2; } }
+    .portfolio__child:nth-child(1)::before {
+      content: "";
+      display: block;
+      padding-bottom: 100%; }
+    .portfolio__child:nth-child(1) .title {
+      line-height: 1;
+      margin-bottom: 0;
+      padding-left: var(--sm);
+      padding-bottom: var(--sm);
+      position: absolute;
+      bottom: 0; }
+  .portfolio .mapa {
+    padding: var(--sm); }
+    @media only screen and (min-width: 568px) {
+      .portfolio .mapa {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        padding-top: var(--xx); } }
+    .portfolio .mapa img {
+      max-width: 100%;
+      position: relative;
+      z-index: 0; }
 
 .power-plants__content {
   position: relative; }
@@ -480,20 +484,49 @@ html {
 .investors {
   --top-bottom-padding: calc(var(--xx) * 1.5);
   background-image: url("../img/inversionistas.png");
+  background-repeat: no-repeat;
   background-size: cover;
   padding-top: var(--top-bottom-padding);
   padding-bottom: var(--top-bottom-padding); }
-  @media only screen and (min-width: 736px) {
-    .investors__content {
-      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (min-width: 568px) {
+    .investors {
+      padding-top: 0;
+      padding-bottom: 0; }
+      .investors.container {
+        padding-right: 0;
+        padding-left: 0; } }
+  @media only screen and (min-width: 1280px) {
+    .investors {
+      background-image: linear-gradient(#fff 50%, #fff 50%), url("../img/inversionistas.png");
+      background-position: right;
+      background-size: 40%, cover; } }
+  .investors__content {
+    gap: 0; }
+    @media only screen and (min-width: 568px) {
+      .investors__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto; } }
+  @media only screen and (min-width: 1280px) {
+    .investors__child {
+      min-height: 100vh; } }
+  .investors__child:nth-child(1) {
+    padding-right: var(--sm);
+    padding-left: var(--sm); }
+    @media only screen and (min-width: 568px) {
+      .investors__child:nth-child(1) {
+        padding-top: var(--top-bottom-padding);
+        padding-bottom: var(--top-bottom-padding); } }
   .investors__child:nth-child(2) {
     background-color: var(--first);
     padding-top: var(--top-bottom-padding);
     padding-bottom: var(--top-bottom-padding); }
 
 .contact {
-  margin-top: calc(var(--xx) * 1.5);
-  margin-bottom: calc(var(--xx) * 1.5); }
+  background-color: var(--first); }
+  @media only screen and (min-width: 1280px) {
+    .contact {
+      background-image: linear-gradient(to left, var(--first) 50%, #fff 50%); } }
   .contact__content,
   .contact .layout-main__right {
     background-color: var(--first); }

@@ -4,8 +4,7 @@
 }
 
 .wrap {
-    --width: calc(768 + 48);
-    --max-width: calc(var(--width) / 16 * 1rem);
+    --max-width: #{toRem(816)};
     margin-right: auto;
     margin-left: auto;
     max-width: var(--max-width);
