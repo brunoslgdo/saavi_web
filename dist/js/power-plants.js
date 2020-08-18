@@ -1,14 +1,16 @@
-function openPowerPlant(powerPlantName) {
-	// Hide all elements with class="tabcontent" by default */
-	let i, description;
-	description = document.getElementsByClassName("description__item");
-	for (i = 0; i < description.length; i++) {
-	  description[i].style.display = "none";
-	}
+function openPowerPlant(powerPlantName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(powerPlantName).style.display = "grid";
+    elmnt.style.backgroundColor = color;
   
-	// Show the specific tab content
-	document.getElementById(powerPlantName).style.display = "grid";
-}
-  
-// Get the element with id="defaultOpen" and click on it
-// document.getElementById("defaultOpen").click();
+  }
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
