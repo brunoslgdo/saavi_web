@@ -1,8 +1,0 @@
-include ../config/conf_menu
-ul.menu#myLinks
-    each item in MENU
-        li.menu__item: a(href=`${item.href}`, class="menu__link")= `${item.content}`
-
-ul.menu-desktop
-    each item in MENU
-        li.menu-desktop__item: a(href=`${item.href}`, class="menu-desktop__link")= `${item.content}`
