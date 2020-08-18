@@ -1,4 +1,6 @@
 include config/conf_variables
+include config/conf_menu
+include config/conf_socials
 include config/conf_energy-solutions
 include config/conf_managers
 include config/conf_power-plants
@@ -13,6 +15,9 @@ html(lang="es")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
         link(href=`${pathStyles}styles.css`, rel="stylesheet")
     body
+
+        include components/header
+        include components/socials
         
         //- ok
         main.container.main
@@ -73,27 +78,32 @@ html(lang="es")
                 .portfolio__child.mapa
                     img(src=`${pathImg}mapa.svg`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico")
         
-        //- section.container.power-plants
-        //-     article.wrap.power-plants__content
-        //-         ul.description
-        //-             each item in POWERPLANTS
-        //-                 li(class="description__item" id=`${item.plantnumber}`)
-        //-                     .description__header
-        //-                         h1.subtitle.text-alt= `${item.city}`
-        //-                         h2.body.text-alt <strong>!{`${item.type}`}</strong>
-        //-                     .description__info
-        //-                         p.small.text-alt <strong>!{`${item.ub}`}</strong>
-        //-                         p.small.text-alt Capacidad nominal: <strong>!{`${item.capacity}`}</strong>
-        //-                         p.small.text-alt Inicio de operaciones: <strong>!{`${item.start}`}</strong>
-        //-                     .description__img
-        //-                         img(src=`${pathImg}${item.img}`, alt=`${item.city} - ${item.type}`, class="card-power-plants__img")
-        //-                     .description__close
-        //-                         p.small.text-alt <strong>Cerrar</strong>
-        //-         ul.thumbnails
-        //-             each item in POWERPLANTS
-        //-                 li.thumbnails__item
-        //-                     img(src=`${pathImg}${item.thumbnail}`, alt=`${item.city} - ${item.type}`)
-        //-                     p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
+        section.container.power-plants
+            article.wrap.power-plants__content
+                ul.description
+                    each item in POWERPLANTS
+                        li(class="description__item tabcontent" id=`${item.id}`)
+                            img(src=`${pathImg}${item.hero}`, alt=`${item.city} - ${item.type}`, class="description__img")
+                            .description__content
+                                .description__header
+                                    h1.subtitle.text-alt= `${item.city}`
+                                    h2.body.text-alt <strong>!{`${item.type}`}</strong>
+                                .description__info
+                                    p.small.text-alt <strong>!{`${item.ub}`}</strong>
+                                    p.small.text-alt Capacidad nominal: <strong>!{`${item.capacity}`}</strong>
+                                    p.small.text-alt Inicio de operaciones: <strong>!{`${item.start}`}</strong>                               
+                                .description__close
+                                    p.small.text-alt <strong>Cerrar</strong>
+                ul.thumbnails
+                    each item in POWERPLANTS
+                        if item.defaultopen !== ''
+                            li.thumbnails__item
+                                img(src=`${pathImg}${item.thumbnail}`, class="thumbnails__img tablink", id="defaultOpen" onclick=`openPowerPlant('${item.id}', this, 'transparent')`, alt=`${item.city} - ${item.type}`)
+                                //- p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
+                        else
+                            li.thumbnails__item
+                                img(src=`${pathImg}${item.thumbnail}`, class="thumbnails__img tablink", onclick=`openPowerPlant('${item.id}', this, 'transparent')`, alt=`${item.city} - ${item.type}`)
+                                //- p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
 
         //- ok
         section.container.investors
@@ -127,6 +137,6 @@ html(lang="es")
                                 img(src=`${pathImg}${item.icon}`, class="data__icon")
                                 span.small.text-alt= `${item.content}`
                 iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15049.390543816424!2d-99.202477!3d19.440573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1597155607932!5m2!1ses!2smx" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="contact__child")
-            aside.layout-main__right
         
-        //- script(src="../js/power-plants.js")
+        <script src="js/show-menu.js"></script>
+        <script src="js/power-plants.js"></script>

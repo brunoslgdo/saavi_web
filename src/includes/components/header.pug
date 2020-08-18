@@ -1,9 +1,14 @@
-header.header
-    .header__child
-        picture
-            source(srcset=`${pathImg}logo-saavi.svg`, media="(min-width: 768px)", class="header__logo")
-            source(srcset=`${pathImg}logo-saavi-alt.svg`, media="(min-width: 320px)", class="header__logo")
-            img(src=`${pathImg}logo-saavi.svg`, alt="logo saavi", class="header__logo")
-    .header__child
-        include hamburguer
-        include menu
+header.content.header
+    .header__content.header__left
+        .header__child
+            picture
+                source(srcset=`${pathImg}logo-saavi.svg`, media="(min-width: 768px)", class="header__logo")
+                source(srcset=`${pathImg}logo-saavi-alt.svg`, media="(min-width: 320px)", class="header__logo")
+                img(src=`${pathImg}logo-saavi.svg`, alt="logo saavi", class="header__logo")
+    .header__content.header__middle
+    .header__content.header__right
+        .icon-hamburguer#js-icon-hamburguer: .icon-hamburguer__line
+        nav.nav#js-nav
+            ul.menu
+                each item in MENU
+                    li.menu__item: a(href=`${item.href}`, class="menu__link")= `${item.content}`

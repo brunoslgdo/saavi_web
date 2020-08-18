@@ -1,0 +1,128 @@
+.header {
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    padding-top: var(--xs);
+    // padding-bottom: var(--ss);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    min-width: 100vw;
+    
+    @media only screen and (min-width: 1280px) {
+        grid-template-columns: minmax(toRem(64), toRem(275)) minmax(toRem(192), 1fr) minmax(toRem(64), toRem(275));
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__left {
+        padding-left: var(--xs);
+    }
+    
+    &__right {
+        align-items: center;
+        padding-right: var(--xs);
+    }
+
+    &__logo {
+        height: var(--xl);
+    }
+}
+
+.nav {
+    background-color: hsl(0, 0%, 22%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    padding: var(--sm);
+    min-height: 100vh;
+    width: toRem(180);
+    transform-origin: right;
+    transform: scale(0, 1);
+    transition: transform .1s ease;
+}
+
+.show {
+    transform: scale(1, 1);
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: var(--sm);
+    list-style: none;
+    text-align: right;
+    padding-top: toRem(58);
+
+    &__link {
+        color: var(--text-alt);
+        font-size: var(--small);
+        text-decoration: none;
+    }
+}
+
+.icon-hamburguer {
+    --border-width: #{toRem(3)};
+    --square: calc(var(--md) + #{toRem(2)});
+    --color: var(--text-alt);
+    --bg-color: hsl(0, 0%, 22%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--bg-color);
+    border: var(--border-width) solid var(--bg-color);
+    width: var(--square);
+    height: var(--square);
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        background-color: var(--color);
+        width: 78%;
+        height: var(--border-width);
+        transition: transform .1s ease;
+    }
+
+    &__line {
+        background-color: var(--color);
+        width: 78%;
+        height: var(--border-width);
+        transition: transform .1 ease;
+    }
+}
+
+.close {
+    justify-content: center;
+
+    &::before,
+    &::after {
+        position: absolute;
+        transition: transform .1s ease;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    .icon-hamburguer__line {
+        width: 0;
+        transition: transform .1s ease;
+    }
+}
+
+.socials-desktop {
+    
+}

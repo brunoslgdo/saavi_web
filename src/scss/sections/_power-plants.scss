@@ -1,13 +1,12 @@
 .power-plants {
-
-    &__content {
-        position: relative;
-    }
+    --child-padding: calc(var(--xx) * 1.5);
+    margin-bottom: var(--child-padding);
 }
 
 .description {
+    list-style: none;
 
-    @media only screen and (min-width: 736px) {
+    &__item {
         display: grid;
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: repeat(9, 1fr);
@@ -20,174 +19,59 @@
         }
     }
 
-    &__item {
-        display: none;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto 1fr auto;
-        gap: var(--sm);
-        padding: var(--sm);
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        top: 50%;
-        transform-origin: center;
-        transform: translateY(-50%) scale(1);
-        overflow: hidden;
-        
-        @media only screen and (min-width: 736px) {
-            grid-template-columns: repeat(16, 1fr);
-            grid-template-rows: repeat(9, 1fr);
-            gap: 0;
-            position: absolute;
-            height: initial;
-            top: initial;
-            transform-origin: initial;
-            transform: initial;
-
-            &::after {
-                content: '';
-                display: block;
-                padding-bottom: 100%;
-            }
-        }
-
-        &:nth-child(odd) {
-            background-color: var(--first);
-        }
-        
-        &:nth-child(even) {
-            background-color: var(--first-alt);
-        }
-    }
-
-    @media only screen and (min-width: 736px) { 
-
-        &__header,
-        &__info,
-        &__img {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            z-index: 1;
-        }
-
-        &__header,
-        &__info {
-            left: var(--sm);
-        }
-
-        &__close { 
-            display: none;
-        }
-
-        &__header {
-            top: var(--sm);
-        }
-
-        &__info {
-            top: calc(var(--xx) + var(--lg));
-        }
-
-        &__img {
-
-            img {
-                object-fit: cover;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-
-    &__header {
-        
-        .subtitle,
-        .body {
-            margin-bottom: 0;
-        }
+    &__img,
+    &__content {
+        position: absolute;
     }
 
     &__img {
-        z-index: 0;
-
-        img {
-            object-fit: cover;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 
-    &__close {
-        cursor: pointer;
-        text-align: right;
+    &__content {
+        padding-top: var(--xl);
+        padding-left: var(--md);
     }
 }
 
 .thumbnails {
-    border: var(--ss) solid var(--text-alt);
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    gap: var(--ss);
-    
-    @media only screen and (min-width: 568px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    @media only screen and (min-width: 736px) {
-        grid-template-columns: repeat(7, 1fr);
-    }
+    display: flex;
+    list-style: none;
 
     &__item {
+        flex: auto;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(4, 1fr);
         position: relative;
-        
-        @media only screen and (min-width: 736px) {
-            // grid-template-columns: repeat(4, 1fr);
-            // grid-template-rows: repeat(4, 1fr);
-        }
-
-        &:nth-child(odd) {
-            background-color: var(--first);
-        }
-        
-        &:nth-child(even) {
-            background-color: var(--first-alt);
-        }
 
         &::after {
             content: '';
             display: block;
             padding-bottom: 100%;
         }
-
-        img,
-        .body {
-            position: absolute;
-        }
-
-        img {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-
-        .body {
-            cursor: pointer;
-            padding-right: var(--sm);
-            padding-bottom: var(--sm);
-            right: 0;
-            bottom: 0;
-            line-height: 1;
-            color: var(--text-alt);
-
-            &::after {
-                content: '\27A4';
-                padding-left: var(--ss);
-            }
-        }
     }
+
+    &__img {
+        object-fit: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.tabcontent {
+    display: none;
+}
+
+#Campeche,
+#ElSauz,
+#Altamira,
+#Chihuahua,
+#LaRosita,
+#SierraJuarez,
+#SanLuisDeLaPaz {
+    background-color: transparent;
 }
