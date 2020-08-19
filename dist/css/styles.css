@@ -293,7 +293,6 @@ html {
     display: block;
     background-color: var(--first);
     mix-blend-mode: multiply;
-    mix-blend-mode: multiply;
     position: absolute;
     z-index: 1;
     width: 100%;

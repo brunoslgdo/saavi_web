@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -29,15 +29,15 @@
         </div><a class="icon-lang" href="index.html">SP</a>
         <nav class="nav" id="js-nav-en">
           <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="#quienes-somos">About us</a></li>
-            <li class="menu__item"><a class="menu__link" href="#soluciones-energia">Energy solutions</a></li>
-            <li class="menu__item"><a class="menu__link" href="#portafolio">Portfolio</a></li>
-            <li class="menu__item"><a class="menu__link" href="#contacto">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="#about-us">About us</a></li>
+            <li class="menu__item"><a class="menu__link" href="#energy-solutions">Energy solutions</a></li>
+            <li class="menu__item"><a class="menu__link" href="#portfolio">Portfolio</a></li>
+            <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="main">
+    <main class="main" id="main">
       <video class="main__video" id="video" autoplay="autoplay" muted.="muted." loop="loop">
         <source src="video/saavi_video.mp4" type="video/mp4"/>
       </video>
@@ -46,7 +46,7 @@
         <p class="body text-alt">We power the competitiveness of the industries <strong>in Mexico</strong></p>
       </section>
     </main>
-    <section class="container about-us">
+    <section class="container about-us" id="about-us">
       <article class="wrap about-us__content">
         <div class="about-us__child">
           <h1 class="title first-alt">Who is Saavi?</h1>
@@ -61,9 +61,9 @@
         </div>
       </article>
     </section>
-    <section class="container managers">
+    <section class="container managers" id="managers">
       <article class="wrap">
-        <h1 class="title first">Directivos</h1>
+        <h1 class="title first">Management team</h1>
         <ul class="card-managers">
           <li class="card-managers__item">
             <div class="card-managers__position">
@@ -140,7 +140,7 @@
         </ul>
       </article>
     </section>
-    <section class="container energy-solutions">
+    <section class="container energy-solutions" id="energy-solutions">
       <article class="wrap energy-solutions__content">
         <div class="energy-solutions__child">
           <h1 class="title first-alt">Choose competitivity and efficiency</h1>
@@ -167,22 +167,22 @@
         </div>
       </article>
     </section>
-    <section class="container portfolio">
+    <section class="container portfolio" id="portfolio">
       <article class="wrap portfolio__content">
         <div class="portfolio__child">
           <h1 class="title text-alt">Portfolio</h1>
         </div>
-        <div class="portfolio__child mapa"><img class="portfolio__mapa" src="img/mapa.svg" alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico"/></div>
+        <div class="portfolio__child mapa"><img class="portfolio__mapa" src="img/mapa-en.svg" alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico"/></div>
       </article>
     </section>
-    <section class="container power-plants">
+    <section class="container power-plants" id="power-plants">
       <article class="wrap power-plants__content">
         <ul class="description">
-          <li class="description__item tabcontent" id="Campeche"><img class="description__img" src="img/01.png" alt="Campeche - Central Ciclo Combinado"/>
+          <li class="description__item tabcontent" id="Campeche"><img class="description__img" src="img/01.png" alt="Campeche - Combined Cycle Plant"/>
             <div class="description__content">
               <div class="description__header">
                 <h1 class="subtitle text-alt">Campeche</h1>
-                <h2 class="body text-alt"><strong>Central Ciclo Combinado</strong></h2>
+                <h2 class="body text-alt"><strong>Combined Cycle Plant</strong></h2>
               </div>
               <div class="description__info">
                 <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
@@ -194,11 +194,11 @@
               </div>
             </div>
           </li>
-          <li class="description__item tabcontent" id="ElSauz"><img class="description__img" src="img/02.png" alt="El Sauz - Estación de compresión de gas"/>
+          <li class="description__item tabcontent" id="ElSauz"><img class="description__img" src="img/02.png" alt="El Sauz - Gas compressor station"/>
             <div class="description__content">
               <div class="description__header">
                 <h1 class="subtitle text-alt">El Sauz</h1>
-                <h2 class="body text-alt"><strong>Estación de compresión de gas</strong></h2>
+                <h2 class="body text-alt"><strong>Gas compressor station</strong></h2>
               </div>
               <div class="description__info">
                 <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
@@ -210,11 +210,11 @@
               </div>
             </div>
           </li>
-          <li class="description__item tabcontent" id="Altamira"><img class="description__img" src="img/03.png" alt="Altamira - Estación de compresión de gas"/>
+          <li class="description__item tabcontent" id="Altamira"><img class="description__img" src="img/03.png" alt="Altamira - Gas compressor station"/>
             <div class="description__content">
               <div class="description__header">
                 <h1 class="subtitle text-alt">Altamira</h1>
-                <h2 class="body text-alt"><strong>Estación de compresión de gas</strong></h2>
+                <h2 class="body text-alt"><strong>Gas compressor station</strong></h2>
               </div>
               <div class="description__info">
                 <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
@@ -226,11 +226,11 @@
               </div>
             </div>
           </li>
-          <li class="description__item tabcontent" id="Chihuahua"><img class="description__img" src="img/04.png" alt="Chihuahua - Central de ciclo combinado"/>
+          <li class="description__item tabcontent" id="Chihuahua"><img class="description__img" src="img/04.png" alt="Chihuahua - Combined Cycle Plant"/>
             <div class="description__content">
               <div class="description__header">
                 <h1 class="subtitle text-alt">Chihuahua</h1>
-                <h2 class="body text-alt"><strong>Central de ciclo combinado</strong></h2>
+                <h2 class="body text-alt"><strong>Combined Cycle Plant</strong></h2>
               </div>
               <div class="description__info">
                 <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
@@ -242,11 +242,11 @@
               </div>
             </div>
           </li>
-          <li class="description__item tabcontent" id="LaRosita"><img class="description__img" src="img/05.png" alt="La Rosita I y II - Central de ciclo combinado"/>
+          <li class="description__item tabcontent" id="LaRosita"><img class="description__img" src="img/05.png" alt="La Rosita I y II - Combined Cycle Plant"/>
             <div class="description__content">
               <div class="description__header">
                 <h1 class="subtitle text-alt">La Rosita I y II</h1>
-                <h2 class="body text-alt"><strong>Central de ciclo combinado</strong></h2>
+                <h2 class="body text-alt"><strong>Combined Cycle Plant</strong></h2>
               </div>
               <div class="description__info">
                 <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
@@ -274,11 +274,11 @@
               </div>
             </div>
           </li>
-          <li class="description__item tabcontent" id="SanLuisDeLaPaz"><img class="description__img" src="img/07.png" alt="San Luis de la Paz - Central de ciclo combinado"/>
+          <li class="description__item tabcontent" id="SanLuisDeLaPaz"><img class="description__img" src="img/07.png" alt="San Luis de la Paz - Combined Cycle Plant"/>
             <div class="description__content">
               <div class="description__header">
                 <h1 class="subtitle text-alt">San Luis de la Paz</h1>
-                <h2 class="body text-alt"><strong>Central de ciclo combinado</strong></h2>
+                <h2 class="body text-alt"><strong>Combined Cycle Plant</strong></h2>
               </div>
               <div class="description__info">
                 <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
@@ -302,7 +302,7 @@
         </ul>
       </article>
     </section>
-    <section class="container investors">
+    <section class="container investors" id="investors">
       <article class="wrap investors__content">
         <div class="investors__child">
           <h1 class="title first">Investors</h1>
@@ -327,7 +327,7 @@
         </div>
       </article>
     </section>
-    <section class="container contact">
+    <section class="container contact" id="contact">
       <article class="wrap contact__content">
         <div class="contact__child">
           <h1 class="title text-alt">Contact</h1>
