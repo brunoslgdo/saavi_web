@@ -10,3 +10,4 @@ const showMenu = (iconHamburguerId, navId) => {
 }
 
 showMenu('js-icon-hamburguer', 'js-nav');
+showMenu('js-icon-hamburguer-en', 'js-nav-en');
