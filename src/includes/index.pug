@@ -16,11 +16,13 @@ html(lang="es")
         link(href=`${pathStyles}styles.css`, rel="stylesheet")
     body
 
-        include components/header
         include components/socials
-        
+        include components/header
+            
         //- ok
-        main.container.main
+        main.main
+            video(class="main__video", id="video" autoplay, muted. loop)
+                source(src="video/saavi_video.mp4" type="video/mp4")
             section.wrap.main__content
                 h1.display.text-alt GENERAMOS EL FUTURO
                 p.body.text-alt Nuestra electricidad impulsa la competitividad de las empresas <strong>en México</strong>
@@ -140,3 +142,4 @@ html(lang="es")
         
         <script src="js/show-menu.js"></script>
         <script src="js/power-plants.js"></script>
+        <script src="js/switch-lang.js"></script>
