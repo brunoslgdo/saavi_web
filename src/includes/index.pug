@@ -20,7 +20,7 @@ html(lang="es")
         include components/header
             
         //- ok
-        main.main
+        main.main#main
             video(class="main__video", id="video" autoplay, muted. loop)
                 source(src="video/saavi_video.mp4" type="video/mp4")
             section.wrap.main__content
@@ -28,7 +28,7 @@ html(lang="es")
                 p.body.text-alt Nuestra electricidad impulsa la competitividad de las empresas <strong>en México</strong>
         
         //- ok
-        section.container.about-us
+        section.container.about-us#about-us
             article.wrap.about-us__content
                 .about-us__child
                     h1.title.first-alt ¿Quiénes somos?
@@ -40,7 +40,7 @@ html(lang="es")
                     p.small.first Se constituye International Generating Company “InterGen”
         
         //- ok
-        section.container.managers
+        section.container.managers#managers
             article.wrap
                 h1.title.first Directivos
                 ul.card-managers
@@ -52,7 +52,7 @@ html(lang="es")
                             img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`, class="card-managers__position")
         
         //- ok
-        section.container.energy-solutions
+        section.container.energy-solutions#energy-solutions
             article.wrap.energy-solutions__content
                 .energy-solutions__child
                     h1.title.first-alt Elige competitividad y eficiencia
@@ -73,14 +73,14 @@ html(lang="es")
                     p.body.text-alt: strong Creamos la solución precisa para tu empresa, con la seguridad de que tendrás siempre el mejor ser vicio.
         
         //- ok
-        section.container.portfolio
+        section.container.portfolio#portfolio
             article.wrap.portfolio__content
                 .portfolio__child
                     h1.title.text-alt Portafolio
                 .portfolio__child.mapa
                     img(src=`${pathImg}mapa.svg`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico")
         
-        section.container.power-plants
+        section.container.power-plants#power-plants
             article.wrap.power-plants__content
                 ul.description
                     each item in POWERPLANTS
@@ -108,10 +108,10 @@ html(lang="es")
                                 //- p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
 
         //- ok
-        section.container.investors
+        section.container.investors#investros
             article.wrap.investors__content
                 .investors__child
-                    h1.title.first Invers
+                    h1.title.first Inversionistas
                 .investors__child
                     form(action="#", class="form-investors")
                         .form-investors__field
@@ -126,7 +126,7 @@ html(lang="es")
                             p.small.text-alt ¿Olvidaste tu contraseña?
         
         //- ok
-        section.container.contact
+        section.container.contact#contact
             article.wrap.contact__content
                 .contact__child
                     h1.title.text-alt Contacto

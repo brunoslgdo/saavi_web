@@ -7,7 +7,7 @@ include config/conf_power-plants
 include config/conf_contact
 
 <!DOCTYPE html>
-html(lang="es")
+html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -20,7 +20,7 @@ html(lang="es")
         include components/header-en
         
         //- ok
-        main.main
+        main.main#main
             video(class="main__video", id="video" autoplay, muted. loop)
                 source(src="video/saavi_video.mp4" type="video/mp4")
             section.wrap.main__content
@@ -28,7 +28,7 @@ html(lang="es")
                 p.body.text-alt We power the competitiveness of the industries <strong>in Mexico</strong>
 
         //- ok
-        section.container.about-us
+        section.container.about-us#about-us
             article.wrap.about-us__content
                 .about-us__child
                     h1.title.first-alt Who is Saavi?
@@ -40,9 +40,9 @@ html(lang="es")
                     p.small.first Generating Company “InterGen”
 
         //- ok
-        section.container.managers
+        section.container.managers#managers
             article.wrap
-                h1.title.first Directivos
+                h1.title.first Management team
                 ul.card-managers
                     each item in MANAGERS
                         li.card-managers__item
@@ -52,7 +52,7 @@ html(lang="es")
                             img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`, class="card-managers__position")
 
         //- ok
-        section.container.energy-solutions
+        section.container.energy-solutions#energy-solutions
             article.wrap.energy-solutions__content
                 .energy-solutions__child
                     h1.title.first-alt Choose competitivity and efficiency
@@ -73,17 +73,17 @@ html(lang="es")
                     p.body.text-alt: strong We create tailor made solutions for your company, based on our best service guarantee.
 
         //- ok
-        section.container.portfolio
+        section.container.portfolio#portfolio
             article.wrap.portfolio__content
                 .portfolio__child
                     h1.title.text-alt Portfolio
                 .portfolio__child.mapa
-                    img(src=`${pathImg}mapa.svg`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico")
+                    img(src=`${pathImg}mapa-en.svg`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico")
 
-        section.container.power-plants
+        section.container.power-plants#power-plants
             article.wrap.power-plants__content
                 ul.description
-                    each item in POWERPLANTS
+                    each item in POWERPLANTS_EN
                         li(class="description__item tabcontent" id=`${item.id}`)
                             img(src=`${pathImg}${item.hero}`, alt=`${item.city} - ${item.type}`, class="description__img")
                             .description__content
@@ -108,7 +108,7 @@ html(lang="es")
                                 //- p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
 
         //- ok
-        section.container.investors
+        section.container.investors#investors
             article.wrap.investors__content
                 .investors__child
                     h1.title.first Investors
@@ -126,7 +126,7 @@ html(lang="es")
                             p.small.text-alt Forgot your password?
 
         //- ok
-        section.container.contact
+        section.container.contact#contact
             article.wrap.contact__content
                 .contact__child
                     h1.title.text-alt Contact
