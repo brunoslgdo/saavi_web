@@ -1,0 +1,15 @@
+header.content.header#header-en
+    .header__content.header__left
+        .header__child
+            picture
+                source(srcset=`${pathImg}saavi.svg`, media="(min-width: 768px)", class="header__logo")
+                source(srcset=`${pathImg}logo-saavi-alt.svg`, media="(min-width: 320px)", class="header__logo")
+                img(src=`${pathImg}saavi.svg`, alt="logo saavi", class="header__logo")
+    .header__content.header__middle
+    .header__content.header__right
+        .icon-hamburguer#js-icon-hamburguer-en: .icon-hamburguer__line
+        a(href="index.html", class="icon-lang") SP
+        nav.nav#js-nav-en
+            ul.menu
+                each item in MENU_EN
+                    li.menu__item: a(href=`${item.href}`, class="menu__link")= `${item.content}`

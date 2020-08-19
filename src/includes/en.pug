@@ -1,0 +1,145 @@
+include config/conf_variables
+include config/conf_menu
+include config/conf_socials
+include config/conf_energy-solutions
+include config/conf_managers
+include config/conf_power-plants
+include config/conf_contact
+
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title SAAVI
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
+        link(href=`${pathStyles}styles.css`, rel="stylesheet")
+    body
+
+        include components/socials
+        include components/header-en
+        
+        //- ok
+        main.main
+            video(class="main__video", id="video" autoplay, muted. loop)
+                source(src="video/saavi_video.mp4" type="video/mp4")
+            section.wrap.main__content
+                h1.display.text-alt GENERATING THE FUTURE
+                p.body.text-alt We power the competitiveness of the industries <strong>in Mexico</strong>
+
+        //- ok
+        section.container.about-us
+            article.wrap.about-us__content
+                .about-us__child
+                    h1.title.first-alt Who is Saavi?
+                    p.body.first: strong We are energy experts with more than 20 years in the market. We generate and trade electric power to satisfy the country’s energy demand.
+                .about-us__child.about-us__history
+                    h1.title.text-alt History
+                .about-us__child.about-us__time-line
+                    h2.subtitle.first-alt 1995
+                    p.small.first Generating Company “InterGen”
+
+        //- ok
+        section.container.managers
+            article.wrap
+                h1.title.first Directivos
+                ul.card-managers
+                    each item in MANAGERS
+                        li.card-managers__item
+                            .card-managers__position
+                                h1.body.text-alt <strong>!{`${item.name}<br>${item.lastname}`}</strong>
+                                h2.small.text-alt= `${item.title}`
+                            img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`, class="card-managers__position")
+
+        //- ok
+        section.container.energy-solutions
+            article.wrap.energy-solutions__content
+                .energy-solutions__child
+                    h1.title.first-alt Choose competitivity and efficiency
+                    h2.subtitle.first Supplier
+                    ul.solutions
+                        each item in SUPPLIER_EN
+                            li.solutions__item
+                                img(src=`${pathImg}${item.icon}`, class="solutions__icon", alt=`${item.name}`)
+                                span.small.first= `${item.name}`
+                .energy-solutions__child
+                    h1.title.text-alt Your energy in the hands of experts
+                    h2.subtitle.text-alt Generator
+                    ul.solutions
+                        each item in GENERATOR_EN
+                            li.solutions__item
+                                img(src=`${pathImg}${item.icon}`, class="solutions__icon", alt=`${item.name}`)
+                                span.small.text-alt= `${item.name}`
+                    p.body.text-alt: strong We create tailor made solutions for your company, based on our best service guarantee.
+
+        //- ok
+        section.container.portfolio
+            article.wrap.portfolio__content
+                .portfolio__child
+                    h1.title.text-alt Portfolio
+                .portfolio__child.mapa
+                    img(src=`${pathImg}mapa.svg`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico")
+
+        section.container.power-plants
+            article.wrap.power-plants__content
+                ul.description
+                    each item in POWERPLANTS
+                        li(class="description__item tabcontent" id=`${item.id}`)
+                            img(src=`${pathImg}${item.hero}`, alt=`${item.city} - ${item.type}`, class="description__img")
+                            .description__content
+                                .description__header
+                                    h1.subtitle.text-alt= `${item.city}`
+                                    h2.body.text-alt <strong>!{`${item.type}`}</strong>
+                                .description__info
+                                    p.small.text-alt <strong>!{`${item.ub}`}</strong>
+                                    p.small.text-alt Capacidad nominal: <strong>!{`${item.capacity}`}</strong>
+                                    p.small.text-alt Inicio de operaciones: <strong>!{`${item.start}`}</strong>                               
+                                .description__close
+                                    p.small.text-alt <strong>Cerrar</strong>
+                ul.thumbnails
+                    each item in POWERPLANTS
+                        if item.defaultopen !== ''
+                            li.thumbnails__item
+                                img(src=`${pathImg}${item.thumbnail}`, class="thumbnails__img tablink", id="defaultOpen" onclick=`openPowerPlant('${item.id}', this, 'transparent')`, alt=`${item.city} - ${item.type}`)
+                                //- p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
+                        else
+                            li.thumbnails__item
+                                img(src=`${pathImg}${item.thumbnail}`, class="thumbnails__img tablink", onclick=`openPowerPlant('${item.id}', this, 'transparent')`, alt=`${item.city} - ${item.type}`)
+                                //- p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
+
+        //- ok
+        section.container.investors
+            article.wrap.investors__content
+                .investors__child
+                    h1.title.first Investors
+                .investors__child
+                    form(action="#", class="form-investors")
+                        .form-investors__field
+                            label(for="", class="form-investors__label body text-alt") User
+                            input(type="text", placeholder="Ej. inversionista@saavienergia.com", required, name="user", id="user", class="form-investors__input")
+                        .form-investors__field
+                            label(for="", class="form-investors__label body text-alt") Password
+                            input(type="password", placeholder="Ingresa tu contraseña", required, name="pass", id="pass", class="form-investors__input")
+                        .form-investors__field
+                            input(type="submit", value="Log in", class="form-investors__input ghost")
+                        .form-investors__field
+                            p.small.text-alt Forgot your password?
+
+        //- ok
+        section.container.contact
+            article.wrap.contact__content
+                .contact__child
+                    h1.title.text-alt Contact
+                .contact__child
+                    h2.subtitle.text-alt Corporate headquarters
+                .contact__child
+                    ul.data
+                        each item in CONTACT
+                            li.data__item
+                                img(src=`${pathImg}${item.icon}`, class="data__icon")
+                                span.small.text-alt= `${item.content}`
+                iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15049.390543816424!2d-99.202477!3d19.440573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1597155607932!5m2!1ses!2smx" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="contact__child")
+        
+        <script src="js/show-menu.js"></script>
+        <script src="js/power-plants.js"></script>
+        <script src="js/switch-lang.js"></script>
