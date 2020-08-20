@@ -29,7 +29,7 @@
   background-color: #ffffff; }
 
 :root {
-  --display: 3.375rem;
+  --display: 3.625rem;
   --title: 2.875rem;
   --subtitle: 2.125rem;
   --body: 1.25rem;
@@ -58,7 +58,7 @@
 .display {
   font-size: var(--display);
   margin-bottom: var(--sm);
-  overflow-wrap: anywhere; }
+  text-align: center; }
 
 .title {
   font-size: var(--title);
@@ -118,14 +118,19 @@ html {
 .mbottom--ss {
   margin-bottom: 0.5rem; }
 
+.container,
+.wrap {
+  margin-right: auto;
+  margin-left: auto; }
+
 .container {
+  --max-width: 85.375rem;
   padding-right: var(--xs);
-  padding-left: var(--xs); }
+  padding-left: var(--xs);
+  max-width: var(--max-width); }
 
 .wrap {
   --max-width: 51rem;
-  margin-right: auto;
-  margin-left: auto;
   max-width: var(--max-width); }
 
 .energy-solutions__content, .portfolio__content, .investors__content {
@@ -179,7 +184,6 @@ html {
   grid-template-rows: auto;
   gap: var(--sm);
   list-style: none;
-  text-align: right;
   padding-top: 3.625rem; }
   .menu__link {
     color: var(--text-alt);
@@ -319,9 +323,35 @@ html {
   .main .body {
     margin: auto; }
   .main .display {
-    max-width: calc(var(--xx) * 5); }
+    max-width: calc(var(--xx) * 6); }
   .main .body {
     max-width: calc(var(--xx) * 4); }
+
+.icon-play {
+  --border-width: 0.1875rem;
+  --square: calc(var(--md) + 0.125rem);
+  --color: var(--text-alt);
+  --bg-color: hsl(0, 0%, 22%);
+  cursor: pointer;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  color: var(--color);
+  background-color: var(--bg-color);
+  border: var(--border-width) solid var(--bg-color);
+  border-radius: 50%;
+  width: var(--square);
+  height: var(--square); }
+  .icon-play::after {
+    content: '\25BA';
+    display: block;
+    font-size: 1.125rem;
+    margin-left: 0.4375rem; }
+
+.pause::after {
+  content: '\258C' '\258C';
+  display: block;
+  font-size: 0.75rem; }
 
 .about-us {
   margin-top: calc(var(--xx) * 1.5);
@@ -370,6 +400,11 @@ html {
   .about-us__time-line {
     padding-right: var(--sm);
     padding-left: var(--sm); }
+    .about-us__time-line .bullet {
+      display: flex; }
+    .about-us__time-line .subtitle {
+      padding-right: var(--sm);
+      margin-bottom: 0; }
 
 .managers {
   --child-padding: calc(var(--xx) * 1.5);

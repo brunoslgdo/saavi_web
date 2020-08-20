@@ -38,7 +38,7 @@
       </div>
     </header>
     <main class="main" id="main">
-      <video class="main__video" id="video" autoplay="autoplay" muted.="muted." loop="loop">
+      <video class="main__video" id="video" preload="none" muted="muted" autoplay="autoplay" loop="loop">
         <source src="video/saavi_video.mp4" type="video/mp4"/>
       </video>
       <section class="wrap main__content">
@@ -56,8 +56,18 @@
           <h1 class="title text-alt">Historia</h1>
         </div>
         <div class="about-us__child about-us__time-line">
-          <h2 class="subtitle first-alt">1995</h2>
-          <p class="small first">Se constituye International Generating Company “InterGen”</p>
+          <div class="bullet">
+            <h2 class="subtitle first-alt">1995</h2>
+            <p class="small first">Se constituye International Generating Company “InterGen”</p>
+          </div>
+          <div class="bullet">
+            <h2 class="subtitle first-alt">1998</h2>
+            <p class="small first">Se construye la primera planta de energía propia</p>
+          </div>
+          <div class="bullet">
+            <h2 class="subtitle first-alt">2018</h2>
+            <p class="small first">Actis adquiere el portafolio de InterGen en México y nace Saavi Energía</p>
+          </div>
         </div>
       </article>
     </section>
@@ -109,7 +119,7 @@
           </li>
           <li class="card-managers__item">
             <div class="card-managers__position">
-              <h1 class="body text-alt"><strong>Rodrigo<br>Apellido</strong></h1>
+              <h1 class="body text-alt"><strong>Rodrigo<br>Bernal</strong></h1>
               <h2 class="small text-alt">TITLE</h2>
             </div><img class="card-managers__position" src="img/icon-linkedin-white.svg" alt="likedin - Rodrigo"/>
           </li>
@@ -346,6 +356,7 @@
         <iframe class="contact__child" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15049.390543816424!2d-99.202477!3d19.440573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1597155607932!5m2!1ses!2smx" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </article>
     </section><script src="js/show-menu.js"></script>
+<script src="js/play-video.js"></script>
 <script src="js/power-plants.js"></script>
 <script src="js/switch-lang.js"></script>
   </body>
