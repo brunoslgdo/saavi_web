@@ -21,7 +21,7 @@ html(lang="en")
         
         //- ok
         main.main#main
-            video(class="main__video", id="video" autoplay, muted. loop)
+            video(class="main__video", id="video" autoplay, muted, loop)
                 source(src="video/saavi_video.mp4" type="video/mp4")
             section.wrap.main__content
                 h1.display.text-alt GENERATING THE FUTURE
@@ -36,8 +36,15 @@ html(lang="en")
                 .about-us__child.about-us__history
                     h1.title.text-alt History
                 .about-us__child.about-us__time-line
-                    h2.subtitle.first-alt 1995
-                    p.small.first Generating Company “InterGen”
+                    .bullet
+                        h2.subtitle.first-alt 1995
+                        p.small.first Generating Company “InterGen”
+                    .bullet
+                        h2.subtitle.first-alt 1998
+                        p.small.first Se construye la primera planta de energía propia
+                    .bullet
+                        h2.subtitle.first-alt 2018
+                        p.small.first Actis adquiere el portafolio de InterGen en México y nace Saavi Energía
 
         //- ok
         section.container.managers#managers
@@ -141,5 +148,6 @@ html(lang="en")
                 iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15049.390543816424!2d-99.202477!3d19.440573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1597155607932!5m2!1ses!2smx" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="contact__child")
         
         <script src="js/show-menu.js"></script>
+        <script src="js/play-video.js"></script>
         <script src="js/power-plants.js"></script>
         <script src="js/switch-lang.js"></script>
