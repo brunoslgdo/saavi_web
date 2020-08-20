@@ -51,10 +51,43 @@
     }
 
     .display {
-        max-width: calc(var(--xx) * 5);
+        max-width: calc(var(--xx) * 6);
     }
 
     .body {
         max-width: calc(var(--xx) * 4);
+    }
+}
+
+.icon-play {
+    --border-width: #{toRem(3)};
+    --square: calc(var(--md) + #{toRem(2)});
+    --color: var(--text-alt);
+    --bg-color: hsl(0, 0%, 22%);
+    cursor: pointer;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    color: var(--color);
+    background-color: var(--bg-color);
+    border: var(--border-width) solid var(--bg-color);
+    border-radius: 50%;
+    width: var(--square);
+    height: var(--square);
+
+    &::after {
+        content: '\25BA';
+        display: block;
+        font-size: toRem(18);
+        margin-left: toRem(7);
+    }
+}
+
+.pause {
+
+    &::after {
+        content: '\258C' '\258C';
+        display: block;
+        font-size: toRem(12);
     }
 }
