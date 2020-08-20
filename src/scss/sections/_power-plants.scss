@@ -1,15 +1,16 @@
-.power-plants {
-    --child-padding: calc(var(--xx) * 1.5);
-    margin-bottom: var(--child-padding);
-}
+.card-power-plants {
+    display: grid;
+    gap: var(--xs);
 
-.description {
-    list-style: none;
+    @media only screen and (min-width: 568px) {
+        grid-template-columns: repeat(2, 1fr);       
+    }
 
     &__item {
         display: grid;
         grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: repeat(9, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        list-style: none;
         position: relative;
 
         &::after {
@@ -19,9 +20,9 @@
         }
     }
 
-    &__img,
-    &__content {
+    &__position {
         position: absolute;
+        transition: transform .1s .2s ease;
     }
 
     &__img {
@@ -30,48 +31,52 @@
         height: 100%;
     }
 
-    &__content {
-        padding-top: var(--xl);
-        padding-left: var(--md);
+    &__caption {
+        background-color: var(--first-alt);
+        padding: var(--xs);
+        left: var(--xs);
+        bottom: var(--xs);
+        transform-origin: left bottom;
+        transform: scale(1, 1);
+        transition: transform .1s ease;
     }
-}
+    
+    &__content {
+        background-color: var(--first-alt);
+        padding: var(--xs);
+        height: 100%;
+        transform-origin: left bottom;
+        transform: scale(0, 0);
+        transition: transform .1s .2s ease;
+    }
 
-.thumbnails {
-    display: flex;
-    list-style: none;
+    .icon-close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #111;
+        position: absolute;
+        right: var(--xs);
+        bottom: var(--xs);
+        width: var(--lg);
+        height: var(--lg);
 
-    &__item {
-        flex: auto;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        position: relative;
-
+        &::before,
         &::after {
             content: '';
+            background-color: #fff;
             display: block;
-            padding-bottom: 100%;
+            position: absolute;
+            width: 60%;
+            height: toRem(2);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+        
+        &::after {
+            transform: rotate(-45deg);
         }
     }
-
-    &__img {
-        object-fit: cover;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.tabcontent {
-    display: none;
-}
-
-#Campeche,
-#ElSauz,
-#Altamira,
-#Chihuahua,
-#LaRosita,
-#SierraJuarez,
-#SanLuisDeLaPaz {
-    background-color: transparent;
 }

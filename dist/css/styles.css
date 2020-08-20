@@ -532,61 +532,65 @@ html {
       position: relative;
       z-index: 0; }
 
-.power-plants {
-  --child-padding: calc(var(--xx) * 1.5);
-  margin-bottom: var(--child-padding); }
-
-.description {
-  list-style: none; }
-  .description__item {
+.card-power-plants {
+  display: grid;
+  gap: var(--xs); }
+  @media only screen and (min-width: 568px) {
+    .card-power-plants {
+      grid-template-columns: repeat(2, 1fr); } }
+  .card-power-plants__item {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    list-style: none;
     position: relative; }
-    .description__item::after {
+    .card-power-plants__item::after {
       content: '';
       display: block;
       padding-bottom: 100%; }
-  .description__img, .description__content {
-    position: absolute; }
-  .description__img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%; }
-  .description__content {
-    padding-top: var(--xl);
-    padding-left: var(--md); }
-
-.thumbnails {
-  display: flex;
-  list-style: none; }
-  .thumbnails__item {
-    flex: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    position: relative; }
-    .thumbnails__item::after {
-      content: '';
-      display: block;
-      padding-bottom: 100%; }
-  .thumbnails__img {
-    object-fit: cover;
+  .card-power-plants__position {
     position: absolute;
+    transition: transform .1s .2s ease; }
+  .card-power-plants__img {
+    object-fit: cover;
     width: 100%;
     height: 100%; }
-
-.tabcontent {
-  display: none; }
-
-#Campeche,
-#ElSauz,
-#Altamira,
-#Chihuahua,
-#LaRosita,
-#SierraJuarez,
-#SanLuisDeLaPaz {
-  background-color: transparent; }
+  .card-power-plants__caption {
+    background-color: var(--first-alt);
+    padding: var(--xs);
+    left: var(--xs);
+    bottom: var(--xs);
+    transform-origin: left bottom;
+    transform: scale(1, 1);
+    transition: transform .1s ease; }
+  .card-power-plants__content {
+    background-color: var(--first-alt);
+    padding: var(--xs);
+    height: 100%;
+    transform-origin: left bottom;
+    transform: scale(0, 0);
+    transition: transform .1s .2s ease; }
+  .card-power-plants .icon-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    position: absolute;
+    right: var(--xs);
+    bottom: var(--xs);
+    width: var(--lg);
+    height: var(--lg); }
+    .card-power-plants .icon-close::before, .card-power-plants .icon-close::after {
+      content: '';
+      background-color: #fff;
+      display: block;
+      position: absolute;
+      width: 60%;
+      height: 0.125rem; }
+    .card-power-plants .icon-close::before {
+      transform: rotate(45deg); }
+    .card-power-plants .icon-close::after {
+      transform: rotate(-45deg); }
 
 .investors {
   --top-bottom-padding: calc(var(--xx) * 1.5);
