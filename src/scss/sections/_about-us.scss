@@ -65,5 +65,14 @@
     &__time-line {
         padding-right: var(--sm);
         padding-left: var(--sm);
+
+        .bullet {
+            display: flex;
+        }
+
+        .subtitle {
+            padding-right: var(--sm);
+            margin-bottom: 0;
+        }
     }
 }
