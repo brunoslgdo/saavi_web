@@ -1,12 +1,18 @@
+.container,
+.wrap {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .container {
+    --max-width: #{toRem(1366)};
     padding-right: var(--xs);
     padding-left: var(--xs);
+    max-width: var(--max-width);
 }
 
 .wrap {
     --max-width: #{toRem(816)};
-    margin-right: auto;
-    margin-left: auto;
     max-width: var(--max-width);
 }
 
