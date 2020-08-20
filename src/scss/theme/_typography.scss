@@ -1,5 +1,5 @@
 $font-size: (
-    display: toRem(54),
+    display: toRem(58),
     title: toRem(46),
     subtitle: toRem(34),
     body: toRem(20),
@@ -45,7 +45,8 @@ $font-weight: (
 .display {
     font-size: var(--display);
     margin-bottom: var(--sm);
-    overflow-wrap: anywhere;
+    text-align: center;
+    // overflow-wrap: anywhere;
 }
 
 .title {
