@@ -30,7 +30,7 @@
 
 :root {
   --display: 3.625rem;
-  --title: 2.875rem;
+  --title: 2.6875rem;
   --subtitle: 2.125rem;
   --body: 1.25rem;
   --small: 1rem;
@@ -142,7 +142,9 @@ html {
 .header {
   display: grid;
   grid-template-columns: min-content 1fr min-content;
+  background-color: rgba(255, 255, 255, 0.8);
   padding-top: var(--xs);
+  padding-bottom: var(--xs);
   position: fixed;
   top: 0;
   z-index: 100;
@@ -160,7 +162,7 @@ html {
     align-items: center;
     padding-right: var(--xs); }
   .header__logo {
-    height: var(--xl); }
+    height: 2.5rem; }
 
 .nav {
   background-color: #383838;
@@ -556,6 +558,10 @@ html {
   .description__content {
     padding-top: var(--xl);
     padding-left: var(--md); }
+  .description .subtitle,
+  .description .body,
+  .description .small {
+    text-shadow: 0 0 0.1875rem black; }
 
 .thumbnails {
   display: flex;
