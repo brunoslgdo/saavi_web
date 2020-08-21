@@ -1,7 +1,9 @@
 .header {
     display: grid;
     grid-template-columns: min-content 1fr min-content;
+    background-color: hsla(0, 100%, 100%, 0.8);
     padding-top: var(--xs);
+    padding-bottom: var(--xs);
     position: fixed;
     top: 0;
     z-index: 100;
@@ -27,7 +29,7 @@
     }
 
     &__logo {
-        height: var(--xl);
+        height: toRem(40);
     }
 }
 
