@@ -1,9 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
-  <g id="icon-fb" transform="translate(-87 -173)">
-    <g id="Elipse_1" data-name="Elipse 1" transform="translate(87 173)" fill="#383838" stroke="#383838" stroke-width="1">
-      <circle cx="17" cy="17" r="17" stroke="none"/>
-      <circle cx="17" cy="17" r="16.5" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #383838;
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Grupo_431" data-name="Grupo 431" transform="translate(-2440 -3123)">
+    <g id="Elipse_1" data-name="Elipse 1" class="cls-1" transform="translate(2440 3123)">
+      <circle class="cls-3" cx="19" cy="19" r="19"/>
+      <circle class="cls-4" cx="19" cy="19" r="18"/>
     </g>
-    <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" d="M10.618,10.125l.5-3.258H7.992V4.753a1.629,1.629,0,0,1,1.837-1.76H11.25V.22A17.329,17.329,0,0,0,8.728,0C6.153,0,4.471,1.56,4.471,4.385V6.867H1.609v3.258H4.471V18H7.992V10.125Z" transform="translate(97.391 181)" fill="#fff"/>
+    <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" class="cls-2" d="M11.678,11.316l.559-3.641H8.743V5.312A1.821,1.821,0,0,1,10.8,3.345h1.588V.246A19.368,19.368,0,0,0,9.566,0C6.688,0,4.808,1.744,4.808,4.9V7.675h-3.2v3.641h3.2v8.8H8.743v-8.8Z" transform="translate(2451.803 3131.941)"/>
   </g>
 </svg>
