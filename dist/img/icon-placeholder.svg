@@ -1,6 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="54.584" height="54.585" viewBox="0 0 54.584 54.585">
-  <g id="icon-placeholder" transform="translate(-6473 -3240)">
-    <path id="Trazado_4" data-name="Trazado 4" d="M6341,1530.4a27.293,27.293,0,1,1,27.292-27.293A27.323,27.323,0,0,1,6341,1530.4m0-51.653a24.361,24.361,0,1,0,24.361,24.36,24.388,24.388,0,0,0-24.361-24.36" transform="translate(159.292 1764.186)" fill="#fff"/>
-    <path id="Trazado_7" data-name="Trazado 7" d="M6341.173,1489.814h-2.346a8.351,8.351,0,0,0-8.351,8.351c0,9.173,9.524,23.649,9.524,23.649s9.524-14.095,9.524-23.649a8.351,8.351,0,0,0-8.351-8.351m-1.173,11.81a3.048,3.048,0,1,1,3.048-3.048,3.048,3.048,0,0,1-3.048,3.048" transform="translate(159.524 1761.186)" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="icon-placeholder" transform="translate(659 96)">
+    <g id="Elipse_1" data-name="Elipse 1" class="cls-1" transform="translate(-659 -96)">
+      <circle class="cls-3" cx="19" cy="19" r="19"/>
+      <circle class="cls-4" cx="19" cy="19" r="17.5"/>
+    </g>
+    <g id="place" transform="translate(-696.886 -87)">
+      <g id="Grupo_2190" data-name="Grupo 2190" transform="translate(48.886)">
+        <g id="Grupo_2189" data-name="Grupo 2189" transform="translate(0)">
+          <path id="Trazado_4" data-name="Trazado 4" class="cls-2" d="M64.361,3.653a8.484,8.484,0,0,0-13.949,0,8.485,8.485,0,0,0-.988,7.818A6.683,6.683,0,0,0,50.655,13.5l6.172,7.249a.734.734,0,0,0,1.119,0l6.17-7.247a6.689,6.689,0,0,0,1.231-2.031A8.487,8.487,0,0,0,64.361,3.653Zm-.39,7.308A5.241,5.241,0,0,1,63,12.549l0,0-5.612,6.592-5.616-6.6a5.244,5.244,0,0,1-.971-1.592,7.019,7.019,0,0,1,.82-6.468,7.015,7.015,0,0,1,11.532,0A7.02,7.02,0,0,1,63.971,10.962Z" transform="translate(-48.886)"/>
+        </g>
+      </g>
+      <g id="Grupo_2192" data-name="Grupo 2192" transform="translate(53.272 4.359)">
+        <g id="Grupo_2191" data-name="Grupo 2191">
+          <path id="Trazado_5" data-name="Trazado 5" class="cls-2" d="M159.868,106.219a4.114,4.114,0,1,0,4.114,4.114A4.119,4.119,0,0,0,159.868,106.219Zm0,6.759a2.645,2.645,0,1,1,2.645-2.645A2.648,2.648,0,0,1,159.868,112.978Z" transform="translate(-155.754 -106.219)"/>
+        </g>
+      </g>
+    </g>
   </g>
 </svg>

@@ -2,9 +2,9 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #383838;
+        fill: #3b5998;
         stroke: #fff;
-        stroke-width: 2px;
+        stroke-width: 3px;
       }
 
       .cls-2 {
@@ -20,11 +20,11 @@
       }
     </style>
   </defs>
-  <g id="Grupo_431" data-name="Grupo 431" transform="translate(-2440 -3123)">
-    <g id="Elipse_1" data-name="Elipse 1" class="cls-1" transform="translate(2440 3123)">
+  <g id="icon-fb" transform="translate(719 -154)">
+    <g id="Elipse_1" data-name="Elipse 1" class="cls-1" transform="translate(-719 154)">
       <circle class="cls-3" cx="19" cy="19" r="19"/>
-      <circle class="cls-4" cx="19" cy="19" r="18"/>
+      <circle class="cls-4" cx="19" cy="19" r="17.5"/>
     </g>
-    <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" class="cls-2" d="M11.678,11.316l.559-3.641H8.743V5.312A1.821,1.821,0,0,1,10.8,3.345h1.588V.246A19.368,19.368,0,0,0,9.566,0C6.688,0,4.808,1.744,4.808,4.9V7.675h-3.2v3.641h3.2v8.8H8.743v-8.8Z" transform="translate(2451.803 3131.941)"/>
+    <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" class="cls-2" d="M11.119,10.688l.528-3.439h-3.3V5.017A1.72,1.72,0,0,1,10.29,3.159h1.5V.232A18.294,18.294,0,0,0,9.125,0C6.406,0,4.63,1.647,4.63,4.628V7.249H1.608v3.439H4.63V19H8.347V10.688Z" transform="translate(-707.197 163.941)"/>
   </g>
 </svg>

@@ -1,25 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
   <defs>
     <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
       .cls-1 {
-        fill: #ffffff;
+        stroke: #fff;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke: none;
       }
     </style>
   </defs>
-  <g id="icon-linkedin" transform="translate(-233.754 -483.702)">
-    <g id="Grupo_2176" data-name="Grupo 2176" transform="translate(233.754 483.702)">
-      <g id="Grupo_2174" data-name="Grupo 2174">
-        <g id="Grupo_2171" data-name="Grupo 2171">
-          <path id="Trazado_1116" data-name="Trazado 1116" class="cls-1" d="M253.754,523.7a20,20,0,1,1,20-20A20.023,20.023,0,0,1,253.754,523.7Zm0-37.848A17.848,17.848,0,1,0,271.6,503.7,17.868,17.868,0,0,0,253.754,485.855Z" transform="translate(-233.754 -483.702)"/>
-        </g>
-        <g id="Grupo_2173" data-name="Grupo 2173" transform="translate(10.476 15.401)">
-          <g id="Grupo_2172" data-name="Grupo 2172">
-            <path id="Trazado_1117" data-name="Trazado 1117" class="cls-1" d="M268.857,510.805v7.468a.334.334,0,0,1-.335.334h-3.855a.334.334,0,0,1-.334-.334v-6.945c0-1.828-.653-3.076-2.291-3.076a2.474,2.474,0,0,0-2.32,1.654,3.088,3.088,0,0,0-.15,1.1v7.264a.334.334,0,0,1-.335.334h-3.854a.333.333,0,0,1-.334-.334c.009-1.849.048-10.823.008-12.933a.332.332,0,0,1,.334-.338h3.846a.334.334,0,0,1,.334.334v1.594c-.009.015-.022.03-.03.045h.03v-.045a4.491,4.491,0,0,1,4.077-2.247c2.976,0,5.207,1.945,5.207,6.122Zm-20.5,7.8h3.855a.334.334,0,0,0,.334-.334V505.336a.334.334,0,0,0-.334-.334h-3.855a.334.334,0,0,0-.334.334v12.937A.334.334,0,0,0,248.359,518.607Z" transform="translate(-248.025 -504.683)"/>
-          </g>
-        </g>
-      </g>
-      <g id="Grupo_2175" data-name="Grupo 2175" transform="translate(10.18 9.147)">
-        <circle id="Elipse_63" data-name="Elipse 63" class="cls-1" cx="2.421" cy="2.421" r="2.421"/>
+  <g id="icon-linkedin-white" transform="translate(703 -31)">
+    <g id="Elipse_1" data-name="Elipse 1" class="cls-1" transform="translate(-703 31)">
+      <circle class="cls-3" cx="19" cy="19" r="19"/>
+      <circle class="cls-4" cx="19" cy="19" r="17.5"/>
+    </g>
+    <g id="Grupo_2193" data-name="Grupo 2193" transform="translate(-74.381 3.371)">
+      <path id="Trazado_1117" data-name="Trazado 1117" class="cls-2" d="M265.023,509.677v6.094a.273.273,0,0,1-.273.273H261.6a.273.273,0,0,1-.273-.273V510.1c0-1.492-.533-2.51-1.869-2.51a2.019,2.019,0,0,0-1.893,1.35,2.52,2.52,0,0,0-.122.9v5.927a.273.273,0,0,1-.273.273h-3.145a.272.272,0,0,1-.273-.273c.007-1.509.039-8.831.007-10.553a.271.271,0,0,1,.273-.276h3.138a.273.273,0,0,1,.273.273v1.3c-.007.012-.018.024-.025.037h.025v-.037a3.665,3.665,0,0,1,3.327-1.834c2.428,0,4.249,1.587,4.249,5ZM248.3,516.042h3.146a.273.273,0,0,0,.273-.273V505.215a.273.273,0,0,0-.273-.273H248.3a.273.273,0,0,0-.273.273v10.556a.273.273,0,0,0,.274.273Z" transform="translate(-865.642 -462.489)"/>
+      <g id="Grupo_2175" data-name="Grupo 2175" transform="translate(-617.44 37.629)">
+        <circle id="Elipse_63" data-name="Elipse 63" class="cls-2" cx="1.975" cy="1.975" r="1.975" transform="translate(0 0)"/>
       </g>
     </g>
   </g>
