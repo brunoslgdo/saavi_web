@@ -6,7 +6,7 @@
     <meta http-equiv="cache-control" content="no-cache"/>
     <title>SAAVI</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
-    <link href="css/styles.css?v=200820:2045" rel="stylesheet"/>
+    <link href="css/styles.css?v=1598334976731" rel="stylesheet"/>
   </head>
   <body>
     <ul class="socials">
@@ -16,12 +16,7 @@
     </ul>
     <header class="content header" id="header-en">
       <div class="header__content header__left">
-        <div class="header__child">
-          <picture>
-            <source class="header__logo" srcset="img/saavi.svg" media="(min-width: 768px)"/>
-            <source class="header__logo" srcset="img/logo-saavi-alt.svg" media="(min-width: 320px)"/><img class="header__logo" src="img/saavi.svg" alt="logo saavi"/>
-          </picture>
-        </div>
+        <div class="header__child"><img class="header__logo" src="img/saavi.svg" alt="logo saavi"/></div>
       </div>
       <div class="header__content header__middle"></div>
       <div class="header__content header__right">
@@ -34,6 +29,8 @@
             <li class="menu__item"><a class="menu__link" href="#energy-solutions">Energy solutions</a></li>
             <li class="menu__item"><a class="menu__link" href="#portfolio">Portfolio</a></li>
             <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+            <li class="menu__item menu__socials"><a class="menu__icon" href="/"><img src="img/icon-tw.svg" alt="saavi twitter"/></a><a class="menu__icon" href="/"><img src="img/icon-fb.svg" alt="saavi facebook"/></a><a class="menu__icon" href="/"><img src="img/icon-in.svg" alt="saavi linkedin"/></a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -188,128 +185,98 @@
     </section>
     <section class="container power-plants" id="power-plants">
       <article class="wrap power-plants__content">
-        <ul class="description">
-          <li class="description__item tabcontent" id="Campeche"><img class="description__img" src="img/thumbnail-campeche.jpg" alt="Campeche - Combined Cycle Plant"/>
-            <div class="description__content">
-              <div class="description__header">
-                <h1 class="subtitle text-alt">Campeche</h1>
-                <h2 class="body text-alt"><strong>Combined Cycle Plant</strong></h2>
-              </div>
-              <div class="description__info">
-                <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
-                <p class="small text-alt">Capacidad nominal: <strong>252 MWh</strong></p>
-                <p class="small text-alt">Inicio de operaciones: <strong>Mayo, 2003</strong>                               </p>
-              </div>
-              <div class="description__close">
-                <p class="small text-alt"><strong>Cerrar</strong></p>
-              </div>
+        <ul class="card">
+          <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-campeche.jpg" alt="Campeche - Central Ciclo Combinado"/>
+            <h1 class="body text-alt absolute" id="one"><strong>Campeche</strong></h1>
+            <div class="card__info absolute" id="card-one">
+              <h1 class="subtitle text-alt">Campeche</h1>
+              <h2 class="small ligth text-alt">Central Ciclo Combinado</h2>
+              <p class="small text-alt mbottom--sm">Palizada, Campeche</p>
+              <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
+              <p class="body ligth text-alt">252 MWh</p>
+              <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
+              <p class="body light text-alt">Mayo, 2003</p>
+              <div class="iclose" id="close-one"></div>
             </div>
           </li>
-          <li class="description__item tabcontent" id="ElSauz"><img class="description__img" src="img/thumbnail-el-sauz.jpg" alt="El Sauz - Gas compressor station"/>
-            <div class="description__content">
-              <div class="description__header">
-                <h1 class="subtitle text-alt">El Sauz</h1>
-                <h2 class="body text-alt"><strong>Gas compressor station</strong></h2>
-              </div>
-              <div class="description__info">
-                <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
-                <p class="small text-alt">Capacidad nominal: <strong>252 MWh</strong></p>
-                <p class="small text-alt">Inicio de operaciones: <strong>Mayo, 2003</strong>                               </p>
-              </div>
-              <div class="description__close">
-                <p class="small text-alt"><strong>Cerrar</strong></p>
-              </div>
+          <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-el-sauz.jpg" alt="El Sauz - Estación de compresión de gas"/>
+            <h1 class="body text-alt absolute" id="two"><strong>El Sauz</strong></h1>
+            <div class="card__info absolute" id="card-two">
+              <h1 class="subtitle text-alt">El Sauz</h1>
+              <h2 class="small ligth text-alt">Estación de compresión de gas</h2>
+              <p class="small text-alt mbottom--sm">Palizada, Campeche</p>
+              <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
+              <p class="body ligth text-alt">252 MWh</p>
+              <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
+              <p class="body light text-alt">Mayo, 2003</p>
+              <div class="iclose" id="close-two"></div>
             </div>
           </li>
-          <li class="description__item tabcontent" id="Altamira"><img class="description__img" src="img/thumbnail-altamira.jpg" alt="Altamira - Gas compressor station"/>
-            <div class="description__content">
-              <div class="description__header">
-                <h1 class="subtitle text-alt">Altamira</h1>
-                <h2 class="body text-alt"><strong>Gas compressor station</strong></h2>
-              </div>
-              <div class="description__info">
-                <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
-                <p class="small text-alt">Capacidad nominal: <strong>252 MWh</strong></p>
-                <p class="small text-alt">Inicio de operaciones: <strong>Mayo, 2003</strong>                               </p>
-              </div>
-              <div class="description__close">
-                <p class="small text-alt"><strong>Cerrar</strong></p>
-              </div>
+          <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-altamira.jpg" alt="Altamira - Estación de compresión de gas"/>
+            <h1 class="body text-alt absolute" id="three"><strong>Altamira</strong></h1>
+            <div class="card__info absolute" id="card-three">
+              <h1 class="subtitle text-alt">Altamira</h1>
+              <h2 class="small ligth text-alt">Estación de compresión de gas</h2>
+              <p class="small text-alt mbottom--sm">Palizada, Campeche</p>
+              <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
+              <p class="body ligth text-alt">252 MWh</p>
+              <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
+              <p class="body light text-alt">Mayo, 2003</p>
+              <div class="iclose" id="close-three"></div>
             </div>
           </li>
-          <li class="description__item tabcontent" id="Chihuahua"><img class="description__img" src="img/thumbnail-chihuahua.jpg" alt="Chihuahua - Combined Cycle Plant"/>
-            <div class="description__content">
-              <div class="description__header">
-                <h1 class="subtitle text-alt">Chihuahua</h1>
-                <h2 class="body text-alt"><strong>Combined Cycle Plant</strong></h2>
-              </div>
-              <div class="description__info">
-                <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
-                <p class="small text-alt">Capacidad nominal: <strong>252 MWh</strong></p>
-                <p class="small text-alt">Inicio de operaciones: <strong>Mayo, 2003</strong>                               </p>
-              </div>
-              <div class="description__close">
-                <p class="small text-alt"><strong>Cerrar</strong></p>
-              </div>
+          <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-chihuahua.jpg" alt="Chihuahua - Central de ciclo combinado"/>
+            <h1 class="body text-alt absolute" id="four"><strong>Chihuahua</strong></h1>
+            <div class="card__info absolute" id="card-four">
+              <h1 class="subtitle text-alt">Chihuahua</h1>
+              <h2 class="small ligth text-alt">Central de ciclo combinado</h2>
+              <p class="small text-alt mbottom--sm">Palizada, Campeche</p>
+              <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
+              <p class="body ligth text-alt">252 MWh</p>
+              <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
+              <p class="body light text-alt">Mayo, 2003</p>
+              <div class="iclose" id="close-four"></div>
             </div>
           </li>
-          <li class="description__item tabcontent" id="LaRosita"><img class="description__img" src="img/thumbnail-la-rosita.jpg" alt="La Rosita I y II - Combined Cycle Plant"/>
-            <div class="description__content">
-              <div class="description__header">
-                <h1 class="subtitle text-alt">La Rosita I y II</h1>
-                <h2 class="body text-alt"><strong>Combined Cycle Plant</strong></h2>
-              </div>
-              <div class="description__info">
-                <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
-                <p class="small text-alt">Capacidad nominal: <strong>252 MWh</strong></p>
-                <p class="small text-alt">Inicio de operaciones: <strong>Mayo, 2003</strong>                               </p>
-              </div>
-              <div class="description__close">
-                <p class="small text-alt"><strong>Cerrar</strong></p>
-              </div>
+          <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-la-rosita.jpg" alt="La Rosita I y II - Central de ciclo combinado"/>
+            <h1 class="body text-alt absolute" id="five"><strong>La Rosita I y II</strong></h1>
+            <div class="card__info absolute" id="card-five">
+              <h1 class="subtitle text-alt">La Rosita I y II</h1>
+              <h2 class="small ligth text-alt">Central de ciclo combinado</h2>
+              <p class="small text-alt mbottom--sm">Palizada, Campeche</p>
+              <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
+              <p class="body ligth text-alt">252 MWh</p>
+              <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
+              <p class="body light text-alt">Mayo, 2003</p>
+              <div class="iclose" id="close-five"></div>
             </div>
           </li>
-          <li class="description__item tabcontent" id="SierraJuarez"><img class="description__img" src="img/thumbnail-sierra-juarez.jpg" alt="Energía Sierra Juárez - Parque eólico"/>
-            <div class="description__content">
-              <div class="description__header">
-                <h1 class="subtitle text-alt">Energía Sierra Juárez</h1>
-                <h2 class="body text-alt"><strong>Parque eólico</strong></h2>
-              </div>
-              <div class="description__info">
-                <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
-                <p class="small text-alt">Capacidad nominal: <strong>252 MWh</strong></p>
-                <p class="small text-alt">Inicio de operaciones: <strong>Mayo, 2003</strong>                               </p>
-              </div>
-              <div class="description__close">
-                <p class="small text-alt"><strong>Cerrar</strong></p>
-              </div>
+          <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-sierra-juarez.jpg" alt="Sierra Juárez - Parque eólico"/>
+            <h1 class="body text-alt absolute" id="six"><strong>Sierra Juárez</strong></h1>
+            <div class="card__info absolute" id="card-six">
+              <h1 class="subtitle text-alt">Sierra Juárez</h1>
+              <h2 class="small ligth text-alt">Parque eólico</h2>
+              <p class="small text-alt mbottom--sm">Palizada, Campeche</p>
+              <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
+              <p class="body ligth text-alt">252 MWh</p>
+              <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
+              <p class="body light text-alt">Mayo, 2003</p>
+              <div class="iclose" id="close-six"></div>
             </div>
           </li>
-          <li class="description__item tabcontent" id="SanLuisDeLaPaz"><img class="description__img" src="img/thumbnail-san-luis-de-la-paz.jpg" alt="San Luis de la Paz - Combined Cycle Plant"/>
-            <div class="description__content">
-              <div class="description__header">
-                <h1 class="subtitle text-alt">San Luis de la Paz</h1>
-                <h2 class="body text-alt"><strong>Combined Cycle Plant</strong></h2>
-              </div>
-              <div class="description__info">
-                <p class="small text-alt"><strong>Palizada, Campeche</strong></p>
-                <p class="small text-alt">Capacidad nominal: <strong>252 MWh</strong></p>
-                <p class="small text-alt">Inicio de operaciones: <strong>Mayo, 2003</strong>                               </p>
-              </div>
-              <div class="description__close">
-                <p class="small text-alt"><strong>Cerrar</strong></p>
-              </div>
+          <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-san-luis-de-la-paz.jpg" alt="San Luis de la Paz - Central de ciclo combinado"/>
+            <h1 class="body text-alt absolute" id="seven"><strong>San Luis de la Paz</strong></h1>
+            <div class="card__info absolute" id="card-seven">
+              <h1 class="subtitle text-alt">San Luis de la Paz</h1>
+              <h2 class="small ligth text-alt">Central de ciclo combinado</h2>
+              <p class="small text-alt mbottom--sm">Palizada, Campeche</p>
+              <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
+              <p class="body ligth text-alt">252 MWh</p>
+              <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
+              <p class="body light text-alt">Mayo, 2003</p>
+              <div class="iclose" id="close-seven"></div>
             </div>
           </li>
-        </ul>
-        <ul class="thumbnails">
-          <li class="thumbnails__item"><img class="thumbnails__img tablink" src="img/thumbnail-campeche.jpg" id="defaultOpen" onclick="openPowerPlant('Campeche', this, 'transparent')" alt="Campeche - Central Ciclo Combinado"/></li>
-          <li class="thumbnails__item"><img class="thumbnails__img tablink" src="img/thumbnail-el-sauz.jpg" onclick="openPowerPlant('ElSauz', this, 'transparent')" alt="El Sauz - Estación de compresión de gas"/></li>
-          <li class="thumbnails__item"><img class="thumbnails__img tablink" src="img/thumbnail-altamira.jpg" onclick="openPowerPlant('Altamira', this, 'transparent')" alt="Altamira - Estación de compresión de gas"/></li>
-          <li class="thumbnails__item"><img class="thumbnails__img tablink" src="img/thumbnail-chihuahua.jpg" onclick="openPowerPlant('Chihuahua', this, 'transparent')" alt="Chihuahua - Central de ciclo combinado"/></li>
-          <li class="thumbnails__item"><img class="thumbnails__img tablink" src="img/thumbnail-la-rosita.jpg" onclick="openPowerPlant('LaRosita', this, 'transparent')" alt="La Rosita I y II - Central de ciclo combinado"/></li>
-          <li class="thumbnails__item"><img class="thumbnails__img tablink" src="img/thumbnail-sierra-juarez.jpg" onclick="openPowerPlant('SierraJuarez', this, 'transparent')" alt="Energía Sierra Juárez - Parque eólico"/></li>
-          <li class="thumbnails__item"><img class="thumbnails__img tablink" src="img/thumbnail-san-luis-de-la-paz.jpg" onclick="openPowerPlant('SanLuisDeLaPaz', this, 'transparent')" alt="San Luis de la Paz - Central de ciclo combinado"/></li>
         </ul>
       </article>
     </section>
@@ -356,9 +323,9 @@
         </div>
         <iframe class="contact__child" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15049.390543816424!2d-99.202477!3d19.440573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1597155607932!5m2!1ses!2smx" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </article>
-    </section><script src="js/show-menu.js"></script>
-<script src="js/play-video.js"></script>
-<script src="js/power-plants.js"></script>
-<script src="js/switch-lang.js"></script>
+    </section>
+    <script src="js/show-menu.js"></script>
+    <script src="js/play-video.js"></script>
+    <script src="js/power-plants.js"></script>
   </body>
 </html>
