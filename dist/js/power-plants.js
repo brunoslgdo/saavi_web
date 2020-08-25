@@ -1,16 +1,28 @@
-function openPowerPlant(powerPlantName, elmnt, color) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].style.backgroundColor = "";
-    }
-    document.getElementById(powerPlantName).style.display = "grid";
-    elmnt.style.backgroundColor = color;
-  
-  }
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
+const showPlant = (plantNumberId, cardNumberId, closeNumberId) => {
+	
+	let plantNumber = document.getElementById(plantNumberId),
+		cardNumber = document.getElementById(cardNumberId),
+		closeNumber = document.getElementById(closeNumberId)
+
+	if(plantNumber && cardNumber) {
+		plantNumber.addEventListener('click', () => {
+			cardNumber.classList.toggle('cover')
+			plantNumber.style.transform = 'scale(0, 0)'
+		})
+	}
+	
+	if(closeNumber && cardNumber) {
+		closeNumber.addEventListener('click', () => {
+			cardNumber.classList.toggle('cover')
+			plantNumber.style.transform = 'scale(1, 1)'
+		})
+	}
+}
+
+showPlant('one', 'card-one', 'close-one')
+showPlant('two', 'card-two', 'close-two')
+showPlant('three', 'card-three', 'close-three')
+showPlant('four', 'card-four', 'close-four')
+showPlant('five', 'card-five', 'close-five')
+showPlant('six', 'card-six', 'close-six')
+showPlant('seven', 'card-seven', 'close-seven')
