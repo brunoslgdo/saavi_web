@@ -14,7 +14,7 @@ html(lang="es")
         meta(http-equiv="cache-control", content="no-cache")
         title SAAVI
         link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
-        link(href=`${pathStyles}styles.css${cacheCss}`, rel="stylesheet")
+        link(href=`${pathStyles}styles.css?v=${cacheCss}`, rel="stylesheet")
     body
 
         include components/socials
@@ -25,7 +25,7 @@ html(lang="es")
             video(class="main__video", id="video" preload="none" muted autoplay loop)
                 source(src="video/saavi_video.mp4" type="video/mp4")
             section.wrap.main__content
-                h1.display.text-alt GENERAMOS EL FUTURO
+                h1.display.text-alt GENERAMOS<br>EL FUTURO
                 p.body.text-alt Nuestra electricidad impulsa la competitividad de las empresas <strong>en México</strong>
                 //- .icon-play#icon-play
         //- ok
@@ -87,39 +87,29 @@ html(lang="es")
                     h1.title.text-alt Portafolio
                 .portfolio__child.mapa
                     img(src=`${pathImg}mapa.svg`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico")
-        
+            
         section.container.power-plants#power-plants
             article.wrap.power-plants__content
-                ul.description
+                ul.card
                     each item in POWERPLANTS
-                        li(class="description__item tabcontent" id=`${item.id}`)
-                            img(src=`${pathImg}${item.hero}`, alt=`${item.city} - ${item.type}`, class="description__img")
-                            .description__content
-                                .description__header
-                                    h1.subtitle.text-alt= `${item.city}`
-                                    h2.body.text-alt <strong>!{`${item.type}`}</strong>
-                                .description__info
-                                    p.small.text-alt <strong>!{`${item.ub}`}</strong>
-                                    p.small.text-alt Capacidad nominal: <strong>!{`${item.capacity}`}</strong>
-                                    p.small.text-alt Inicio de operaciones: <strong>!{`${item.start}`}</strong>                               
-                                .description__close
-                                    p.small.text-alt <strong>Cerrar</strong>
-                ul.thumbnails
-                    each item in POWERPLANTS
-                        if item.defaultopen !== ''
-                            li.thumbnails__item
-                                img(src=`${pathImg}${item.thumbnail}`, class="thumbnails__img tablink", id="defaultOpen" onclick=`openPowerPlant('${item.id}', this, 'transparent')`, alt=`${item.city} - ${item.type}`)
-                                //- p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
-                        else
-                            li.thumbnails__item
-                                img(src=`${pathImg}${item.thumbnail}`, class="thumbnails__img tablink", onclick=`openPowerPlant('${item.id}', this, 'transparent')`, alt=`${item.city} - ${item.type}`)
-                                //- p(class="body", onclick=`openPowerPlant('${item.plantnumber}', this)`) <strong>!{`${item.city}`}</strong>
+                        li(class="card__item")
+                            img(src=`${pathImg}${item.hero}`, class="card__img absolute", alt=`${item.city} - ${item.type}`, class="description__img")
+                            h1(id=`${item.plantnumber}` class="body text-alt absolute"): strong !{`${item.city}`}
+                            div(id=`${item.cardnumber}` class="card__info absolute")
+                                h1.subtitle.text-alt !{`${item.city}`}
+                                h2.small.ligth.text-alt !{`${item.type}`}
+                                p.small.text-alt.mbottom--sm !{`${item.ub}`}
+                                p.small.text-alt: strong Capacidad nominal: 
+                                p.body.ligth.text-alt !{`${item.capacity}`}
+                                p.small.text-alt: strong Inicio de operaciones: 
+                                p.body.light.text-alt !{`${item.start}`}
+                                div(id=`${item.closenumber}` class="iclose")
 
         //- ok
         section.container.investors#investros
             article.wrap.investors__content
                 .investors__child
-                    h1.title.first Inversionistas
+                    h1.title.first Inver
                 .investors__child
                     form(action="#", class="form-investors")
                         .form-investors__field
@@ -148,7 +138,6 @@ html(lang="es")
                                 span.small.text-alt= `${item.content}`
                 iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15049.390543816424!2d-99.202477!3d19.440573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1597155607932!5m2!1ses!2smx" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="contact__child")
         
-        <script src="js/show-menu.js"></script>
-        <script src="js/play-video.js"></script>
-        <script src="js/power-plants.js"></script>
-        <script src="js/switch-lang.js"></script>
+        script(src=`${pathJs}show-menu.js`)
+        //- script(src=`${pathJs}/play-video.js`)
+        script(src=`${pathJs}power-plants.js`)

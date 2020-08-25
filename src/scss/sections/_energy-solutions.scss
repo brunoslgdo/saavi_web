@@ -55,6 +55,6 @@
     &__icon {
         flex: none;
         margin-right: var(--ss);
-        width: calc(var(--xl) + var(--ss));
+        width: toRem(38);
     }
 }
