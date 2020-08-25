@@ -3,14 +3,35 @@
     margin-bottom: var(--child-padding);
 }
 
-.description {
-    list-style: none;
+.card {
+    display: grid;
+    gap: var(--sm);
 
+    @media only screen and (min-width: 736px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     &__item {
         display: grid;
         grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: repeat(9, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        list-style: none;
         position: relative;
+        
+        @media only screen and (min-width: 568px) {
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+        }
+
+        @media only screen and (min-width: 736px) {
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: repeat(16, 1fr);
+        }
+        
+        // @media only screen and (min-width: 896px) {
+        //     grid-template-columns: repeat(16, 1fr);
+        //     grid-template-rows: repeat(9, 1fr);
+        // }
 
         &::after {
             content: '';
@@ -19,65 +40,83 @@
         }
     }
 
-    &__img,
-    &__content {
-        position: absolute;
-    }
-
     &__img {
         object-fit: cover;
         width: 100%;
         height: 100%;
     }
 
-    &__content {
-        padding-top: var(--xl);
-        padding-left: var(--md);
+    &__info {
+        background-color: rgba(0, 113, 187, .6);
+        margin: 0;
+        padding: var(--ss);
+        width: 100%;
+        height: 100%;
+        transform: scale(0, 0);
+        transition: transform .1s ease;
+
+        @media only screen and (min-width: 375px) {
+            padding: var(--sm);
+        }
     }
 
-    .subtitle,
-    .body,
-    .small {
-        text-shadow: 0 0 toRem(3) hsla(0, 0, 0, 1);
+    h1.body {
+        background-color: rgba(0, 113, 187, .6);
+        margin: var(--xs);
+        padding: var(--ss) var(--xs);
+        bottom: 0;
+
+        @media only screen and (min-width: 375px) {
+            margin: var(--sm);
+        }
+    }
+    
+    .subtitle {
+        margin-bottom: 0;
+    }
+    
+    .absolute {
+        position: absolute;
+    }
+
+    .cover {
+        transform: scale(1, 1);
     }
 }
 
-.thumbnails {
+.iclose {
+    --side: #{toRem(34)};
     display: flex;
-    list-style: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    position: absolute;
+    right: var(--ss);
+    bottom: var(--ss);
+    width: var(--side);
+    height: var(--side);
+    transition: transform .1s ease;
 
-    &__item {
-        flex: auto;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        position: relative;
-
-        &::after {
-            content: '';
-            display: block;
-            padding-bottom: 100%;
-        }
+    @media only screen and (min-width: 375px) {
+        right: var(--sm);
+        bottom: var(--sm);
     }
 
-    &__img {
-        object-fit: cover;
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        background-color: var(--text-alt);
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 70%;
+        height: toRem(3);
     }
-}
 
-.tabcontent {
-    display: none;
-}
-
-#Campeche,
-#ElSauz,
-#Altamira,
-#Chihuahua,
-#LaRosita,
-#SierraJuarez,
-#SanLuisDeLaPaz {
-    background-color: transparent;
+    &::before {
+        transform: rotate(45deg);
+    }
+    
+    &::after {
+        transform: rotate(-45deg);
+    }
 }
