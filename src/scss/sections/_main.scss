@@ -9,8 +9,8 @@
     &::before {
         content: '';
         display: block;
-        background-color: var(--first);
-        mix-blend-mode: multiply;
+        // background-color: var(--first-alt);
+        // mix-blend-mode: multiply;
         position: absolute;
         z-index: 1;
         width: 100%;
@@ -52,10 +52,20 @@
 
     .display {
         max-width: calc(var(--xx) * 6);
+
+        @media only screen and (min-width: 320px) {
+            font-size: toRem(40);
+        }
+        
+        @media only screen and (min-width: 768px) {
+            font-size: toRem(56);
+        }
     }
 
     .body {
         max-width: calc(var(--xx) * 4);
+        padding-right: var(--ss);
+        padding-left: var(--ss);
     }
 }
 
