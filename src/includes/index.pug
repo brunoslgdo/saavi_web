@@ -17,7 +17,6 @@ html(lang="es")
         link(href=`${pathStyles}styles.css?v=${cacheCss}`, rel="stylesheet")
     body
 
-        include components/socials
         include components/header
             
         //- ok
@@ -27,7 +26,7 @@ html(lang="es")
             section.wrap.main__content
                 h1.display.text-alt GENERAMOS<br>EL FUTURO
                 p.body.text-alt Nuestra electricidad impulsa la competitividad de las empresas <strong>en México</strong>
-                //- .icon-play#icon-play
+
         //- ok
         section.container.about-us#about-us
             article.wrap.about-us__content
@@ -57,7 +56,8 @@ html(lang="es")
                             .card-managers__position
                                 h1.body.text-alt <strong>!{`${item.name}<br>${item.lastname}`}</strong>
                                 h2.small.text-alt= `${item.title}`
-                            img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`, class="card-managers__position")
+                            a(href=`${item.href}`, class="card-managers__position", target="_blank")
+                                img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`)
         
         //- ok
         section.container.energy-solutions#energy-solutions
@@ -109,7 +109,7 @@ html(lang="es")
         section.container.investors#investros
             article.wrap.investors__content
                 .investors__child
-                    h1.title.first Inver
+                    h1.title.first Inversionistas
                 .investors__child
                     form(action="#", class="form-investors")
                         .form-investors__field
@@ -139,5 +139,5 @@ html(lang="es")
                 iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15049.390543816424!2d-99.202477!3d19.440573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1597155607932!5m2!1ses!2smx" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="contact__child")
         
         script(src=`${pathJs}show-menu.js`)
-        //- script(src=`${pathJs}/play-video.js`)
+        script(src=`${pathJs}/play-video.js`)
         script(src=`${pathJs}power-plants.js`)

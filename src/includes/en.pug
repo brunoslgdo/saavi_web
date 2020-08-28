@@ -17,7 +17,6 @@ html(lang="en")
         link(href=`${pathStyles}styles.css?v=${cacheCss}`, rel="stylesheet")
     body
 
-        include components/socials
         include components/header-en
         
         //- ok
@@ -25,7 +24,7 @@ html(lang="en")
             video(class="main__video", id="video" autoplay, muted, loop)
                 source(src="video/saavi_video.mp4" type="video/mp4")
             section.wrap.main__content
-                h1.display.text-alt GENERATING THE FUTURE
+                h1.display.text-alt GENERATING<br>THE FUTURE
                 p.body.text-alt We power the competitiveness of the industries <strong>in Mexico</strong>
 
         //- ok
@@ -52,12 +51,13 @@ html(lang="en")
             article.wrap
                 h1.title.first Management team
                 ul.card-managers
-                    each item in MANAGERS
+                    each item in MANAGERS_EN
                         li.card-managers__item
                             .card-managers__position
                                 h1.body.text-alt <strong>!{`${item.name}<br>${item.lastname}`}</strong>
                                 h2.small.text-alt= `${item.title}`
-                            img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`, class="card-managers__position")
+                            a(href=`${item.href}`, class="card-managers__position", target="_blank")
+                                img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`)
 
         //- ok
         section.container.energy-solutions#energy-solutions
