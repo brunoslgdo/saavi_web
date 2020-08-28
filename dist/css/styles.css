@@ -29,7 +29,7 @@
   background-color: #ffffff; }
 
 :root {
-  --display: 3.625rem;
+  --display: 4rem;
   --title: 2.6875rem;
   --subtitle: 2.125rem;
   --body: 1.25rem;
@@ -285,10 +285,14 @@ html {
   grid-template-rows: auto;
   row-gap: var(--sm);
   list-style: none;
-  position: fixed;
-  top: calc(50% + 3.625rem);
-  transform: translateY(-50%);
+  position: absolute;
+  top: 700%;
+  left: 50%;
+  transform: translateY(-50%, -50%);
   z-index: 10; }
+  @media only screen and (min-width: 1024px) {
+    .socials {
+      display: grid; } }
   .socials__item {
     margin: auto; }
 
@@ -302,8 +306,6 @@ html {
   .main::before {
     content: '';
     display: block;
-    background-color: var(--first);
-    mix-blend-mode: multiply;
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -334,6 +336,9 @@ html {
     @media only screen and (min-width: 320px) {
       .main .display {
         font-size: 2.5rem; } }
+    @media only screen and (min-width: 768px) {
+      .main .display {
+        font-size: 3.5rem; } }
   .main .body {
     max-width: calc(var(--xx) * 4);
     padding-right: var(--ss);
