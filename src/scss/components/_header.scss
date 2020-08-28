@@ -1,12 +1,13 @@
 .header {
     display: grid;
     grid-template-columns: min-content 1fr min-content;
-    background-color: hsla(0, 100%, 100%, 0.8);
-    padding-top: var(--xs);
-    padding-bottom: var(--xs);
+    background-color: var(--text-alt);
+    box-shadow: 0 0 toRem(4) rgba(0, 0, 0, .4);
+    padding-top: var(--ss);
+    padding-bottom: var(--ss);
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     min-width: 100vw;
     
     @media only screen and (min-width: 1280px) {
@@ -29,21 +30,21 @@
     }
 
     &__logo {
-        height: toRem(40);
+        height: toRem(38);
     }
 }
 
 .nav {
-    background-color: hsl(0, 0%, 22%);
+    background-color: var(--text-alt);
+    border-radius: toRem(6);
+    box-shadow: 0 0 toRem(4) rgba(0, 0, 0, .4);
     position: fixed;
-    top: 0;
-    right: 0;
+    top: toRem(50);
+    right: var(--ss);
     z-index: -1;
     padding: var(--sm);
-    min-height: 100vh;
-    width: toRem(180);
-    transform-origin: right;
-    transform: scale(0, 1);
+    transform-origin: top;
+    transform: scale(1, 0);
     transition: transform .1s ease;
 }
 
@@ -57,20 +58,35 @@
     grid-template-rows: auto;
     gap: var(--sm);
     list-style: none;
-    padding-top: toRem(58);
 
     &__link {
-        color: var(--text-alt);
+        color: var(--first-alt);
         font-size: var(--small);
         text-decoration: none;
+    }
+
+    &__socials {
+
+        @media only screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+
+        &:nth-child(2) {
+            padding-right: var(--ss);
+            padding-left: var(--ss);
+        }
     }
 }
 
 %icon {
     --border-width: #{toRem(3)};
     --square: calc(var(--md) + #{toRem(2)});
-    --color: var(--text-alt);
-    --bg-color: hsl(0, 0%, 22%);
+    --color: var(--first-alt);
+    --bg-color: var(--text-alt);
     cursor: pointer;
     background-color: var(--bg-color);
     border: var(--border-width) solid var(--bg-color);
@@ -135,8 +151,4 @@
         width: 0;
         transition: transform .1s ease;
     }
-}
-
-.socials-desktop {
-    
 }
