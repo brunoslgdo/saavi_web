@@ -48,8 +48,14 @@
     list-style: none;
 
     &__item {
+        cursor: pointer;
         display: flex;
         align-items: center;
+        position: relative;
+
+        &:hover > span.small {
+            text-decoration: underline;
+        }
     }
 
     &__icon {
