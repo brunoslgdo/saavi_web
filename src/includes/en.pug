@@ -91,6 +91,49 @@ html(lang="en")
         section.container.power-plants#power-plants
             article.wrap.power-plants__content
                 ul.card
+                    //- central de ciclo combinado
+                    each item in POWERPLANTS
+                        li(class="card__item")
+                            img(src=`${pathImg}${item.hero}`, class="card__img absolute", alt=`${item.city} - ${item.type}`, class="description__img")
+                            h1(id=`${item.plantnumber}` class="body text-alt absolute"): strong !{`${item.city}`}
+                            div(id=`${item.cardnumber}` class="card__info absolute")
+                                h1.subtitle.text-alt !{`${item.city}`}
+                                h2.small.ligth.text-alt !{`${item.type}`}
+                                p.small.text-alt.mbottom--sm !{`${item.ub}`}
+                                p.small.text-alt: strong Capacidad nominal: 
+                                p.body.ligth.text-alt !{`${item.capacity}`}
+                                p.small.text-alt: strong Inicio de operaciones: 
+                                p.body.light.text-alt !{`${item.start}`}
+                                div(id=`${item.closenumber}` class="iclose")
+                    //- estación de compresión de gas
+                    each item in POWERPLANTS
+                        li(class="card__item")
+                            img(src=`${pathImg}${item.hero}`, class="card__img absolute", alt=`${item.city} - ${item.type}`, class="description__img")
+                            h1(id=`${item.plantnumber}` class="body text-alt absolute"): strong !{`${item.city}`}
+                            div(id=`${item.cardnumber}` class="card__info absolute")
+                                h1.subtitle.text-alt !{`${item.city}`}
+                                h2.small.ligth.text-alt !{`${item.type}`}
+                                p.small.text-alt.mbottom--sm !{`${item.ub}`}
+                                p.small.text-alt: strong Capacidad nominal: 
+                                p.body.ligth.text-alt !{`${item.capacity}`}
+                                p.small.text-alt: strong Inicio de operaciones: 
+                                p.body.light.text-alt !{`${item.start}`}
+                                div(id=`${item.closenumber}` class="iclose")
+                    //- parque eolico
+                    each item in POWERPLANTS
+                        li(class="card__item")
+                            img(src=`${pathImg}${item.hero}`, class="card__img absolute", alt=`${item.city} - ${item.type}`, class="description__img")
+                            h1(id=`${item.plantnumber}` class="body text-alt absolute"): strong !{`${item.city}`}
+                            div(id=`${item.cardnumber}` class="card__info absolute")
+                                h1.subtitle.text-alt !{`${item.city}`}
+                                h2.small.ligth.text-alt !{`${item.type}`}
+                                p.small.text-alt.mbottom--sm !{`${item.ub}`}
+                                p.small.text-alt: strong Capacidad nominal: 
+                                p.body.ligth.text-alt !{`${item.capacity}`}
+                                p.small.text-alt: strong Inicio de operaciones: 
+                                p.body.light.text-alt !{`${item.start}`}
+                                div(id=`${item.closenumber}` class="iclose")
+                    //- generacion
                     each item in POWERPLANTS
                         li(class="card__item")
                             img(src=`${pathImg}${item.hero}`, class="card__img absolute", alt=`${item.city} - ${item.type}`, class="description__img")
