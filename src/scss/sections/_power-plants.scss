@@ -1,6 +1,12 @@
 .power-plants {
     --child-padding: calc(var(--xx) * 1.5);
     margin-bottom: var(--child-padding);
+
+    &__type {
+        display: grid;
+        // gap: var(--sm);
+        margin-bottom: var(--md);
+    }
 }
 
 .card {
