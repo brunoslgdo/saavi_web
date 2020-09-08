@@ -134,7 +134,7 @@ html {
   --max-width: 51rem;
   max-width: var(--max-width); }
 
-.energy-solutions__content, .portfolio__content, .investors__content {
+.energy-solutions__content, .portfolio__content, .investors__content, .clients__content {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -301,26 +301,17 @@ html {
   filter: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.6));
   padding: var(--sm);
   position: absolute;
+  top: 100%;
   left: var(--xl);
-  bottom: calc(100% + var(--ss));
-  max-width: 15rem;
-  transform-origin: bottom;
+  z-index: 1;
+  width: calc(100% - 4rem);
+  transform-origin: top;
   transform: scale(1, 0);
-  transition: transform .3s ease; }
-  .tooltip::after {
-    content: '';
-    display: block;
-    background-color: inherit;
-    box-shadow: 0 0 0.375rem 0.125rem rgba(0, 0, 0, 0.9);
-    position: absolute;
-    z-index: 10;
-    bottom: -0.75rem;
-    clip-path: polygon(100% 50%, 0 50%, 50% 100%);
-    width: var(--sm);
-    height: var(--sm); }
+  transition: transform .1s ease; }
 
 .solutions__item:hover .tooltip {
-  transform: scale(1, 1); }
+  transform: scale(1, 1);
+  transition: transform .1s ease; }
 
 .main {
   display: grid;
@@ -526,16 +517,29 @@ html {
   gap: var(--sm);
   list-style: none; }
   .solutions__item {
-    cursor: pointer;
     display: flex;
     align-items: center;
     position: relative; }
-    .solutions__item:hover > span.small {
-      text-decoration: underline; }
   .solutions__icon {
     flex: none;
     margin-right: var(--ss);
     width: 2.375rem; }
+
+.arrow-right {
+  cursor: pointer;
+  display: block;
+  position: relative; }
+  .arrow-right::after {
+    content: '\276F';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -1rem;
+    transform: translateY(-50%);
+    transition: transform .1s ease; }
+
+.arrow-down::after {
+  transform: translateY(-50%) rotate(90deg); }
 
 .portfolio {
   --child-padding: calc(var(--xx) * 1.5);
@@ -705,6 +709,55 @@ html {
         padding-top: var(--top-bottom-padding);
         padding-bottom: var(--top-bottom-padding); } }
   .investors__child:nth-child(2) {
+    background-color: var(--first);
+    padding-top: var(--top-bottom-padding);
+    padding-bottom: var(--top-bottom-padding); }
+
+.clients {
+  --top-bottom-padding: calc(var(--xx) * 1.5);
+  background-image: url("../img/inversionistas.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: var(--top-bottom-padding);
+  padding-bottom: var(--top-bottom-padding); }
+  @media only screen and (min-width: 568px) {
+    .clients {
+      padding-top: 0;
+      padding-bottom: 0; }
+      .clients.container {
+        padding-right: 0;
+        padding-left: 0; } }
+  @media only screen and (min-width: 1280px) {
+    .clients {
+      background-image: linear-gradient(#fff 50%, #fff 50%), url("../img/inversionistas-alt.png");
+      background-position: left;
+      background-size: 40%, cover; } }
+  .clients__content {
+    gap: 0; }
+    @media only screen and (min-width: 568px) {
+      .clients__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto; } }
+  @media only screen and (min-width: 1280px) {
+    .clients__child {
+      min-height: 100vh; } }
+  .clients__child:nth-child(1) {
+    padding-right: var(--sm);
+    padding-left: var(--sm); }
+    @media only screen and (min-width: 568px) {
+      .clients__child:nth-child(1) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding-top: var(--top-bottom-padding);
+        padding-bottom: var(--top-bottom-padding); } }
+  .clients__child:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
     background-color: var(--first);
     padding-top: var(--top-bottom-padding);
     padding-bottom: var(--top-bottom-padding); }

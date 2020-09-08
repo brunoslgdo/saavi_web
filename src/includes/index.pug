@@ -69,7 +69,7 @@ html(lang="es")
                         each item in SUPPLIER
                             li.solutions__item
                                 img(src=`${pathImg}${item.icon}`, class="solutions__icon", alt=`${item.name}`)
-                                span.small.first= `${item.name}`
+                                span(id=`${item.idsupplier}` class="small first")= `${item.name}`
                                 include components/tooltip
                 .energy-solutions__child
                     h1.title.text-alt Tu energía en manos de expertos
@@ -78,7 +78,7 @@ html(lang="es")
                         each item in GENERATOR
                             li.solutions__item
                                 img(src=`${pathImg}${item.icon}`, class="solutions__icon", alt=`${item.name}`)
-                                span.small.text-alt= `${item.name}`
+                                span.small.text-alt.solutions__info= `${item.name}`
                                 include components/tooltip
                     p.body.text-alt: strong Creamos la solución precisa para tu empresa, con la seguridad de que tendrás siempre el mejor servicio.
         
@@ -103,8 +103,8 @@ html(lang="es")
                                         h1(id=`${content.plantnumber}` class="body text-alt absolute"): strong !{`${content.city}`}
                                         div(id=`${content.cardnumber}` class="card__info absolute")
                                             h1.subtitle.text-alt !{`${content.city}`}
-                                            //- h2.small.ligth.text-alt !{`${content.type}`}
-                                            p.small.text-alt.mbottom--sm !{`${content.ub}`}
+                                            p.small.text-alt !{`${content.ub}`}
+                                            h2.small.ligth.text-alt.mbottom--sm CFE / Industria
                                             p.small.text-alt: strong Capacidad nominal: 
                                             p.body.ligth.text-alt !{`${content.capacity}`}
                                             p.small.text-alt: strong Inicio de operaciones: 
@@ -120,8 +120,8 @@ html(lang="es")
                                         h1(id=`${content.plantnumber}` class="body text-alt absolute"): strong !{`${content.city}`}
                                         div(id=`${content.cardnumber}` class="card__info absolute")
                                             h1.subtitle.text-alt !{`${content.city}`}
-                                            //- h2.small.ligth.text-alt !{`${content.type}`}
-                                            p.small.text-alt.mbottom--sm !{`${content.ub}`}
+                                            p.small.text-alt !{`${content.ub}`}
+                                            h2.small.ligth.text-alt.mbottom--sm CFE / Industria
                                             p.small.text-alt: strong Capacidad nominal: 
                                             p.body.ligth.text-alt !{`${content.capacity}`}
                                             p.small.text-alt: strong Inicio de operaciones: 
@@ -137,8 +137,8 @@ html(lang="es")
                                         h1(id=`${content.plantnumber}` class="body text-alt absolute"): strong !{`${content.city}`}
                                         div(id=`${content.cardnumber}` class="card__info absolute")
                                             h1.subtitle.text-alt !{`${content.city}`}
-                                            //- h2.small.ligth.text-alt !{`${content.type}`}
                                             p.small.text-alt.mbottom--sm !{`${content.ub}`}
+                                            h2.small.ligth.text-alt.mbottom--sm CFE / Industria
                                             p.small.text-alt: strong Capacidad nominal: 
                                             p.body.ligth.text-alt !{`${content.capacity}`}
                                             p.small.text-alt: strong Inicio de operaciones: 
@@ -146,13 +146,30 @@ html(lang="es")
                                             div(id=`${content.closenumber}` class="iclose")
                 //- generacion
                     
-
         //- ok
         section.container.investors#investros
             article.wrap.investors__content
                 .investors__child
                     h1.title.first Inversionistas
                 .investors__child
+                    form(action="#", class="form-investors")
+                        .form-investors__field
+                            label(for="", class="form-investors__label body text-alt") Usuario
+                            input(type="text", placeholder="Ej. inversionista@saavienergia.com", required, name="user", id="user", class="form-investors__input")
+                        .form-investors__field
+                            label(for="", class="form-investors__label body text-alt") Contraseña
+                            input(type="password", placeholder="Ingresa tu contraseña", required, name="pass", id="pass", class="form-investors__input")
+                        .form-investors__field
+                            input(type="submit", value="Iniciar sesión", class="form-investors__input ghost")
+                        .form-investors__field
+                            p.small.text-alt ¿Olvidaste tu contraseña?
+        
+        //- ok
+        section.container.clients#clients
+            article.wrap.clients__content
+                .clients__child
+                    h1.title.first Clientes
+                .clients__child
                     form(action="#", class="form-investors")
                         .form-investors__field
                             label(for="", class="form-investors__label body text-alt") Usuario
@@ -183,4 +200,4 @@ html(lang="es")
         script(src=`${pathJs}show-menu.js`)
         script(src=`${pathJs}play-video.js`)
         script(src=`${pathJs}power-plants.js`)
-        script(src=`${pathJs}show-tooltip.js`)
+        //- script(src=`${pathJs}show-tooltip.js`)

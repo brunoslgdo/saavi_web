@@ -48,19 +48,37 @@
     list-style: none;
 
     &__item {
-        cursor: pointer;
         display: flex;
         align-items: center;
         position: relative;
-
-        &:hover > span.small {
-            text-decoration: underline;
-        }
     }
 
     &__icon {
         flex: none;
         margin-right: var(--ss);
         width: toRem(38);
+    }
+}
+
+.arrow-right {
+    cursor: pointer;
+    display: block;
+    position: relative;
+  
+    &::after {
+        content: '\276F';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: toRem(-16);
+        transform: translateY(-50%);
+        transition: transform .1s ease;
+    }
+}
+
+.arrow-down {
+  
+    &::after {
+        transform: translateY(-50%) rotate(90deg);
     }
 }

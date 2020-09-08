@@ -70,6 +70,7 @@ html(lang="en")
                             li.solutions__item
                                 img(src=`${pathImg}${item.icon}`, class="solutions__icon", alt=`${item.name}`)
                                 span.small.first= `${item.name}`
+                                include components/tooltip
                 .energy-solutions__child
                     h1.title.text-alt Your energy in the hands of experts
                     h2.subtitle.text-alt Generator
@@ -78,6 +79,7 @@ html(lang="en")
                             li.solutions__item
                                 img(src=`${pathImg}${item.icon}`, class="solutions__icon", alt=`${item.name}`)
                                 span.small.text-alt= `${item.name}`
+                                include components/tooltip
                     p.body.text-alt: strong We create tailor made solutions for your company, based on our best service guarantee.
 
         //- ok
@@ -90,63 +92,58 @@ html(lang="en")
 
         section.container.power-plants#power-plants
             article.wrap.power-plants__content
-                ul.card
-                    //- central de ciclo combinado
-                    each item in POWERPLANTS
-                        li(class="card__item")
-                            img(src=`${pathImg}${item.hero}`, class="card__img absolute", alt=`${item.city} - ${item.type}`, class="description__img")
-                            h1(id=`${item.plantnumber}` class="body text-alt absolute"): strong !{`${item.city}`}
-                            div(id=`${item.cardnumber}` class="card__info absolute")
-                                h1.subtitle.text-alt !{`${item.city}`}
-                                h2.small.ligth.text-alt !{`${item.type}`}
-                                p.small.text-alt.mbottom--sm !{`${item.ub}`}
-                                p.small.text-alt: strong Capacidad nominal: 
-                                p.body.ligth.text-alt !{`${item.capacity}`}
-                                p.small.text-alt: strong Inicio de operaciones: 
-                                p.body.light.text-alt !{`${item.start}`}
-                                div(id=`${item.closenumber}` class="iclose")
-                    //- estación de compresión de gas
-                    each item in POWERPLANTS
-                        li(class="card__item")
-                            img(src=`${pathImg}${item.hero}`, class="card__img absolute", alt=`${item.city} - ${item.type}`, class="description__img")
-                            h1(id=`${item.plantnumber}` class="body text-alt absolute"): strong !{`${item.city}`}
-                            div(id=`${item.cardnumber}` class="card__info absolute")
-                                h1.subtitle.text-alt !{`${item.city}`}
-                                h2.small.ligth.text-alt !{`${item.type}`}
-                                p.small.text-alt.mbottom--sm !{`${item.ub}`}
-                                p.small.text-alt: strong Capacidad nominal: 
-                                p.body.ligth.text-alt !{`${item.capacity}`}
-                                p.small.text-alt: strong Inicio de operaciones: 
-                                p.body.light.text-alt !{`${item.start}`}
-                                div(id=`${item.closenumber}` class="iclose")
-                    //- parque eolico
-                    each item in POWERPLANTS
-                        li(class="card__item")
-                            img(src=`${pathImg}${item.hero}`, class="card__img absolute", alt=`${item.city} - ${item.type}`, class="description__img")
-                            h1(id=`${item.plantnumber}` class="body text-alt absolute"): strong !{`${item.city}`}
-                            div(id=`${item.cardnumber}` class="card__info absolute")
-                                h1.subtitle.text-alt !{`${item.city}`}
-                                h2.small.ligth.text-alt !{`${item.type}`}
-                                p.small.text-alt.mbottom--sm !{`${item.ub}`}
-                                p.small.text-alt: strong Capacidad nominal: 
-                                p.body.ligth.text-alt !{`${item.capacity}`}
-                                p.small.text-alt: strong Inicio de operaciones: 
-                                p.body.light.text-alt !{`${item.start}`}
-                                div(id=`${item.closenumber}` class="iclose")
-                    //- generacion
-                    each item in POWERPLANTS
-                        li(class="card__item")
-                            img(src=`${pathImg}${item.hero}`, class="card__img absolute", alt=`${item.city} - ${item.type}`, class="description__img")
-                            h1(id=`${item.plantnumber}` class="body text-alt absolute"): strong !{`${item.city}`}
-                            div(id=`${item.cardnumber}` class="card__info absolute")
-                                h1.subtitle.text-alt !{`${item.city}`}
-                                h2.small.ligth.text-alt !{`${item.type}`}
-                                p.small.text-alt.mbottom--sm !{`${item.ub}`}
-                                p.small.text-alt: strong Capacidad nominal: 
-                                p.body.ligth.text-alt !{`${item.capacity}`}
-                                p.small.text-alt: strong Inicio de operaciones: 
-                                p.body.light.text-alt !{`${item.start}`}
-                                div(id=`${item.closenumber}` class="iclose")
+               each item in POWERPLANTS
+                    if item.type.toLowerCase() === 'central ciclo combinado'
+                        .power-plants__type
+                            h1.title.first= `${item.type}` 
+                            ul.card
+                                each content in item.content
+                                    li(class="card__item")
+                                        img(src=`${pathImg}${content.img}`, class="card__img absolute", alt=`${content.city} - ${item.type}`, class="description__img")
+                                        h1(id=`${content.plantnumber}` class="body text-alt absolute"): strong !{`${content.city}`}
+                                        div(id=`${content.cardnumber}` class="card__info absolute")
+                                            h1.subtitle.text-alt !{`${content.city}`}
+                                            p.small.text-alt !{`${content.ub}`}
+                                            h2.small.ligth.text-alt.mbottom--sm CFE / Industry
+                                            p.small.text-alt: strong Capacidad nominal: 
+                                            p.body.ligth.text-alt !{`${content.capacity}`}
+                                            p.small.text-alt: strong Inicio de operaciones: 
+                                            p.body.light.text-alt !{`${content.start}`}
+                                            div(id=`${content.closenumber}` class="iclose")
+                    if item.type.toLowerCase() === 'estación de compresión de gas'
+                        .power-plants__type
+                            h1.title.first= `${item.type}` 
+                            ul.card
+                                each content in item.content
+                                    li(class="card__item")
+                                        img(src=`${pathImg}${content.img}`, class="card__img absolute", alt=`${content.city} - ${item.type}`, class="description__img")
+                                        h1(id=`${content.plantnumber}` class="body text-alt absolute"): strong !{`${content.city}`}
+                                        div(id=`${content.cardnumber}` class="card__info absolute")
+                                            h1.subtitle.text-alt !{`${content.city}`}
+                                            p.small.text-alt !{`${content.ub}`}
+                                            h2.small.ligth.text-alt.mbottom--sm CFE / Industry
+                                            p.small.text-alt: strong Capacidad nominal: 
+                                            p.body.ligth.text-alt !{`${content.capacity}`}
+                                            p.small.text-alt: strong Inicio de operaciones: 
+                                            p.body.light.text-alt !{`${content.start}`}
+                                            div(id=`${content.closenumber}` class="iclose")
+                    if item.type.toLowerCase() === 'parque eólico'
+                        .power-plants__type
+                            h1.title.first= `${item.type}` 
+                            ul.card
+                                each content in item.content
+                                    li(class="card__item")
+                                        img(src=`${pathImg}${content.img}`, class="card__img absolute", alt=`${content.city} - ${item.type}`, class="description__img")
+                                        h1(id=`${content.plantnumber}` class="body text-alt absolute"): strong !{`${content.city}`}
+                                        div(id=`${content.cardnumber}` class="card__info absolute")
+                                            h1.subtitle.text-alt !{`${content.city}`}
+                                            //- h2.small.ligth.text-alt !{`${content.type}`}
+                                            p.small.text-alt.mbottom--sm !{`${content.ub}`}
+                                            p.small.text-alt: strong Capacidad nominal: 
+                                            p.body.ligth.text-alt !{`${content.capacity}`}
+                                            p.small.text-alt: strong Inicio de operaciones: 
+                                            p.body.light.text-alt !{`${content.start}`}
+                                            div(id=`${content.closenumber}` class="iclose")
 
         //- ok
         section.container.investors#investors
@@ -154,6 +151,24 @@ html(lang="en")
                 .investors__child
                     h1.title.first Investors
                 .investors__child
+                    form(action="#", class="form-investors")
+                        .form-investors__field
+                            label(for="", class="form-investors__label body text-alt") User
+                            input(type="text", placeholder="Ej. inversionista@saavienergia.com", required, name="user", id="user", class="form-investors__input")
+                        .form-investors__field
+                            label(for="", class="form-investors__label body text-alt") Password
+                            input(type="password", placeholder="Ingresa tu contraseña", required, name="pass", id="pass", class="form-investors__input")
+                        .form-investors__field
+                            input(type="submit", value="Log in", class="form-investors__input ghost")
+                        .form-investors__field
+                            p.small.text-alt Forgot your password?
+        
+        //- ok
+        section.container.clients#clients
+            article.wrap.investors__content
+                .clients__child
+                    h1.title.first Clients
+                .clients__child
                     form(action="#", class="form-investors")
                         .form-investors__field
                             label(for="", class="form-investors__label body text-alt") User

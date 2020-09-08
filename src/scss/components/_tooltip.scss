@@ -3,27 +3,26 @@
     filter: drop-shadow(0 0 toRem(4) rgba(0, 0, 0, 0.6));
     padding: var(--sm);
     position: absolute;
+    top: 100%;
     left: var(--xl);
-    bottom: calc(100% + var(--ss));
-    max-width: toRem(240);
-    transform-origin: bottom;
+    z-index: 1;
+    width: calc(100% - #{toRem(64)});
+    transform-origin: top;
     transform: scale(1, 0);
-    transition: transform .3s ease;
-
-    &::after {
-        content: '';
-        display: block;
-        background-color: inherit;
-        box-shadow: 0 0 toRem(6) toRem(2) rgba(0, 0, 0, 0.9);
-        position: absolute;
-        z-index: 10;
-        bottom: toRem(-12);
-        clip-path: polygon(100% 50%, 0 50%, 50% 100%);
-        width: var(--sm);
-        height: var(--sm);
-    }
+    transition: transform .1s ease;
 }
 
 .solutions__item:hover .tooltip {
     transform: scale(1, 1);
+    transition: transform .1s ease;
 }
+
+// .tooltip-show {
+//     transform: scale(1, 1);
+// }
+
+// .tooltip-close {
+//     cursor: pointer;
+//     color: var(--first-alt);
+//     text-align: right;
+// }
