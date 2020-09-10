@@ -1,0 +1,21 @@
+include ../config/conf_managers
+mixin managers(arrManagers, language)
+    - let lang = language
+    section.container.managers#managers
+        article.wrap
+            each item in arrManagers.heading
+                if lang == 'sp' 
+                    h1.title.first= `${item.titleSp}`
+                if lang == 'en'
+                    h1.title.first= `${item.titleEn}`
+            ul.card-managers
+                each item in arrManagers.desc
+                    li.card-managers__item
+                        .card-managers__position
+                            h1.body.text-alt <strong>!{`${item.name}<br>${item.lastname}`}</strong>
+                            if lang == 'sp'
+                                h2.small.text-alt= `${item.positionSp}`
+                            if lang == 'en'
+                                h2.small.text-alt= `${item.positionEn}`
+                        a(href=`${item.href}`, class="card-managers__position", target="_blank")
+                            img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`)

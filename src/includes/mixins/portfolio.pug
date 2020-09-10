@@ -1,0 +1,20 @@
+include ../config/conf_portfolio
+mixin portfolio(arrPortfolio, language)
+    - let lang = language
+    section.container.portfolio#portfolio
+        article.wrap.portfolio__content
+            .portfolio__child
+                if lang.toLowerCase() == 'sp'
+                    each item in arrPortfolio.sp
+                        h1.title.text-alt !{`${item.title}`}
+                if lang.toLowerCase() == 'en'
+                    each item in arrPortfolio.en
+                        h1.title.text-alt !{`${item.title}`}
+            .portfolio__child.mapa
+                if lang.toLowerCase() == 'sp'
+                    each item in arrPortfolio.sp
+                        img(src=`${pathImg}${item.mapImg}`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico")
+                if lang.toLowerCase() == 'en'
+                    each item in arrPortfolio.en
+                        img(src=`${pathImg}${item.mapImg}`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico")
+        

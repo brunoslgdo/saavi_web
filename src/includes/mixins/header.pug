@@ -1,0 +1,30 @@
+include ../config/conf_menu
+include ../config/conf_socials
+mixin header(arrMenu, language)
+    - let lang = language
+    header.content.header
+        .header__content.header__left
+            .header__child
+                if lang == 'sp'
+                    a(href="index.html"): img(src=`${pathImg}saavi.svg`, alt="logo saavi", class="header__logo")
+                if lang == 'en'
+                    a(href="en.html"): img(src=`${pathImg}saavi.svg`, alt="logo saavi", class="header__logo")
+                include ../components/socials
+        .header__content.header__middle
+        .header__content.header__right
+            .icon-hamburguer#js-icon-hamburguer: .icon-hamburguer__line
+            if lang == 'sp'
+                a(href="en.html", class="icon-lang") EN
+            if lang == 'en'
+                a(href="index.html", class="icon-lang") SP
+            nav.nav#js-nav
+                ul.menu
+                    each item in arrMenu
+                        if lang == 'sp'
+                            li.menu__item: a(href=`${item.href}`, class="menu__link")= `${item.contentSp}`
+                        if lang == 'en'
+                            li.menu__item: a(href=`${item.href}`, class="menu__link")= `${item.contentEn}`
+                    li.menu__item.menu__socials
+                        each item in SOCIALS
+                            a(href=`${item.href}`, class="menu__icon")
+                                img(src=`${pathImg}${item.icon}`, alt=`${item.alt}`)

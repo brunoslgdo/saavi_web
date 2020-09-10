@@ -1,0 +1,15 @@
+include ../config/conf_main
+mixin main(arrMain, language)
+    - let lang = language
+    main.main#main
+        video(class="main__video", id="video" preload="none" muted autoplay loop)
+            source(src="video/saavi_video.mp4" type="video/mp4")
+        section.wrap.main__content
+            if lang == 'sp'
+                each item in arrMain.sp
+                    h1.display.text-alt !{`${item.display}`} 
+                    p.body.text-alt !{`${item.caption}`}
+            if lang == 'en'
+                each item in arrMain.en
+                    h1.display.text-alt !{`${item.display}`} 
+                    p.body.text-alt !{`${item.caption}`}

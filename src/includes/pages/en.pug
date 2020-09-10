@@ -1,0 +1,48 @@
+extends ../templates/main
+block content
+
+    +header(MENU, 'en')
+    +main(MAIN, 'en')
+    +aboutUs(ABOUTUS, HISTORY, 'en')
+    +managers(MANAGERS, 'en')
+    +energySolutions 
+    +portfolio(PORTFOLIO, 'en')
+    +powerPlants(POWERPLANTS, 'en')
+
+    //- ok
+    section.container.investors#investors
+        article.wrap.investors__content
+            .investors__child
+                h1.title.first Investors
+            .investors__child
+                form(action="#", class="form-investors")
+                    .form-investors__field
+                        label(for="", class="form-investors__label body text-alt") User
+                        input(type="text", placeholder="Ej. inversionista@saavienergia.com", required, name="user", id="user", class="form-investors__input")
+                    .form-investors__field
+                        label(for="", class="form-investors__label body text-alt") Password
+                        input(type="password", placeholder="Ingresa tu contraseña", required, name="pass", id="pass", class="form-investors__input")
+                    .form-investors__field
+                        input(type="submit", value="Log in", class="form-investors__input ghost")
+                    .form-investors__field
+                        p.small.text-alt Forgot your password?
+        
+    //- ok
+    section.container.clients#clients
+        article.wrap.investors__content
+            .clients__child
+                h1.title.first Clients
+            .clients__child
+                form(action="#", class="form-investors")
+                    .form-investors__field
+                        label(for="", class="form-investors__label body text-alt") User
+                        input(type="text", placeholder="Ej. inversionista@saavienergia.com", required, name="user", id="user", class="form-investors__input")
+                    .form-investors__field
+                        label(for="", class="form-investors__label body text-alt") Password
+                        input(type="password", placeholder="Ingresa tu contraseña", required, name="pass", id="pass", class="form-investors__input")
+                    .form-investors__field
+                        input(type="submit", value="Log in", class="form-investors__input ghost")
+                    .form-investors__field
+                        p.small.text-alt Forgot your password?
+
+    +contact(CONTACT, 'sp')
