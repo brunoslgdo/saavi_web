@@ -1,133 +1,159 @@
 -
-    const SUPPLIER = [
-        {
-          icon: 'icon-suministradora-potencia.svg',
-          name: 'Potencia',
-          tooltip: 'Potencia. Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-          idsupplier: 'supplier-one',
-          idtooltip: 'tooltip-one',
-          idtooltipclose: 'tooltip-close-one',
-        },
-        {
-          icon: 'icon-suministradora-cel.svg',
-          //- name: 'CEL Certificados de Energías Limpias',
-          name: 'CEL',
-          tooltip: 'CEL. Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-          idsupplier: 'supplier-two',
-          idtooltip: 'tooltip-two',
-          idtooltipclose: 'tooltip-close-two',
-        },
-        {
-          icon: 'icon-suministradora-dft.svg',
-          //- name: 'DFT Derechos Financieros de Transmision',
-          name: 'DFT',
-          tooltip: 'DFT. Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-          idsupplier: 'supplier-three',
-          idtooltip: 'tooltip-three',
-          idtooltipclose: 'tooltip-close-three',
-        },
-        {
-          icon: 'icon-suministradora-conexos.svg',
-          name: 'Servicios Conexos',
-          tooltip: 'Servicios conexos. Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-          idsupplier: 'supplier-four',
-          idtooltip: 'tooltip-four',
-          idtooltipclose: 'tooltip-close-four',
-        },
-        {
-          icon: 'icon-suministradora-controlable.svg',
-          name: 'Demanda Controlable',
-          tooltip: 'Demanda controlable. Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-          idsupplier: 'supplier-five',
-          idtooltip: 'tooltip-five',
-          idtooltipclose: 'tooltip-close-five',
-        },
-        {
-          icon: 'icon-suministradora-distribuida.svg',
-          //- name: 'RGD Representación de Generación Distribuida',
-          name: 'RGD',
-          tooltip: 'RGD. Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-          idsupplier: 'supplier-six',
-          idtooltip: 'tooltip-six',
-          idtooltipclose: 'tooltip-close-six',
-        },
-    ]
-    
-    const SUPPLIER_EN = [
-        {
-          icon: 'icon-suministradora-potencia.svg',
-          name: 'Power',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece'
-        },
-        {
-          icon: 'icon-suministradora-cel.svg',
-          name: 'Clean Energy Certificates',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece'
-        },
-        {
-          icon: 'icon-suministradora-dft.svg',
-          name: 'Financial Transmission Rights',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece'
-        },
-        {
-          icon: 'icon-suministradora-conexos.svg',
-          name: 'Related services',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece'
-        },
-        {
-          icon: 'icon-suministradora-controlable.svg',
-          name: 'Controllable demand',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-        },
-        {
-          icon: 'icon-suministradora-distribuida.svg',
-          name: 'Distributed generation representation',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-        },
-    ]
+	const SUPPLIER = {
+		sp: [
+			{
+				display: 'Elige competitividad y eficiencia',
+				title: 'Suministradora',
+				solutions: [
+					{
+						icon: 'icon-suministradora-potencia.svg',
+						name: 'Potencia',
+					},
+					{
+						icon: 'icon-suministradora-cel.svg',
+						name: 'CEL',
+					},
+					{
+						icon: 'icon-suministradora-dft.svg',
+						name: 'DFT',
+					},
+					{
+						icon: 'icon-suministradora-conexos.svg',
+						name: 'Servicios Conexos',
+					},
+					{
+						icon: 'icon-suministradora-controlable.svg',
+						name: 'Demanda Controlable',
+					},
+					{
+						icon: 'icon-suministradora-distribuida.svg',
+						name: 'RGD',
+					},
+				],
+			},
+		],
+		en: [
+			{
+				display: 'Choose competitivity and efficiency',
+				title: 'Supplier',
+				solutions: [
+					{
+						icon: 'icon-suministradora-potencia.svg',
+						name: 'Power',
+					},
+					{
+						icon: 'icon-suministradora-cel.svg',
+						name: 'Clean Energy Certificates',
+					},
+					{
+						icon: 'icon-suministradora-dft.svg',
+						name: 'Financial Transmission Rights',
+					},
+					{
+						icon: 'icon-suministradora-conexos.svg',
+						name: 'Related services',
+					},
+					{
+						icon: 'icon-suministradora-controlable.svg',
+						name: 'Controllable demand',
+					},
+					{
+						icon: 'icon-suministradora-distribuida.svg',
+						name: 'Distributed generation representation',
+					},
+				],
+			},
+		],
+	}
 
-  const GENERATOR = [
-        {
-          icon: 'icon-generadora-energia.svg',
-          name: 'Energía',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-        },
-        {
-          icon: 'icon-generadora-potencia.svg',
-          name: 'Potencia',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-        },
-        {
-          icon: 'icon-generadora-conexos.svg',
-          name: 'Servicios Conexos',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-        },
-        {
-          icon: 'icon-generadora-generadores.svg',
-          name: 'Representación de Generadores',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-        },
-    ]
-  
-  const GENERATOR_EN = [
-        {
-          icon: 'icon-generadora-energia.svg',
-          name: 'Energy',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-        },
-        {
-          icon: 'icon-generadora-potencia.svg',
-          name: 'Power',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-        },
-        {
-          icon: 'icon-generadora-conexos.svg',
-          name: 'Related services',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-        },
-        {
-          icon: 'icon-generadora-generadores.svg',
-          name: 'Generators representation',
-          tooltip: 'Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece',
-        },
-    ]
+	const GENERATOR = {
+		sp: [
+			{
+				display: 'Tu energía en manos de expertos',
+				title: 'Generador',
+				content: 'Creamos la solución precisa para tu empresa, con la seguridad de que tendrás siempre el mejor servicio.',
+				solutions: [
+					{
+						icon: 'icon-generadora-energia.svg',
+						name: 'Energía',
+					},
+					{
+						icon: 'icon-generadora-potencia.svg',
+						name: 'Potencia',
+					},
+					{
+						icon: 'icon-generadora-conexos.svg',
+						name: 'Servicios Conexos',
+					},
+					{
+						icon: 'icon-generadora-generadores.svg',
+						name: 'Representación de Generadores',
+					},
+				],
+			},
+		],
+		en: [
+			{
+				display: 'Your energy in the hands of experts',
+				title: 'Generator',
+				content: 'We create tailor made solutions for your company, based on our best service guarantee.',
+				solutions: [
+					{
+						icon: 'icon-generadora-energia.svg',
+						name: 'Energy',
+					},
+					{
+						icon: 'icon-generadora-potencia.svg',
+						name: 'Power',
+					},
+					{
+						icon: 'icon-generadora-conexos.svg',
+						name: 'Related services',
+					},
+					{
+						icon: 'icon-generadora-generadores.svg',
+						name: 'Generators representation',
+					},
+				],
+			},
+		],
+	}
+
+	const TOOLTIPS = [
+		{
+			desc: 'Potencia',
+			def: 'producto comercial mediante el cual se asegura la disponibilidad de producción de las centrales de generación para ofrecer la energía correspondiente (kW) y brinda soporte al Sistema Eléctrico Nacional en las horas críticas. Producto obligatorio para todos los consumidores (MW-año).',
+		},
+		{
+			desc: 'Energía eléctrica',
+			def: 'electricidad generada por las distintas Fuentes de generación (kWh)',
+		},
+		{
+			desc: 'Certificados de Energía Limpia',
+			def: 'títulos emitidos por la CRE que acreditan la producción de energía eléctrica a partir de fuentes de Energías Limpias, el cual sirve para cumplir los requisitos asociados al consumo de los Centros de Carga.',
+		},
+		{
+			desc: 'Servicios Conexos:',
+			def: 'servicios vinculados a la operación del Sistema Eléctrico Nacional y que son necesarios para garantizar su calidad, confiabilidad, continuidad y seguridad. Actualmente los servicios conexos comprenden: regulación de frecuencia, regulación de voltaje, reservas operativas y rodantes, entre otros. ',
+		},
+		{
+			desc: 'Derechos Financieros de Transmisión:',
+			def: 'títulos emitidos por CENACE que operan como un mecanismo de cobertura financiera que permite mitigar el riesgo de diferencia de precios entre el nodo de generación y el nodo de consumo. Actualmente este instrumento no está en operación en el Mercado Eléctrico Mayorista. ',
+		},
+		{
+			desc: 'Demanda controlable:',
+			def: 'producto que los centros de carga ofrecen en el Mercado Eléctrico Mayorista que consiste en la reducción de su demanda en un momento determinado para mantener la confiabilidad del Sistema. Actualmente este instrumento no está en operación en el Mercado Eléctrico Mayorista. ',
+		},
+		{
+			desc: 'Representación de Centrales Eléctricas:',
+			def: 'contamos con las autorizaciones necesarias y la infraestructura para gestionar sus activos de generación con capacidad mayor a 0.5 MW en el Mercado Eléctrico Mayorista',
+		},
+		{
+			desc: 'Representación de Generación Distribuida:',
+			def: 'como Suministrador gestionamos sus activos de Generación Distribuida (capacidad menor a 0.5 MW).',
+		},
+		{
+			desc: 'Gestiones para el registro y habilitación de los centros de carga como Usuarios Calificados:',
+			def: 'trámites ante la Comisión Reguladora de Energía (CRE) y el Centro Nacional de Control de Energía (CENACE) para acceder al suministro por parte de Saavi Energía. ',
+		},
+	]
