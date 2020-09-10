@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="cache-control" content="no-cache"/>
     <title>SAAVI</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
-    <link href="css/styles.css?v=1599535470814" rel="stylesheet"/>
+    <link href="css/styles.css?v=1599758759861" rel="stylesheet"/>
   </head>
   <body>
-    <header class="content header" id="header-en">
+    <header class="content header">
       <div class="header__content header__left">
-        <div class="header__child"><img class="header__logo" src="img/saavi.svg" alt="logo saavi"/>
+        <div class="header__child"><a href="en.html"><img class="header__logo" src="img/saavi.svg" alt="logo saavi"/></a>
           <ul class="socials">
             <li class="socials__item"><a class="socials__link" href="https://twitter.com/SaaviEnergia?s=12"><img class="socials__icon" src="img/icon-tw.svg" alt="saavi twitter"/></a></li>
             <li class="socials__item"><a class="socials__link" href="https://www.facebook.com/saavienergia/"><img class="socials__icon" src="img/icon-fb.svg" alt="saavi facebook"/></a></li>
@@ -21,10 +21,10 @@
       </div>
       <div class="header__content header__middle"></div>
       <div class="header__content header__right">
-        <div class="icon-hamburguer" id="js-icon-hamburguer-en">
+        <div class="icon-hamburguer" id="js-icon-hamburguer">
           <div class="icon-hamburguer__line"></div>
         </div><a class="icon-lang" href="index.html">SP</a>
-        <nav class="nav" id="js-nav-en">
+        <nav class="nav" id="js-nav">
           <ul class="menu">
             <li class="menu__item"><a class="menu__link" href="#about-us">About us</a></li>
             <li class="menu__item"><a class="menu__link" href="#energy-solutions">Energy solutions</a></li>
@@ -37,11 +37,11 @@
       </div>
     </header>
     <main class="main" id="main">
-      <video class="main__video" id="video" autoplay="autoplay" muted="muted" loop="loop">
+      <video class="main__video" id="video" preload="none" muted="muted" autoplay="autoplay" loop="loop">
         <source src="video/saavi_video.mp4" type="video/mp4"/>
       </video>
       <section class="wrap main__content">
-        <h1 class="display text-alt">GENERATING<br>THE FUTURE</h1>
+        <h1 class="display text-alt">GENERATING<br>THE FUTURE </h1>
         <p class="body text-alt">We power the competitiveness of the industries <strong>in Mexico</strong></p>
       </section>
     </main>
@@ -54,25 +54,25 @@
         <div class="about-us__child about-us__history">
           <h1 class="title text-alt">History</h1>
         </div>
-        <div class="about-us__child about-us__time-line">
-          <div class="bullet">
+        <ul class="about-us__child about-us__time-line">
+          <li class="bullet">
             <h2 class="subtitle first-alt">1995</h2>
             <p class="small first">International Generating Company “InterGen” is founded</p>
-          </div>
-          <div class="bullet">
+          </li>
+          <li class="bullet">
             <h2 class="subtitle first-alt">1998</h2>
             <p class="small first">Construction of its first energy plant in the country</p>
-          </div>
-          <div class="bullet">
+          </li>
+          <li class="bullet">
             <h2 class="subtitle first-alt">2018</h2>
             <p class="small first">Actis acquired the InterGen portfolio in México and Saavi Energía is organized</p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </article>
     </section>
     <section class="container managers" id="managers">
       <article class="wrap">
-        <h1 class="title first">Management team</h1>
+        <h1 class="title first">Managers</h1>
         <ul class="card-managers">
           <li class="card-managers__item">
             <div class="card-managers__position">
@@ -149,197 +149,132 @@
         </ul>
       </article>
     </section>
-    <section class="container energy-solutions" id="energy-solutions">
-      <article class="wrap energy-solutions__content">
-        <div class="energy-solutions__child">
-          <h1 class="title first-alt">Choose competitivity and efficiency</h1>
-          <h2 class="subtitle first">Supplier</h2>
-          <ul class="solutions">
-            <li class="solutions__item"><img class="solutions__icon" src="img/icon-suministradora-potencia.svg" alt="Power"/><span class="small first">Power</span>
-              <div class="tooltip" id="undefined">
-                <p class="small light first-alt">Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece</p>
-              </div>
-            </li>
-            <li class="solutions__item"><img class="solutions__icon" src="img/icon-suministradora-cel.svg" alt="Clean Energy Certificates"/><span class="small first">Clean Energy Certificates</span>
-              <div class="tooltip" id="undefined">
-                <p class="small light first-alt">Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece</p>
-              </div>
-            </li>
-            <li class="solutions__item"><img class="solutions__icon" src="img/icon-suministradora-dft.svg" alt="Financial Transmission Rights"/><span class="small first">Financial Transmission Rights</span>
-              <div class="tooltip" id="undefined">
-                <p class="small light first-alt">Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece</p>
-              </div>
-            </li>
-            <li class="solutions__item"><img class="solutions__icon" src="img/icon-suministradora-conexos.svg" alt="Related services"/><span class="small first">Related services</span>
-              <div class="tooltip" id="undefined">
-                <p class="small light first-alt">Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece</p>
-              </div>
-            </li>
-            <li class="solutions__item"><img class="solutions__icon" src="img/icon-suministradora-controlable.svg" alt="Controllable demand"/><span class="small first">Controllable demand</span>
-              <div class="tooltip" id="undefined">
-                <p class="small light first-alt">Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece</p>
-              </div>
-            </li>
-            <li class="solutions__item"><img class="solutions__icon" src="img/icon-suministradora-distribuida.svg" alt="Distributed generation representation"/><span class="small first">Distributed generation representation</span>
-              <div class="tooltip" id="undefined">
-                <p class="small light first-alt">Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="energy-solutions__child">
-          <h1 class="title text-alt">Your energy in the hands of experts</h1>
-          <h2 class="subtitle text-alt">Generator</h2>
-          <ul class="solutions">
-            <li class="solutions__item"><img class="solutions__icon" src="img/icon-generadora-energia.svg" alt="Energy"/><span class="small text-alt">Energy</span>
-              <div class="tooltip" id="undefined">
-                <p class="small light first-alt">Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece</p>
-              </div>
-            </li>
-            <li class="solutions__item"><img class="solutions__icon" src="img/icon-generadora-potencia.svg" alt="Power"/><span class="small text-alt">Power</span>
-              <div class="tooltip" id="undefined">
-                <p class="small light first-alt">Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece</p>
-              </div>
-            </li>
-            <li class="solutions__item"><img class="solutions__icon" src="img/icon-generadora-conexos.svg" alt="Related services"/><span class="small text-alt">Related services</span>
-              <div class="tooltip" id="undefined">
-                <p class="small light first-alt">Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece</p>
-              </div>
-            </li>
-            <li class="solutions__item"><img class="solutions__icon" src="img/icon-generadora-generadores.svg" alt="Generators representation"/><span class="small text-alt">Generators representation</span>
-              <div class="tooltip" id="undefined">
-                <p class="small light first-alt">Este tooltip tendrá información breve de cada uno de los tipos de los servicios de energía que el cliente ofrece</p>
-              </div>
-            </li>
-          </ul>
-          <p class="body text-alt"><strong>We create tailor made solutions for your company, based on our best service guarantee.</strong></p>
-        </div>
-      </article>
-    </section>
     <section class="container portfolio" id="portfolio">
       <article class="wrap portfolio__content">
         <div class="portfolio__child">
           <h1 class="title text-alt">Portfolio</h1>
         </div>
-        <div class="portfolio__child mapa"><img class="portfolio__mapa" src="img/mapa-en.svg" alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico"/></div>
+        <div class="portfolio__child mapa"><img class="portfolio__mapa" src="img/mapa-en.svg" alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico"/>
+        </div>
       </article>
     </section>
     <section class="container power-plants" id="power-plants">
       <article class="wrap power-plants__content">
         <div class="power-plants__type">
-          <h1 class="title first">Central Ciclo Combinado</h1>
+          <h1 class="title first">Combined Cycle Plant</h1>
           <ul class="card">
-            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-campeche.jpg" alt="Campeche - Central Ciclo Combinado"/>
+            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-campeche.jpg" alt="Campeche"/>
               <h1 class="body text-alt absolute" id="one"><strong>Campeche</strong></h1>
               <div class="card__info absolute" id="card-one">
                 <h1 class="subtitle text-alt">Campeche</h1>
                 <p class="small text-alt">Palizada, Campeche</p>
-                <h2 class="small ligth text-alt mbottom--sm">CFE / Industry</h2>
+                <h2 class="small ligth text-alt mbottom--sm">CFE / Industria</h2>
                 <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
                 <p class="body ligth text-alt">252 MWh</p>
                 <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
                 <p class="body light text-alt">Mayo, 2003</p>
-                <div class="iclose" id="close-one"></div>
+                <div class="iclose" id="close-one">       </div>
               </div>
             </li>
-            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-chihuahua.jpg" alt="Chihuahua - Central Ciclo Combinado"/>
+            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-chihuahua.jpg" alt="Chihuahua"/>
               <h1 class="body text-alt absolute" id="four"><strong>Chihuahua</strong></h1>
               <div class="card__info absolute" id="card-four">
                 <h1 class="subtitle text-alt">Chihuahua</h1>
-                <p class="small text-alt">Palizada, Campeche</p>
-                <h2 class="small ligth text-alt mbottom--sm">CFE / Industry</h2>
+                <p class="small text-alt">Chihuahua</p>
+                <h2 class="small ligth text-alt mbottom--sm">CFE / Industria</h2>
                 <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
                 <p class="body ligth text-alt">252 MWh</p>
                 <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
                 <p class="body light text-alt">Mayo, 2003</p>
-                <div class="iclose" id="close-four"></div>
+                <div class="iclose" id="close-four">       </div>
               </div>
             </li>
-            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-la-rosita.jpg" alt="La Rosita I - Central Ciclo Combinado"/>
+            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-la-rosita.jpg" alt="La Rosita I"/>
               <h1 class="body text-alt absolute" id="five"><strong>La Rosita I</strong></h1>
               <div class="card__info absolute" id="card-five">
                 <h1 class="subtitle text-alt">La Rosita I</h1>
-                <p class="small text-alt">Palizada, Campeche</p>
-                <h2 class="small ligth text-alt mbottom--sm">CFE / Industry</h2>
+                <p class="small text-alt">Baja California</p>
+                <h2 class="small ligth text-alt mbottom--sm">CFE / Industria</h2>
                 <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
                 <p class="body ligth text-alt">252 MWh</p>
                 <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
                 <p class="body light text-alt">Mayo, 2003</p>
-                <div class="iclose" id="close-five"></div>
+                <div class="iclose" id="close-five">       </div>
               </div>
             </li>
-            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-la-rosita.jpg" alt="La Rosita II - Central Ciclo Combinado"/>
+            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-la-rosita-ii.jpg" alt="La Rosita II"/>
               <h1 class="body text-alt absolute" id="fiveDos"><strong>La Rosita II</strong></h1>
               <div class="card__info absolute" id="card-fiveDos">
                 <h1 class="subtitle text-alt">La Rosita II</h1>
-                <p class="small text-alt">Palizada, Campeche</p>
-                <h2 class="small ligth text-alt mbottom--sm">CFE / Industry</h2>
+                <p class="small text-alt">Baja California</p>
+                <h2 class="small ligth text-alt mbottom--sm">CFE / Industria</h2>
                 <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
                 <p class="body ligth text-alt">252 MWh</p>
                 <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
                 <p class="body light text-alt">Mayo, 2003</p>
-                <div class="iclose" id="close-fiveDos"></div>
+                <div class="iclose" id="close-fiveDos">       </div>
               </div>
             </li>
-            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-san-luis-de-la-paz.jpg" alt="San Luis de la Paz - Central Ciclo Combinado"/>
+            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-san-luis-de-la-paz.jpg" alt="San Luis de la Paz"/>
               <h1 class="body text-alt absolute" id="seven"><strong>San Luis de la Paz</strong></h1>
               <div class="card__info absolute" id="card-seven">
                 <h1 class="subtitle text-alt">San Luis de la Paz</h1>
-                <p class="small text-alt">Palizada, Campeche</p>
-                <h2 class="small ligth text-alt mbottom--sm">CFE / Industry</h2>
+                <p class="small text-alt">Guanajuato</p>
+                <h2 class="small ligth text-alt mbottom--sm">CFE / Industria</h2>
                 <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
                 <p class="body ligth text-alt">252 MWh</p>
                 <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
                 <p class="body light text-alt">Mayo, 2003</p>
-                <div class="iclose" id="close-seven"></div>
+                <div class="iclose" id="close-seven">       </div>
               </div>
             </li>
           </ul>
         </div>
         <div class="power-plants__type">
-          <h1 class="title first">Estación de compresión de gas</h1>
+          <h1 class="title first">Gas compressor station</h1>
           <ul class="card">
-            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-el-sauz.jpg" alt="El Sauz - Estación de compresión de gas"/>
+            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-el-sauz.jpg" alt="El Sauz"/>
               <h1 class="body text-alt absolute" id="two"><strong>El Sauz</strong></h1>
               <div class="card__info absolute" id="card-two">
                 <h1 class="subtitle text-alt">El Sauz</h1>
-                <p class="small text-alt">Palizada, Campeche</p>
-                <h2 class="small ligth text-alt mbottom--sm">CFE / Industry</h2>
+                <p class="small text-alt">Guanajuato</p>
+                <h2 class="small ligth text-alt mbottom--sm">CFE / Industria</h2>
                 <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
                 <p class="body ligth text-alt">252 MWh</p>
                 <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
                 <p class="body light text-alt">Mayo, 2003</p>
-                <div class="iclose" id="close-two"></div>
+                <div class="iclose" id="close-two">       </div>
               </div>
             </li>
-            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-altamira.jpg" alt="Altamira - Estación de compresión de gas"/>
+            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-altamira.jpg" alt="Altamira"/>
               <h1 class="body text-alt absolute" id="three"><strong>Altamira</strong></h1>
               <div class="card__info absolute" id="card-three">
                 <h1 class="subtitle text-alt">Altamira</h1>
-                <p class="small text-alt">Palizada, Campeche</p>
-                <h2 class="small ligth text-alt mbottom--sm">CFE / Industry</h2>
+                <p class="small text-alt">Tamaulipas</p>
+                <h2 class="small ligth text-alt mbottom--sm">CFE / Industria</h2>
                 <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
                 <p class="body ligth text-alt">252 MWh</p>
                 <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
                 <p class="body light text-alt">Mayo, 2003</p>
-                <div class="iclose" id="close-three"></div>
+                <div class="iclose" id="close-three">       </div>
               </div>
             </li>
           </ul>
         </div>
         <div class="power-plants__type">
-          <h1 class="title first">Parque eólico</h1>
+          <h1 class="title first">Wind Park</h1>
           <ul class="card">
-            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-sierra-juarez.jpg" alt="Sierra Juárez - Parque eólico"/>
+            <li class="card__item"><img class="card__img absolute description__img" src="img/thumbnail-sierra-juarez.jpg" alt="Sierra Juárez"/>
               <h1 class="body text-alt absolute" id="six"><strong>Sierra Juárez</strong></h1>
               <div class="card__info absolute" id="card-six">
                 <h1 class="subtitle text-alt">Sierra Juárez</h1>
-                <p class="small text-alt mbottom--sm">Palizada, Campeche</p>
+                <p class="small text-alt">Baja California</p>
+                <h2 class="small ligth text-alt mbottom--sm">CFE / Industria</h2>
                 <p class="small text-alt"><strong>Capacidad nominal: </strong></p>
                 <p class="body ligth text-alt">252 MWh</p>
                 <p class="small text-alt"><strong>Inicio de operaciones: </strong></p>
                 <p class="body light text-alt">Mayo, 2003</p>
-                <div class="iclose" id="close-six"></div>
+                <div class="iclose" id="close-six">       </div>
               </div>
             </li>
           </ul>
@@ -399,10 +334,10 @@
     <section class="container contact" id="contact">
       <article class="wrap contact__content">
         <div class="contact__child">
-          <h1 class="title text-alt">Contact</h1>
+          <h1 class="title text-alt">Contacto</h1>
         </div>
         <div class="contact__child">
-          <h2 class="subtitle text-alt">Corporate headquarters</h2>
+          <h2 class="subtitle text-alt">Oficinas corporativas</h2>
         </div>
         <div class="contact__child">
           <ul class="data">
