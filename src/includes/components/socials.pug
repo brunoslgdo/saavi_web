@@ -1,3 +1,4 @@
+include ../config/conf_socials
 ul.socials
     each item in SOCIALS
          li.socials__item: a(href=`${item.href}`, class="socials__link"): img(src=`${pathImg}${item.icon}`, alt=`${item.alt}`, class="socials__icon")
