@@ -15,7 +15,7 @@
 
     &__content {
        @extend %content;
-        
+
         @media only screen and (min-width: 736px) {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -24,7 +24,7 @@
     &__child {
         padding: var(--child-padding);
     }
-    
+
     &__child:nth-child(2) {
         background-color: var(--first);
     }
@@ -64,7 +64,7 @@
     cursor: pointer;
     display: block;
     position: relative;
-  
+
     &::after {
         content: '\276F';
         display: block;
@@ -77,8 +77,21 @@
 }
 
 .arrow-down {
-  
+
     &::after {
         transform: translateY(-50%) rotate(90deg);
     }
+}
+
+.info {
+    cursor: pointer;
+    margin-left: var(--ss);
+    transform-origin: center center;
+    transform: rotate(-90deg);
+    transition: transform .3s ease;
+}
+
+.info-down {
+    transform: rotate(0);
+    transition: transform .3s ease;
 }

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: rgba(0,0,0,0);
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #fff;
+      }
+
+      .cls-2 {
+        stroke-width: 0.635px;
+      }
+
+      .cls-3 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="icon-gestion" transform="translate(-31 -32)">
+    <g id="Grupo_1" data-name="Grupo 1" transform="translate(-130.115 14.852)">
+      <path id="Exclusión_1" data-name="Exclusión 1" class="cls-1" d="M606.266-1086.509h-8.3a2.853,2.853,0,0,1-2.849-2.849V-1099a2.853,2.853,0,0,1,2.849-2.849h8.3a2.853,2.853,0,0,1,2.849,2.849v9.644A2.853,2.853,0,0,1,606.266-1086.509Zm-6.992-12.461a.931.931,0,0,0-.93.93v7.893a.931.931,0,0,0,.93.93h7.547a.931.931,0,0,0,.93-.93v-7.893a.931.931,0,0,0-.93-.93Z" transform="translate(-422 1130)"/>
+      <path id="Trazado_4" data-name="Trazado 4" class="cls-2" d="M.93,0H5.355a.93.93,0,0,1,.93.93V4.271a.93.93,0,0,1-.93.93H.93A.93.93,0,0,1,0,4.271V.93A.93.93,0,0,1,.93,0Z" transform="translate(177.991 34.064)"/>
+      <path id="Exclusión_2" data-name="Exclusión 2" class="cls-1" d="M596.228-1097.518h-1.113v-4.334h1.113v4.333Zm-1.041-1.431v.564h.94v-.564Z" transform="translate(-416.777 1136.35)"/>
+      <path id="Exclusión_3" data-name="Exclusión 3" class="cls-1" d="M596.228-1097.518h-1.113v-4.334h1.113v4.333Zm-1.039-3.554v.563h.94v-.563Z" transform="translate(-415.306 1136.35)"/>
+      <path id="Exclusión_4" data-name="Exclusión 4" class="cls-1" d="M596.228-1097.518h-1.113v-4.334h1.113v4.333Zm-1.036-1.517v.563h.94v-.563Z" transform="translate(-413.835 1136.35)"/>
+      <path id="Exclusión_5" data-name="Exclusión 5" class="cls-1" d="M596.228-1097.518h-1.113v-4.334h1.113v4.333Zm-1.033-1.517v.563h.94v-.563Z" transform="translate(-412.364 1136.35)"/>
+    </g>
+    <g id="Elipse_2" data-name="Elipse 2" class="cls-3" transform="translate(31 32)">
+      <circle class="cls-4" cx="19" cy="19" r="19"/>
+      <circle class="cls-5" cx="19" cy="19" r="18.25"/>
+    </g>
+  </g>
+</svg>

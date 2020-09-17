@@ -1,29 +1,45 @@
-// const tooltipShow = (arrowId, tooltipId, tooltipCloseId) => {
-// 	let arrow = document.getElementById(arrowId)
-//         tooltip = document.getElementById(tooltipId)
-//         tooltipClose = document.getElementById(tooltipCloseId)
+// const arrowIcon = document.getElementById('supplier')
 
-//     if(arrow && tooltip) {
-//         arrow.addEventListener('click', () => {
-//             arrow.classList.toggle('arrow-down')
-//             tooltip.classList.toggle('tooltip-show')
-//         })
-//     }
-    
-    // if(tooltipClose && tooltip && ) {
-    //     tooltipClose.addEventListener('click', () => {
-    //         arrow.classList.toggle('arrow-down')
-    //         tooltip.classList.remove('tooltip-show')
-    //     })
-    // }
-    
-// }    
+// arrowIcon.addEventListener('click', e => {
+//     const target = e.target,
+//           list = Array.from(arrowIcon.querySelectorAll('.info')),
+//           index = list.indexOf(target)
+//     console.log(`hiciste clic en el item ${index + 1}`)
+// })
 
-// tooltipShow('supplier-one', 'tooltip-one', 'tooltip-close-one')
-// tooltipShow('supplier-two', 'tooltip-two', 'tooltip-close-two')
-// tooltipShow('supplier-three', 'tooltip-three', 'tooltip-close-three')
-// tooltipShow('supplier-four', 'tooltip-four', 'tooltip-close-four')
-// tooltipShow('supplier-five', 'tooltip-five', 'tooltip-close-five')
-// tooltipShow('supplier-six', 'tooltip-six', 'tooltip-close-six')
+const showTooltip = (imgButtonId, tooltipId) => {
+    let imgButton = document.getElementById(imgButtonId),
+        tooltip = document.getElementById(tooltipId)
+    if(imgButton && tooltip) {
+        imgButton.addEventListener('click', () => {
+            imgButton.classList.toggle('info-down')
+            tooltip.classList.toggle('toggle-tooltip')
+        })
+    }
+}
 
+showTooltip('supplierpotencia', 'potencia')
+showTooltip('suppliercel', 'cel')
+showTooltip('supplierdft', 'dft')
+showTooltip('supplierserviciosconexos', 'serviciosconexos')
+showTooltip('supplierdemandacontrolable', 'demandacontrolable')
+showTooltip('supplierrgd', 'rgd')
 
+showTooltip('supplierpower', 'power')
+showTooltip('suppliercec', 'cec')
+showTooltip('supplierftr', 'ftr')
+showTooltip('supplierrelatedservices', 'relatedservices')
+showTooltip('suppliercontrollabledemand', 'controllabledemand')
+showTooltip('supplierdgr', 'dgr')
+
+showTooltip('generatorenergía', 'energíados')
+showTooltip('generatorpotencia', 'potenciados')
+showTooltip('generatorserviciosconexos', 'serviciosconexosdos')
+showTooltip('generatorrgd', 'rgddos')
+showTooltip('generatorrce', 'rgcedos')
+
+showTooltip('generatorenergy', 'energydos')
+showTooltip('generatorpower', 'powerdos')
+showTooltip('generatorrelatedservices', 'relatedservicesdos')
+showTooltip('generatorrgs', 'generatorsreprgddos')
+showTooltip('generatorrce', 'rcedos')

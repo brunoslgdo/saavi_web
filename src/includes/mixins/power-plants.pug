@@ -18,9 +18,9 @@ mixin powerPlants(arrPowerPlants, language)
                                 div(id=`${description.cardnumber}` class="card__info absolute")
                                     h1.subtitle.text-alt !{`${description.city}`}
                                     p.small.text-alt !{`${description.ub}`}
-                                    h2.small.ligth.text-alt.mbottom--sm CFE / Industria
-                                    p.small.text-alt: strong Capacidad nominal: 
+                                    h2.small.ligth.text-alt.mbottom--sm !{`${description.prov}`}
+                                    p.small.text-alt: strong Capacidad nominal:
                                     p.body.ligth.text-alt !{`${description.capacity}`}
-                                    p.small.text-alt: strong Inicio de operaciones: 
+                                    p.small.text-alt: strong Inicio de operaciones:
                                     p.body.light.text-alt !{`${description.start}`}
-                                    div(id=`${description.closenumber}` class="iclose")        
+                                    div(id=`${description.closenumber}` class="iclose")

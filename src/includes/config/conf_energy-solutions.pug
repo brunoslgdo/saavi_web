@@ -1,159 +1,154 @@
 -
-	const SUPPLIER = {
-		sp: [
-			{
-				display: 'Elige competitividad y eficiencia',
-				title: 'Suministradora',
-				solutions: [
-					{
-						icon: 'icon-suministradora-potencia.svg',
-						name: 'Potencia',
-					},
-					{
-						icon: 'icon-suministradora-cel.svg',
-						name: 'CEL',
-					},
-					{
-						icon: 'icon-suministradora-dft.svg',
-						name: 'DFT',
-					},
-					{
-						icon: 'icon-suministradora-conexos.svg',
-						name: 'Servicios Conexos',
-					},
-					{
-						icon: 'icon-suministradora-controlable.svg',
-						name: 'Demanda Controlable',
-					},
-					{
-						icon: 'icon-suministradora-distribuida.svg',
-						name: 'RGD',
-					},
-				],
-			},
-		],
-		en: [
-			{
-				display: 'Choose competitivity and efficiency',
-				title: 'Supplier',
-				solutions: [
-					{
-						icon: 'icon-suministradora-potencia.svg',
-						name: 'Power',
-					},
-					{
-						icon: 'icon-suministradora-cel.svg',
-						name: 'Clean Energy Certificates',
-					},
-					{
-						icon: 'icon-suministradora-dft.svg',
-						name: 'Financial Transmission Rights',
-					},
-					{
-						icon: 'icon-suministradora-conexos.svg',
-						name: 'Related services',
-					},
-					{
-						icon: 'icon-suministradora-controlable.svg',
-						name: 'Controllable demand',
-					},
-					{
-						icon: 'icon-suministradora-distribuida.svg',
-						name: 'Distributed generation representation',
-					},
-				],
-			},
-		],
-	}
+	const SUPPLIER = [
+		{
+			sp: [
+				{
+					display: 'Elige competitividad y eficiencia',
+					title: 'Suministradora',
+					solutions: [
+						{
+							icon: 'icon-suministradora-potencia.svg',
+							name: 'Potencia',
+							def: '<strong>Potencia:</strong> producto comercial mediante el cual se asegura la disponibilidad de producción de las centrales de generación para ofrecer la energía correspondiente (kW), y brinda soporte al Sistema Eléctrico Nacional en las horas críticas. Producto obligatorio para todos los consumidores (MW-año).',
+						},
+						{
+							icon: 'icon-suministradora-cel.svg',
+							name: 'CEL',
+							def: '<strong>Certificados de Energía Limpia:</strong> títulos emitidos por la CRE que acreditan la producción de energía eléctrica a partir de fuentes de Energías Limpias, los cuales sirven para cumplir los requisitos asociados al consumo de los Centros de Carga.'
+						},
+						{
+							icon: 'icon-suministradora-dft.svg',
+							name: 'DFT',
+							def: '<strong>Derechos Financieros de Transmisión:</strong> títulos emitidos por CENACE que operan como un mecanismo de cobertura financiera, el cual permite mitigar el riesgo de diferencia de precios entre el nodo de generación y el de consumo. Actualmente este instrumento no está en operación en el Mercado Eléctrico Mayorista.',
+						},
+						{
+							icon: 'icon-suministradora-conexos.svg',
+							name: 'Servicios Conexos',
+							def: '<strong>Sevicios Conexos:</strong> están vinculados a la operación del Sistema Eléctrico Nacional y son necesarios para garantizar su calidad, confiabilidad, continuidad y seguridad. Actualmente comprenden regulación de frecuencia, regulación de voltaje, reservas operativas y rodantes, entre otros.',
+						},
+						{
+							icon: 'icon-suministradora-controlable.svg',
+							name: 'Demanda Controlable',
+							def: '<strong>Demanda Controlable:</strong> producto que los centros de carga ofrecen en el Mercado Eléctrico Mayorista que consiste en la reducción de su demanda en un momento determinado para mantener la confiabilidad del Sistema. Actualmente este instrumento no está en operación en el Mercado Eléctrico Mayorista.',
+						},
+						{
+							icon: 'icon-suministradora-distribuida.svg',
+							name: 'RGD',
+							def: '<strong>Representación de Generación Distribuida:</strong> como suministrador gestionamos sus activos de Generación Distribuida (capacidad menor a 0.5 MW).',
+						},
+					],
+				},
+			],
+			en: [
+				{
+					display: 'Choose competitivity and efficiency',
+					title: 'Supplier',
+					solutions: [
+						{
+							icon: 'icon-suministradora-potencia.svg',
+							name: 'Power',
+							def: '<strong>Power:</strong> producto comercial mediante el cual se asegura la disponibilidad de producción de las centrales de generación para ofrecer la energía correspondiente (kW), y brinda soporte al Sistema Eléctrico Nacional en las horas críticas. Producto obligatorio para todos los consumidores (MW-año).',
+						},
+						{
+							icon: 'icon-suministradora-cel.svg',
+							name: 'CEC',
+							def: '<strong>Clean Energy Certificates:</strong> títulos emitidos por la CRE que acreditan la producción de energía eléctrica a partir de fuentes de Energías Limpias, los cuales sirven para cumplir los requisitos asociados al consumo de los Centros de Carga.'
+						},
+						{
+							icon: 'icon-suministradora-dft.svg',
+							name: 'FTR',
+							def: '<strong>Financial Transmission Rights:</strong> títulos emitidos por CENACE que operan como un mecanismo de cobertura financiera, el cual permite mitigar el riesgo de diferencia de precios entre el nodo de generación y el de consumo. Actualmente este instrumento no está en operación en el Mercado Eléctrico Mayorista.',
+						},
+						{
+							icon: 'icon-suministradora-conexos.svg',
+							name: 'Related Services',
+							def: '<strong>Related Services:</strong> están vinculados a la operación del Sistema Eléctrico Nacional y son necesarios para garantizar su calidad, confiabilidad, continuidad y seguridad. Actualmente comprenden regulación de frecuencia, regulación de voltaje, reservas operativas y rodantes, entre otros.',
+						},
+						{
+							icon: 'icon-suministradora-controlable.svg',
+							name: 'Controllable Demand',
+							def: '<strong>Controllable Demand:</strong> producto que los centros de carga ofrecen en el Mercado Eléctrico Mayorista que consiste en la reducción de su demanda en un momento determinado para mantener la confiabilidad del Sistema. Actualmente este instrumento no está en operación en el Mercado Eléctrico Mayorista.',
+						},
+						{
+							icon: 'icon-suministradora-distribuida.svg',
+							name: 'DGR',
+							def: '<strong>Distributed generation representation:</strong> como suministrador gestionamos sus activos de Generación Distribuida (capacidad menor a 0.5 MW).',
+						},
+					],
+				},
+			],
+		},
+	]
 
-	const GENERATOR = {
-		sp: [
-			{
-				display: 'Tu energía en manos de expertos',
-				title: 'Generador',
-				content: 'Creamos la solución precisa para tu empresa, con la seguridad de que tendrás siempre el mejor servicio.',
-				solutions: [
-					{
-						icon: 'icon-generadora-energia.svg',
-						name: 'Energía',
-					},
-					{
-						icon: 'icon-generadora-potencia.svg',
-						name: 'Potencia',
-					},
-					{
-						icon: 'icon-generadora-conexos.svg',
-						name: 'Servicios Conexos',
-					},
-					{
-						icon: 'icon-generadora-generadores.svg',
-						name: 'Representación de Generadores',
-					},
-				],
-			},
-		],
-		en: [
-			{
-				display: 'Your energy in the hands of experts',
-				title: 'Generator',
-				content: 'We create tailor made solutions for your company, based on our best service guarantee.',
-				solutions: [
-					{
-						icon: 'icon-generadora-energia.svg',
-						name: 'Energy',
-					},
-					{
-						icon: 'icon-generadora-potencia.svg',
-						name: 'Power',
-					},
-					{
-						icon: 'icon-generadora-conexos.svg',
-						name: 'Related services',
-					},
-					{
-						icon: 'icon-generadora-generadores.svg',
-						name: 'Generators representation',
-					},
-				],
-			},
-		],
-	}
-
-	const TOOLTIPS = [
+	const GENERATOR = [
 		{
-			desc: 'Potencia',
-			def: 'producto comercial mediante el cual se asegura la disponibilidad de producción de las centrales de generación para ofrecer la energía correspondiente (kW) y brinda soporte al Sistema Eléctrico Nacional en las horas críticas. Producto obligatorio para todos los consumidores (MW-año).',
-		},
-		{
-			desc: 'Energía eléctrica',
-			def: 'electricidad generada por las distintas Fuentes de generación (kWh)',
-		},
-		{
-			desc: 'Certificados de Energía Limpia',
-			def: 'títulos emitidos por la CRE que acreditan la producción de energía eléctrica a partir de fuentes de Energías Limpias, el cual sirve para cumplir los requisitos asociados al consumo de los Centros de Carga.',
-		},
-		{
-			desc: 'Servicios Conexos:',
-			def: 'servicios vinculados a la operación del Sistema Eléctrico Nacional y que son necesarios para garantizar su calidad, confiabilidad, continuidad y seguridad. Actualmente los servicios conexos comprenden: regulación de frecuencia, regulación de voltaje, reservas operativas y rodantes, entre otros. ',
-		},
-		{
-			desc: 'Derechos Financieros de Transmisión:',
-			def: 'títulos emitidos por CENACE que operan como un mecanismo de cobertura financiera que permite mitigar el riesgo de diferencia de precios entre el nodo de generación y el nodo de consumo. Actualmente este instrumento no está en operación en el Mercado Eléctrico Mayorista. ',
-		},
-		{
-			desc: 'Demanda controlable:',
-			def: 'producto que los centros de carga ofrecen en el Mercado Eléctrico Mayorista que consiste en la reducción de su demanda en un momento determinado para mantener la confiabilidad del Sistema. Actualmente este instrumento no está en operación en el Mercado Eléctrico Mayorista. ',
-		},
-		{
-			desc: 'Representación de Centrales Eléctricas:',
-			def: 'contamos con las autorizaciones necesarias y la infraestructura para gestionar sus activos de generación con capacidad mayor a 0.5 MW en el Mercado Eléctrico Mayorista',
-		},
-		{
-			desc: 'Representación de Generación Distribuida:',
-			def: 'como Suministrador gestionamos sus activos de Generación Distribuida (capacidad menor a 0.5 MW).',
-		},
-		{
-			desc: 'Gestiones para el registro y habilitación de los centros de carga como Usuarios Calificados:',
-			def: 'trámites ante la Comisión Reguladora de Energía (CRE) y el Centro Nacional de Control de Energía (CENACE) para acceder al suministro por parte de Saavi Energía. ',
+			sp: [
+				{
+					display: 'Tu energía en manos de expertos',
+					title: 'Generador',
+					content: 'Creamos la solución precisa para tu empresa, con la seguridad de que tendrás siempre el mejor servicio.',
+					solutions: [
+						{
+							icon: 'icon-generadora-energia.svg',
+							name: 'Energía',
+							def: '<strong>Energía eléctrica:</strong> electricidad generada por las distintas fuentes de generación (kWh).',
+						},
+						{
+							icon: 'icon-generadora-potencia.svg',
+							name: 'Potencia',
+							def: '<strong>Potencia:</strong> producto comercial mediante el cual se asegura la disponibilidad de producción de las centrales de generación para ofrecer la energía correspondiente (kW), y brinda soporte al Sistema Eléctrico Nacional en las horas críticas. Producto obligatorio para todos los consumidores (MW-año).',
+						},
+						{
+							icon: 'icon-generadora-conexos.svg',
+							name: 'Servicios Conexos',
+							def: '<strong>Servicios Conexos:</strong> están vinculados a la operación del Sistema Eléctrico Nacional y son necesarios para garantizar su calidad, confiabilidad, continuidad y seguridad. Actualmente los servicios conexos comprenden regulación de frecuencia, regulación de voltaje, reservas operativas y rodantes, entre otros.',
+						},
+						{
+							icon: 'icon-generadora-generadores.svg',
+							name: 'RGD',
+							def: '<strong>Representación de Generación Distribuida:</strong> como suministrador gestionamos sus activos de Generación Distribuida (capacidad menor a 0.5 MW).',
+						},
+						{
+							icon: 'icon-gestion.svg',
+							name: 'RCE',
+							def: '<strong>Representación de Centrales Eléctricas:</strong> contamos con las autorizaciones necesarias y la infraestructura para gestionar sus activos de generación con capacidad mayor a 0.5 MW en el Mercado Eléctrico Mayorista.',
+						},
+					],
+				},
+			],
+			en: [
+				{
+					display: 'Your energy in the hands of experts',
+					title: 'Generator',
+					content: 'We create tailor made solutions for your company, based on our best service guarantee.',
+					solutions: [
+						{
+							icon: 'icon-generadora-energia.svg',
+							name: 'Energy',
+							def: '<strong>Energy:</strong> electricidad generada por las distintas fuentes de generación (kWh).',
+						},
+						{
+							icon: 'icon-generadora-potencia.svg',
+							name: 'Power',
+							def: '<strong>Power:</strong> producto comercial mediante el cual se asegura la disponibilidad de producción de las centrales de generación para ofrecer la energía correspondiente (kW), y brinda soporte al Sistema Eléctrico Nacional en las horas críticas. Producto obligatorio para todos los consumidores (MW-año).',
+						},
+						{
+							icon: 'icon-generadora-conexos.svg',
+							name: 'Related Services',
+							def: '<strong>Related services:</strong> están vinculados a la operación del Sistema Eléctrico Nacional y son necesarios para garantizar su calidad, confiabilidad, continuidad y seguridad. Actualmente los servicios conexos comprenden regulación de frecuencia, regulación de voltaje, reservas operativas y rodantes, entre otros.',
+						},
+						{
+							icon: 'icon-generadora-generadores.svg',
+							name: 'RGD',
+							def: '<strong>Representación de Generación Distribuida:</strong> como suministrador gestionamos sus activos de Generación Distribuida (capacidad menor a 0.5 MW).',
+						},
+						{
+							icon: 'icon-gestion.svg',
+							name: 'RCE',
+							def: '<strong>Representación de Centrales Eléctricas:</strong> contamos con las autorizaciones necesarias y la infraestructura para gestionar sus activos de generación con capacidad mayor a 0.5 MW en el Mercado Eléctrico Mayorista.',
+						},
+					],
+				},
+			],
 		},
 	]
