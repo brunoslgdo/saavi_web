@@ -1,11 +1,18 @@
 include ../config/conf_contact
-mixin contact(arrContact)
+mixin contact(arrContact, language)
+    - let lang = language
     section.container.contact#contact
         article.wrap.contact__content
             .contact__child
-                h1.title.text-alt Contacto
+                if lang == 'sp'
+                    h1.title.text-alt Contacto
+                if lang == 'en'
+                    h1.title.text-alt Contact Us
             .contact__child
-                h2.subtitle.text-alt Oficinas corporativas
+                if lang == 'sp'
+                    h2.subtitle.text-alt Oficinas corporativas
+                if lang == 'en'
+                    h2.subtitle.text-alt Headquarters
             .contact__child
                 ul.data
                     each item in arrContact

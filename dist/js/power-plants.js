@@ -1,5 +1,5 @@
 const showPlant = (plantNumberId, cardNumberId, closeNumberId) => {
-	
+
 	let plantNumber = document.getElementById(plantNumberId),
 		cardNumber = document.getElementById(cardNumberId),
 		closeNumber = document.getElementById(closeNumberId)
@@ -10,7 +10,7 @@ const showPlant = (plantNumberId, cardNumberId, closeNumberId) => {
 			plantNumber.style.transform = 'scale(0, 0)'
 		})
 	}
-	
+
 	if(closeNumber && cardNumber) {
 		closeNumber.addEventListener('click', () => {
 			cardNumber.classList.toggle('cover')
@@ -27,3 +27,4 @@ showPlant('five', 'card-five', 'close-five')
 showPlant('fiveDos', 'card-fiveDos', 'close-fiveDos')
 showPlant('six', 'card-six', 'close-six')
 showPlant('seven', 'card-seven', 'close-seven')
+showPlant('sevenDos', 'card-sevenDos', 'close-sevenDos')

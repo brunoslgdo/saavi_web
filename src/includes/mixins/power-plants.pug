@@ -7,20 +7,27 @@ mixin powerPlants(arrPowerPlants, language)
                 .power-plants__type
                     each title in item.type
                         if lang == 'sp'
-                            h1.title.first= `${title.titleSp}` 
+                            h1.title.first= `${title.titleSp}`
                         if lang == 'en'
-                            h1.title.first= `${title.titleEn}` 
+                            h1.title.first= `${title.titleEn}`
                     ul.card
                         each description in item.desc
                             li(class="card__item")
                                 img(src=`${pathImg}${description.img}`, class="card__img absolute", alt=`${description.city}`, class="description__img")
-                                h1(id=`${description.plantnumber}` class="body text-alt absolute"): strong !{`${description.city}`}
+                                h1(id=`${description.plantnumber}` class="body text-alt absolute button"): strong !{`${description.city}`}
                                 div(id=`${description.cardnumber}` class="card__info absolute")
                                     h1.subtitle.text-alt !{`${description.city}`}
                                     p.small.text-alt !{`${description.ub}`}
                                     h2.small.ligth.text-alt.mbottom--sm !{`${description.prov}`}
-                                    p.small.text-alt: strong Capacidad nominal:
+                                    if lang == 'sp'
+                                        p.small.text-alt: strong Capacidad nominal:
+                                    if lang == 'en'
+                                        p.small.text-alt: strong Installed capacity:
                                     p.body.ligth.text-alt !{`${description.capacity}`}
-                                    p.small.text-alt: strong Inicio de operaciones:
-                                    p.body.light.text-alt !{`${description.start}`}
+                                    if lang == 'sp'
+                                        p.small.text-alt: strong Inicio de operaciones:
+                                        p.body.light.text-alt !{`${description.startSp}`}
+                                    if lang == 'en'
+                                        p.small.text-alt: strong Operating since:
+                                        p.body.light.text-alt !{`${description.startEn}`}
                                     div(id=`${description.closenumber}` class="iclose")

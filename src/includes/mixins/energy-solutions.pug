@@ -43,6 +43,7 @@ mixin energySolutions(arrSupplier, arrGenerator, language)
 										img(src=`${pathImg}icon-arrow-alt.svg`, id=`generator${sol.name.toLowerCase().split(' ').join('')}`, class="info", alt="info")
 										div(id=`${sol.name.toLowerCase().split(' ').join('')}dos` class="tooltip")
 											p.small.light.first-alt !{`${sol.def}`}
+							p.body.text-alt: strong= `${desc.content}`
 					if lang == 'en'
 						each desc in item.en
 							h1.title.text-alt= `${desc.display}`
@@ -55,3 +56,4 @@ mixin energySolutions(arrSupplier, arrGenerator, language)
 										img(src=`${pathImg}icon-arrow-alt.svg`, id=`generator${sol.name.toLowerCase().split(' ').join('')}`, class="info", alt="info")
 										div(id=`${sol.name.toLowerCase().split(' ').join('')}dos` class="tooltip")
 											p.small.light.first-alt !{`${sol.def}`}
+							p.body.text-alt: strong= `${desc.content}`
