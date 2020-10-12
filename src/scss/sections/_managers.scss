@@ -8,15 +8,16 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: var(--xs);
-    
+    color: var(--text-alt);
+
     @media only screen and (min-width: 414px) {
         gap: var(--sm);
     }
-    
+
     @media only screen and (min-width: 568px) {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     @media only screen and (min-width: 768px) {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -27,6 +28,7 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(4, 1fr);
         position: relative;
+        box-shadow: 0 0 toRem(1) toRem(1) rgba(0, 0, 0, 0.2);
 
         &::before {
             content: "";
@@ -38,31 +40,48 @@
     &__item:nth-child(odd) {
        background-color: var(--first);
     }
-    
+
     &__item:nth-child(even) {
        background-color: var(--first-alt);
     }
 
     &__position {
-        padding: var(--ss);
+        padding: toRem(41) var(--xs) var(--xs);
         position: absolute;
-
-        @media only screen and (min-width: 375px) {
-            padding: var(--sm);
-        }
-    }
-
-    &__position:nth-child(1) {
         top: 0;
+        right: 0;
+        bottom: 0;
         left: 0;
     }
 
-    &__position:nth-child(2) {
-        right: 0;
-        bottom: 0;
+    &__name {
+        font-size: toRem(18);
     }
 
-    .body {
-        line-height: 1.2;
+    &__title {
+        font-size: toRem(14);
+        font-weight: var(--light);
+        margin-bottom: var(--xs);
+    }
+
+    &__tag {
+        display: inline-block;
+        background-color: var(--text-alt);
+        color: var(--first-alt);
+        font-size: toRem(10);
+        padding: toRem(6);
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__contact {
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        gap: var(--xs);
+
+        a {
+            cursor: pointer;
+        }
     }
 }

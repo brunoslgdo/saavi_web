@@ -4,7 +4,7 @@ mixin managers(arrManagers, language)
     section.container.managers#managers
         article.wrap
             each item in arrManagers.heading
-                if lang == 'sp' 
+                if lang == 'sp'
                     h1.title.first= `${item.titleSp}`
                 if lang == 'en'
                     h1.title.first= `${item.titleEn}`
@@ -12,10 +12,18 @@ mixin managers(arrManagers, language)
                 each item in arrManagers.desc
                     li.card-managers__item
                         .card-managers__position
-                            h1.body.text-alt <strong>!{`${item.name}<br>${item.lastname}`}</strong>
+                            if lang == 'sp' && item.contactTypeSp !== ''
+                                .card-managers__tag !{`${item.contactTypeSp}`}
+                            if lang == 'en' && item.contactTypeEn !== ''
+                                .card-managers__tag !{`${item.contactTypeEn}`}
+                            h1.card-managers__name !{`${item.name}<br>${item.lastname}`}
                             if lang == 'sp'
-                                h2.small.text-alt= `${item.positionSp}`
+                                h2.card-managers__title= `${item.positionSp}`
                             if lang == 'en'
-                                h2.small.text-alt= `${item.positionEn}`
-                        a(href=`${item.href}`, class="card-managers__position", target="_blank")
-                            img(src=`${pathImg}icon-linkedin-white.svg`, alt=`likedin - ${item.name}`)
+                                h2.card-managers__title= `${item.positionEn}`
+                            .card-managers__contact
+                                a(href=`${item.href}`, target="_blank")
+                                    img(src=`${pathImg}icon-in-alt.svg`, alt=`likedin - ${item.name}`)
+                                if item.email !== ''
+                                    a(href=`mailto:${item.email}`)
+                                        img(src=`${pathImg}icon-mail-alt.svg`)
