@@ -7,6 +7,7 @@ include ../mixins/energy-solutions
 include ../mixins/portfolio
 include ../mixins/power-plants
 include ../mixins/contact
+include ../mixins/regulations
 
 <!DOCTYPE html>
 html(lang="es")
@@ -19,14 +20,15 @@ html(lang="es")
         meta(http-equiv="expires" content="0")
         meta(http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT")
         meta(http-equiv="pragma" content="no-cache")
-        title SAAVI
+        title Saavi Energía
+        link(href=`${pathImg}favicon.svg`, rel="icon", type="image/svg+xml", sizes="any")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
         link(href=`${pathStyles}styles.css?v=${cacheCss}`, rel="stylesheet")
     body
 
-        block content
-
+        .main-wrap
+            block content
         script(src=`${pathJs}show-menu.js`)
-        //- script(src=`${pathJs}play-video.js`)
+        script(src=`${pathJs}play-video.js`)
         script(src=`${pathJs}power-plants.js`)
         script(src=`${pathJs}show-tooltip.js`)
