@@ -1,0 +1,15 @@
+mixin privacyNotice(arrRegulations, language)
+    - let lang = language
+    section.container
+        article.wrap
+            .regulations
+                if lang == 'sp'
+                    each item in arrRegulations.sp
+                        h1.title.first-alt !{`${item.title}`}
+                        each text in item.content
+                            p.small.light.text.mbottom--xs !{`${text}`}
+                if lang == 'en'
+                    each item in arrRegulations.en
+                        h1.title.first-alt !{`${item.title}`}
+                        each text in item.content
+                            p.small.light.text.mbottom--xs !{`${text}`}
