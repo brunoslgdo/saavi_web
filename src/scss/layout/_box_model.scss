@@ -1,7 +1,12 @@
+.main-wrap,
 .container,
 .wrap {
     margin-right: auto;
     margin-left: auto;
+}
+
+.main-wrap {
+    max-width: toRem(1366);
 }
 
 .container {
