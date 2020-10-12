@@ -1,4 +1,10 @@
 .vscode
 dist/index.html
+dist/aviso-de-privacidad.html
+dist/politica-de-cookies.html
+dist/terminos-y-condiciones.html
 dist/en.html
+dist/privacy-notice.html
+dist/cookies-policy.html
+dist/terms-and-conditions.html
 dist/css/styles.css
