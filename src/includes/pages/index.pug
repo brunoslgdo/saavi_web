@@ -13,36 +13,42 @@ block content
     section.container.investors#investros
         article.wrap.investors__content
             .investors__child
-                h1.title.first Inversionistas
+            //-     h1.title.first Inversionistas
             .investors__child
-                form(action="#", class="form-investors")
-                    .form-investors__field
-                        label(for="", class="form-investors__label body text-alt") Usuario
-                        input(type="text", placeholder="Ej. inversionista@saavienergia.com", required, name="user", id="user", class="form-investors__input")
-                    .form-investors__field
-                        label(for="", class="form-investors__label body text-alt") Contraseña
-                        input(type="password", placeholder="Ingresa tu contraseña", required, name="pass", id="pass", class="form-investors__input")
-                    .form-investors__field
-                        input(type="submit", value="Iniciar sesión", class="form-investors__input ghost")
-                    .form-investors__field
-                        p.small.text-alt ¿Olvidaste tu contraseña?
+                .access
+                    p.small.bold.text-alt Ingreso
+                    a(href="https://www.saavienergia.com/web/inversionistas-acceso", class="title text-alt") Inversionistas
+                //- form(action="#", class="form-investors")
+                //-     .form-investors__field
+                //-         label(for="", class="form-investors__label body text-alt") Usuario
+                //-         input(type="text", placeholder="Ej. inversionista@saavienergia.com", required, name="user", id="user", class="form-investors__input")
+                //-     .form-investors__field
+                //-         label(for="", class="form-investors__label body text-alt") Contraseña
+                //-         input(type="password", placeholder="Ingresa tu contraseña", required, name="pass", id="pass", class="form-investors__input")
+                //-     .form-investors__field
+                //-         input(type="submit", value="Iniciar sesión", class="form-investors__input ghost")
+                //-     .form-investors__field
+                //-         p.small.text-alt ¿Olvidaste tu contraseña?
 
     //- ok
     section.container.clients#clients
         article.wrap.clients__content
             .clients__child
-                h1.title.first Clientes
+                //- h1.title.first Clientes
             .clients__child
-                form(action="#", class="form-investors")
-                    .form-investors__field
-                        label(for="", class="form-investors__label body text-alt") Usuario
-                        input(type="text", placeholder="Ej. inversionista@saavienergia.com", required, name="user", id="user", class="form-investors__input")
-                    .form-investors__field
-                        label(for="", class="form-investors__label body text-alt") Contraseña
-                        input(type="password", placeholder="Ingresa tu contraseña", required, name="pass", id="pass", class="form-investors__input")
-                    .form-investors__field
-                        input(type="submit", value="Iniciar sesión", class="form-investors__input ghost")
-                    .form-investors__field
-                        p.small.text-alt ¿Olvidaste tu contraseña?
+                .access
+                    p.small.bold.text-alt Ingreso
+                    a(href="#", class="title text-alt") Clientes
+                //- form(action="#", class="form-investors")
+                //-     .form-investors__field
+                //-         label(for="", class="form-investors__label body text-alt") Usuario
+                //-         input(type="text", placeholder="Ej. inversionista@saavienergia.com", required, name="user", id="user", class="form-investors__input")
+                //-     .form-investors__field
+                //-         label(for="", class="form-investors__label body text-alt") Contraseña
+                //-         input(type="password", placeholder="Ingresa tu contraseña", required, name="pass", id="pass", class="form-investors__input")
+                //-     .form-investors__field
+                //-         input(type="submit", value="Iniciar sesión", class="form-investors__input ghost")
+                //-     .form-investors__field
+                //-         p.small.text-alt ¿Olvidaste tu contraseña?
 
     +contact(CONTACT, 'sp')

@@ -1,0 +1,22 @@
+.access {
+    padding-left: var(--md);
+    padding-right: var(--md);
+
+    a {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    a::after {
+        content: url('#{$pathImg}icon-external.svg');
+        display: block;
+        position: absolute;
+        top: 0;
+        right: toRem(-36);
+    }
+}
