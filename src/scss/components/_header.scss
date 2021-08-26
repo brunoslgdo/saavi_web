@@ -7,8 +7,9 @@
     padding-bottom: var(--ss);
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 1000;
-    min-width: 100vw;
+    width: 100%;
     
     @media only screen and (min-width: 1280px) {
         grid-template-columns: minmax(toRem(64), toRem(275)) minmax(toRem(192), 1fr) minmax(toRem(64), toRem(275));

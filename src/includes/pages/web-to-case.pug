@@ -1,0 +1,98 @@
+extends ../templates/forms
+block content
+
+    +header(MENU, 'sp')
+    
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+    <!--  If necessary, please modify the charset parameter to specify the        -->
+    <!--  character set of your HTML page.                                        -->
+    <!--  ----------------------------------------------------------------------  -->
+
+    //- <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+
+    //- <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <form action="https://saavidev--saavidev.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="s-form">
+
+        <input type=hidden name="orgid" value="00D55000000LWRu">
+        <input type=hidden name="retURL" value="https://www.saavienergia.com/">
+        <input type=hidden name="Priority" value="High">
+
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+        <!--  these lines if you wish to test in debug mode.                          -->
+        <!--  <input type="hidden" name="debug" value=1>                              -->
+        <!--  <input type="hidden" name="debugEmail" value="efleon@minsait.com">      -->
+        <!--  ----------------------------------------------------------------------  -->
+
+        <label for="recordType" class="s-form__label">Case Record Type</label>
+        <select id="recordType" name="recordType">
+            <option value="">--None--</option>
+            <option value="01255000001tWTg">Facturación</option>
+            <!-- <option value="01255000001tWT7">Comunicacion</option> -->
+            <option value="01255000001tJLR">Falla</option>
+            <!--<option value="01255000001tO4h">Libranzas Media Tension</option>
+            <option value="01255000001tWTC">Ticket Comunicacion</option>
+            <option value="01255000001tWTl">Ticket Facturacion</option>
+            <option value="01255000001tVT6">Ticket Fallas</option>
+            <option value="01255000001tVdJ">Ticket Libranzas Media Tension</option>
+            <option value="01255000001tLlQ">To Debug</option>-->
+        </select>
+
+        <label for="subject" class="s-form__label">RPU</label>
+        <input id="subject" maxlength="80" name="subject" size="20" type="text" class="s-form__input" />
+
+        <label for="name" class="s-form__label">Nombre de contacto</label>
+        <input id="name" maxlength="80" name="name" size="20" type="text" class="s-form__input" />
+
+        <label for="email" class="s-form__label">Email</label>
+        <input id="email" maxlength="80" name="email" size="20" type="text" class="s-form__input" />
+
+        <label for="phone" class="s-form__label">Teléfono</label>
+        <input id="phone" maxlength="40" name="phone" size="20" type="text" class="s-form__input" />
+        
+        <label class="s-form__label">Domicilio de centro de carga con afectación:</label>
+        <input id="00N5500000D0Q2T" maxlength="255" name="00N5500000D0Q2T" size="20" type="text" class="s-form__input" /><br>    Fecha y hora de inicio de la 
+        
+        <label class="s-form__label">incidencia:</label>
+        <span class="dateInput"><input id="00N5500000D0LIS" name="00N5500000D0LIS" size="20" type="text" /></span>
+        <label class="s-form__label">Fecha y hora fin de la incidencia:</label>
+        <span class="dateInput"><input  id="00N5500000D0LIX" name="00N5500000D0LIX" size="20" type="text" /></span>
+
+        <label for="description" class="s-form__label">Caracteristicas principles del evento</label>
+        <textarea name="description"></textarea>
+
+        <input type="submit" name="submit">
+
+    </form>
+
+    //- script.
+    //-     $("select")
+    //-         .change(function() {
+    //-             var str = "";
+    //-             $("select option:selected").each(function() {
+    //-                 str += $(this).text() + " ";
+    //-             });
+    //-             $("div").text(str);
+
+    //-             if (str === 'Facturación') {
+    //-                 $("#name").hide();
+    //-                 $("#email").hide();
+    //-                 $("#phone").hide();
+    //-             } else {
+    //-                 $("#name").show();
+    //-                 $("#email").show();
+    //-                 $("#phone").show();
+    //-             }
+
+    //-             console.log('chekkkkkkk', str);
+
+    //-         })
+    //-         .change();
+
+    +contact(CONTACT, 'en')

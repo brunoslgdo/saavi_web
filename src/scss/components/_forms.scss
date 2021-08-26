@@ -36,3 +36,65 @@
     }
 }
 
+
+// salesforce forms
+
+.s-form {
+    --focus: #63DDFF;
+    --valid: #63FF8A;
+    --invalid: #FF6363;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: toRem(24);
+    margin-right: auto;
+    margin-left: auto;
+    max-width: toRem(568);
+
+    &__personal-data {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        gap: toRem(24);
+
+        @media only screen and (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    &__label,
+    &__input,
+    &__button {
+        display: block;
+        font-size: toRem(14);
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    &__label {
+        color: #21282d;
+        font-weight: var(--sbold);
+        margin-bottom: toRem(8);
+    }
+    
+    &__input {
+        border: toRem(1) solid #495056;
+        border-radius: toRem(4);
+        font-weight: var(--light);
+        padding: toRem(8) toRem(16);
+        width: 100%;
+
+        &:focus {
+            outline-color: var(--focus);
+        }
+    }
+
+    &__button {
+        background-color: #007BCB;
+        color: #FFFFFF;
+        border: toRem(1) solid #007BCB;
+        border-radius: toRem(4);
+        font-weight: var(--sbold);
+        padding: toRem(8) toRem(32);
+    }
+}

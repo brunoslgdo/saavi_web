@@ -4,11 +4,11 @@ $font-size: (
     subtitle: toRem(34),
     body: toRem(20),
     small: toRem(16),
-    xsmall: toRem(12),
+    xsmall: toRem(12)
 );
 
 $font-weight: (
-    black: 900,
+    'black': 900,
     ebold: 800,
     bold: 700,
     sbold: 600,
@@ -16,7 +16,7 @@ $font-weight: (
     regular: 400,
     light: 300,
     elight: 200,
-    thin: 100,
+    thin: 100
 );
 
 :root {

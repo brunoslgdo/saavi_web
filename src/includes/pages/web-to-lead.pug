@@ -1,0 +1,89 @@
+extends ../templates/main
+block content
+
+    +header(MENU, 'sp')
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+    <!--  If necessary, please modify the charset parameter to specify the        -->
+    <!--  character set of your HTML page.                                        -->
+    <!--  ----------------------------------------------------------------------  -->
+
+    //- <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="s-form">
+
+    <input type=hidden name="oid" value="00D55000000LWRu">
+    <input type=hidden name="retURL" value="http://">
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+    <!--  these lines if you wish to test in debug mode.                          -->
+    <!--  <input type="hidden" name="debug" value=1>                              -->
+    <!--  <input type="hidden" name="debugEmail" value="daramirez@minsait.com">   -->
+    <!--  ----------------------------------------------------------------------  -->
+
+    .s-form__personal-data
+        <div class="s-form__field">
+            <label for="first_name" class="s-form__label">First Name</label>
+            <input id="first_name" maxlength="40" name="first_name" size="20" type="text" class="s-form__input" title="Este campo solo acepta letras y espacios en blanco" pattern="^[a-zA-ZÑñÁáÉéÍíÓóÚú\s]+$" required />
+        </div>
+        <div class="s-form__field">
+            <label for="last_name" class="s-form__label">Last Name</label>
+            <input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="s-form__input" title="Este campo solo acepta letras y espacios en blanco" pattern="^[a-zA-ZÑñÁáÉéÍíÓóÚú\s]+$" required />
+        </div>
+
+    <div class="s-form__field">
+    <label for="title" class="s-form__label">Title</label>
+    <input id="title" maxlength="40" name="title" size="20" type="text" class="s-form__input" pattern="^.{1,255}$" required />
+    </div>
+
+    .s-form__personal-data
+        <div class="s-form__field">
+            <label for="phone" class="s-form__label">Phone</label>
+            <input id="phone" maxlength="40" name="phone" size="20" type="text" class="s-form__input" title="Este campo solo acepta números y no admite espacios en blanco" pattern="^[0-9]+" required />
+        </div>
+        <div class="s-form__field">
+            <label class="s-form__label">Ext. (opcional):</label>
+            <input  id="00N5500000D0kNn" name="00N5500000D0kNn" size="20" type="text" class="s-form__input" title="Este campo solo acepta números y no admite espacios en blanco" pattern="^[0-9]+" />
+        </div>
+
+    <div class="s-form__field">
+    <label for="email" class="s-form__label">Email</label>
+    <input id="email" maxlength="80" name="email" size="20" type="text" class="s-form__input" title="Escribe una dirección de email válida" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required />
+    </div>
+
+    <div class="s-form__field">
+    <label for="company" class="s-form__label">Company</label>
+    <input id="company" maxlength="40" name="company" size="20" type="text" class="s-form__input" pattern="^.{1,255}$" required />
+    </div>
+    
+    .s-form__personal-data
+        <div class="s-form__field">
+            <label for="city" class="s-form__label">City</label>
+            <input id="city" maxlength="40" name="city" size="20" type="text" class="s-form__input" title="Este campo solo acepta letras y espacios en blanco" pattern="^[a-zA-ZÑñÁáÉéÍíÓóÚú\s]+$" required />
+        </div>
+        <div class="s-form__field">
+            <label for="state" class="s-form__label">State/Province</label>
+            <input id="state" maxlength="20" name="state" size="20" type="text" class="s-form__input" title="Este campo solo acepta letras y espacios en blanco" pattern="^[a-zA-ZÑñÁáÉéÍíÓóÚú\s]+$" required />
+        </div>
+
+    <div class="s-form__field">
+    <label class="s-form__label">RPU (opcional):</label>
+    <input id="00N5500000D0dgf" maxlength="25" name="00N5500000D0dgf" size="20" type="text" class="s-form__input" />
+    <div class="s-form__field">
+
+    //- hidden
+    <select id="lead_source" name="lead_source" style="visibility:hidden">
+        <option value="Website">Website</option>
+    </select>
+
+    <input type="submit" name="submit" class="s-form__button">
+
+    </form>
+
+    +contact(CONTACT, 'en')
