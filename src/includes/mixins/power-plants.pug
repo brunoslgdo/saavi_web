@@ -30,4 +30,12 @@ mixin powerPlants(arrPowerPlants, language)
                                     if lang == 'en'
                                         p.small.text-alt: strong Operating since:
                                         p.body.light.text-alt !{`${description.startEn}`}
+                                    if lang == 'sp'
+                                        <br><br>
+                                        a(href=`${description.urlSgiPolitica}`, class="small text-alt") Política SGI
+                                        <br>
+                                        a(href=`${description.urlSgiAlcance}`, class="small text-alt") Alcance SGI
+                                    if lang == 'en'
+                                        p.small.text-alt: strong Operating since:
+                                        p.body.light.text-alt !{`${description.startEn}`}
                                     div(id=`${description.closenumber}` class="iclose")

@@ -23,8 +23,10 @@ mixin aboutUs(arrAboutUs, arrHistory, language)
                         li.bullet
                             h2.subtitle.first-alt !{`${item.year}`}
                             p.small.first !{`${item.hitoSp}`}
+                                img(src=`${pathImg}${item.logo}`, alt=`${item.logoAlt}`)
                 if lang == 'en'
                     each item in arrHistory.timeLine
                         li.bullet
                             h2.subtitle.first-alt !{`${item.year}`}
-                            p.small.first !{`${item.hitoEn}`}
+                            p.small.first !{`${item.hitoEn}`} <br>
+                                img(src=`${pathImg}${item.logo}`, alt=`${item.logoAlt}`)
