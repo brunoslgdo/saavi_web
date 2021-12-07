@@ -30,7 +30,7 @@ mixin powerPlants(arrPowerPlants, language)
                                     if lang == 'en'
                                         p.small.text-alt: strong Operating since:
                                         p.body.light.text-alt !{`${description.startEn}`}
-                                    if lang == 'sp'
+                                    if lang == 'sp' && description.urlSgiPolitica !== ''
                                         <br><br>
                                         a(href=`${description.urlSgiPolitica}`, class="small text-alt") Política SGI
                                         <br>

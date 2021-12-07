@@ -1,10 +1,15 @@
 extends ../templates/main
 block content
 
-    +header(MENU, 'sp')
+    +header(MENU_SP, 'sp')
     +main(MAIN, 'sp')
     +aboutUs(ABOUTUS, HISTORY, 'sp')
-    +managers(MANAGERS, 'sp')
+    +write_us_now(
+        'Conoce más y contacta a un representante comercial',
+        'Crearemos la solución de energía a tu medida, aportando la experiencia de nuestro equipo en el sector energético y el conocimiento de tu industria.',
+        'Escríbenos ahora',
+        'pamela.tadeo@saavieergia.com'
+    )
     +energySolutions(SUPPLIER, GENERATOR, 'sp')
     +portfolio(PORTFOLIO, 'sp')
     +powerPlants(POWERPLANTS, 'sp')

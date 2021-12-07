@@ -20,10 +20,7 @@ mixin header(arrMenu, language)
             nav.nav#js-nav
                 ul.menu
                     each item in arrMenu
-                        if lang == 'sp'
-                            li.menu__item: a(href=`${pathGlobal}#${item.href}`, class="menu__link")= `${item.contentSp}`
-                        if lang == 'en'
-                            li.menu__item: a(href=`${pathEnHome}#${item.href}`, class="menu__link")= `${item.contentEn}`
+                        li.menu__item: a(href=`${item.href}`, class="menu__link")= `${item.content}`
                     li.menu__item.menu__socials
                         each item in SOCIALS
                             a(href=`${item.href}`, class="menu__icon")

@@ -1,0 +1,6 @@
+mixin write_us_now(textTitle, textCaption, textCta, ctaMailUrl)
+    section.write-us-now
+        article.write-us-now__content
+            h2.title !{`${textTitle}`}
+            p.caption !{`${textCaption}`}
+            a(href=`mailto:${ctaMailUrl}`, rel="noopener", target="_blank", class="button caption") !{`${textCta}`}

@@ -1,11 +1,11 @@
 @function toRem($px) {
-    @return $px / 16 * 1rem;
+    @return math.div($px, 16) * 1rem;
 }
 
 @function toEm($px) {
-    @return $px / 16 * 1em;
+    @return math.div($px, 16) * 1em;
 }
 
 @function toPer($px) {
-    @return $px / 16 * 1%;
+    @return math.div($px, 16) * 1%;
 }

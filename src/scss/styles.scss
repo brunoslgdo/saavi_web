@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import 'variables/paths';
 @import 'functions/convert-pixels';
 
@@ -20,7 +22,8 @@
 @import 'sections/managers';
 @import 'sections/energy-solutions';
 @import 'sections/portfolio';
-@import 'SECTIONS/power-plants';
+@import 'sections/power-plants';
 @import 'sections/investors';
 @import 'sections/contact';
 @import 'sections/regulations';
+@import 'sections/write_us_now';
