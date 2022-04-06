@@ -77,3 +77,53 @@
         padding-left: var(--ss);
     }
 }
+
+.codigo-conducta {
+    max-width: toRem(880);
+    margin-right: auto;
+    margin-left: auto;
+
+    h2, h3 {
+        text-align: center;
+        margin-top: var(--title);
+        margin-bottom: var(--title);
+    }
+
+    h3 {
+        text-align: left;
+    }
+    
+    ul {
+        list-style: none;
+        margin-top: var(--title);
+        margin-bottom: var(--title);
+
+        strong {
+            color: var(--first);
+            display: block;
+        }
+
+        span {
+            color: var(--text);
+
+            a {
+                color: var(--first-alt);
+            }
+        }
+    }
+
+    li {
+        margin-bottom: toRem(16);
+    }
+
+    iframe {
+        margin-top: var(--title);
+        margin-bottom: var(--title);
+        width: 100%;
+    }
+
+    h3.title {
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
