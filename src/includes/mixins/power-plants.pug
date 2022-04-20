@@ -30,19 +30,21 @@ mixin powerPlants(arrPowerPlants, language)
                                     if lang == 'en'
                                         p.small.text-alt: strong Operating since:
                                         p.body.light.text-alt !{`${description.startEn}`}
-                                    if lang == 'sp' && description.urlSgiPolitica
-                                        <br><br>
-                                        a(href=`${description.urlSgiPolitica}`, class="small text-alt") Política SGI
+                                    if lang == 'sp' && description.politicas
                                         <br>
-                                        a(href=`${description.urlSgiAlcance}`, class="small text-alt") Alcance SGI
-                                    if lang == 'sp' && description.urlSgiPoliticas
-                                        <br><br>
-                                        a(href=`${description.urlSgiPoliticas}`, class="small text-alt") Política del SG CASS
-                                        <br>
-                                        a(href=`${description.urlSgiAlcances}`, class="small text-alt") Alcance del SG CASS
-                                    if lang == 'sp' && description.urlDesempenoAmbiental
-                                        <br>
-                                        a(href=`${description.urlDesempenoAmbiental}`, class="small text-alt") Desempeño Ambiental
+                                        each item in description.politicas
+                                            a(href=`${item.document}` target="_blank" rel="noopener" class="small text-alt") !{`${item.name}`}
+                                            <br>
+                                        //- <br>
+                                        //- a(href=`${description.urlSgiAlcance}`, class="small text-alt") Alcance SGI
+                                    //- if lang == 'sp' && description.urlSgiPoliticas
+                                    //-     <br><br>
+                                    //-     a(href=`${description.urlSgiPoliticas}`, class="small text-alt") Política del SG CASS
+                                    //-     <br>
+                                    //-     a(href=`${description.urlSgiAlcances}`, class="small text-alt") Alcance del SG CASS
+                                    //- if lang == 'sp' && description.urlDesempenoAmbiental
+                                    //-     <br>
+                                    //-     a(href=`${description.urlDesempenoAmbiental}`, class="small text-alt") Desempeño Ambiental
                                     if lang == 'en'
                                         p.small.text-alt: strong Operating since:
                                         p.body.light.text-alt !{`${description.startEn}`}
