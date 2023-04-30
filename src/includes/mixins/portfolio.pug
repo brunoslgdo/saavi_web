@@ -13,8 +13,8 @@ mixin portfolio(arrPortfolio, language)
             .portfolio__child.mapa
                 if lang.toLowerCase() == 'sp'
                     each item in arrPortfolio.sp
-                        img(src=`${pathImg}${item.mapImg}`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico")
+                        img(src=`${pathImg}${item.mapImg}`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico" style="margin-top: 160px;")
                 if lang.toLowerCase() == 'en'
                     each item in arrPortfolio.en
-                        img(src=`${pathImg}${item.mapImg}`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico")
+                        img(src=`${pathImg}${item.mapImg}`, class="portfolio__mapa", alt="mapa centrales de ciclo combinado, compresión de gas y parque eólico" style="margin-top: 160px;")
         

@@ -1,0 +1,9 @@
+extends ../templates/main
+block content
+    +header(MENU_EN, 'en')
+    section.codigo-conducta
+        h2.title.first 2021 Sustainability Report
+        //- img(src=`${pathImg}codigo-de-conducta.png`, alt="Nuestro código de conducta es nuestra guía para tomar la decisión correcta")
+        //- h3.subtitle.first ¿Cómo contactar a la Línea Ética?
+        iframe(src="https://www.saavienergia.com/assets/2021-sustainability-report.pdf", frameborder="0" height="768")
+    +contact(CONTACT, 'en')

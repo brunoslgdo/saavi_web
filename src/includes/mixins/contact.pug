@@ -19,17 +19,20 @@ mixin contact(arrContact, language)
                     each item in arrContact
                         li.data__item
                             img(src=`${pathImg}${item.icon}`, class="data__icon")
-                            span.small.text-alt= `${item.content}`
+                            span.small.text-alt !{`${item.content}`}
             iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15049.390543816424!2d-99.202477!3d19.440573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8cf49bafefb54!2sSaavi%20Energ%C3%ADa!5e0!3m2!1ses!2smx!4v1597155607932!5m2!1ses!2smx" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="contact__child")
             .contact__child.article.regulations
                 if lang == 'sp'
-                    p: a(href=`${pathGlobal}aviso-de-privacidad/`, class="small text-alt") Aviso de Privacidad
+                    p: a(href=`${pathGlobal}aviso-de-privacidad.html`, class="small text-alt") Aviso de Privacidad
                     p: a(href=`${pathGlobal}politica-de-cookies.html`, class="small text-alt") Política de Cookies
                     p: a(href=`${pathGlobal}terminos-y-condiciones.html`, class="small text-alt") Términos y Condiciones
                     p: a(href=`${pathGlobal}codigo-de-conducta.html`, class="small text-alt") Código de Conducta
                     p: a(href=`${pathGlobal}reporte-de-sustentabilidad-2020.html`, class="small text-alt") Reporte de Sustentabilidad 2020
+                    p: a(href=`${pathGlobal}2021-sustainability-report.html`, class="small text-alt") Reporte de Sustentabilidad 2021
+                    //- p: a(href=`https://saavienergia.com/assets/programa-energia-con-equidad-saavi-convocatoria-febrero-2023.pdf` class="small text-alt") Programa Energía con Equidad Saavi. Convocatoria febrero 2023.
                 if lang == 'en'
                     p: a(href=`${pathGlobal}privacy-notice.html`, class="small text-alt") Privacy Notice
                     p: a(href=`${pathGlobal}cookies-policy.html`, class="small text-alt") Cookies Policy
                     p: a(href=`${pathGlobal}terms-and-conditions.html`, class="small text-alt") Terms and Conditions
                     p: a(href=`${pathGlobal}2020-sustainability-report.html`, class="small text-alt") 2020 Sustainability Report
+                    p: a(href=`${pathGlobal}2021-sustainability-report.html`, class="small text-alt") 2021 Sustainability Report
